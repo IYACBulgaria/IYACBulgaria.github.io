@@ -18,7 +18,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = ['index', 'writeitdown', 'doityourself', 'stepforward', 'keeptalking',
-         'letuscook', 'democracyunderpressure', 'faciliteasy']
+         'letuscook', 'democracyunderpressure', 'faciliteasy',
+         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope']
 
 TEXT_TAGS = 'p|h1|h2|h3|h4|dt|dd|span|a|button|title|label|figcaption|small'
 INLINE = r'(?:[^<]|<(?:/?(?:b|strong|em)\b[^>]*|br\s*/?)>|<a\b[^>]*>[^<]*</a>|<i\b[^>]*></i>)'
@@ -30,7 +31,8 @@ META_DESC = re.compile(r'(<meta name="description" content=")([^"]*)(")')
 # Text that stays the same in both languages
 KEEP = {'IYAC', 'EN', 'BG', 'IYAC Bulgaria', '+359 88 792 8282', 'iyac.bulgaria@gmail.com',
         'Write It Down!', 'Do It Yourself!', 'Step Forward!', 'Keep Talking!', 'Let us cook!',
-        'Democracy Under Pressure', 'Faciliteasy', 'Write it Down!', 'Let Us Cook!', 'Facebook', 'Instagram'}
+        'Democracy Under Pressure', 'Faciliteasy', 'Write it Down!', 'Let Us Cook!', 'Facebook', 'Instagram',
+        'Write the Change', 'Beyond the Game', 'Break the Silence', 'A Taste of Europe'}
 
 # Patterns for text that contains numbers
 PATTERNS = [

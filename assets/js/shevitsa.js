@@ -189,6 +189,12 @@
     hu: (x, y) => band3(y, H_FLAG, '#CD2A3E', '#FFFFFF', '#436F4D'),
     ro: (x) => band3(x, W_FLAG, '#002B7F', '#FCD116', '#CE1126'),
     pl: (x, y) => (y < 5 ? '#FFFFFF' : '#DC143C'),
+    lu: (x, y) => band3(y, H_FLAG, '#ED2939', '#FFFFFF', '#00A1DE'),
+    md: (x, y) => {
+      // Blue, yellow, red, with the eagle as a small brown-gold emblem in the centre
+      if (x >= 5 && x <= 6 && y >= 3 && y <= 5) return y === 5 ? '#CC092F' : '#A6772D';
+      return band3(x, W_FLAG, '#0046AE', '#FFD200', '#CC092F');
+    },
     gr: (x, y) => (x < 5 && y < 5
       ? ((x === 2 || y === 2) ? '#FFFFFF' : '#0D5EAF')
       : (y % 2 ? '#FFFFFF' : '#0D5EAF')),
