@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="bg">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Начало | IYAC Bulgaria</title>
+  <meta name="description" content="IYAC Bulgaria (Международен център за младежки дейности) е динамична неправителствена младежка организация, посветена на това да вдъхновява и овластява младите хора чрез образование, доброволчество и международно сътрудничество.">
+  <link rel="alternate" hreflang="en" href="https://iyacbulgaria.com/index.html">
+  <link rel="alternate" hreflang="bg" href="https://iyacbulgaria.com/bg/index.html">
+  <link rel="alternate" hreflang="x-default" href="https://iyacbulgaria.com/index.html">
+  <meta name="theme-color" content="#F2ECE3">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Favicons -->
+  <link href="../assets/img/favicon.png" rel="icon">
+  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wdth,wght@8..144,75..100,400..700&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Shevitsa design system -->
+  <link href="../assets/css/shevitsa.css?v=6" rel="stylesheet">
+
+  <!-- Motion (the page works fully without these) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+  <script src="../assets/js/shevitsa.js?v=6" defer></script>
+
+  <!--
+    PHOTO GUIDE
+    Every photo sits in a frame that crops it with object-fit: cover, so any size or
+    orientation works. To swap a photo, change its src. To control the crop, set the
+    focal point on the <img>: style="--focus: 50% 30%" (x% y%, default is centre).
+    The hoop photo is shown in a circle: keep faces near the middle.
+  -->
+</head>
+
+<body class="index-page">
+
+  <a class="skip-link" href="#main">Към съдържанието</a>
+
+  <header id="header" class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="IYAC Bulgaria – начална страница">
+        <img src="../assets/img/logo.png" alt="IYAC Bulgaria" width="140" height="140">
+      </a>
+
+      <nav id="navmenu" class="nav__menu" aria-label="Основна навигация">
+        <ul>
+          <li><a href="#hero" data-spy="hero">Начало</a></li>
+          <li><a href="#projects" data-spy="projects">Проекти</a></li>
+          <li><a href="#contact" data-spy="contact">Контакти</a></li>
+          <li class="only-mobile"><a href="#about" data-spy="about">За нас</a></li>
+        </ul>
+        <span class="nav__seam" aria-hidden="true"></span>
+      </nav>
+
+      <div class="lang" role="group" aria-label="Език">
+        <a class="lang__opt" href="../index.html" hreflang="en" lang="en">EN</a>
+        <a class="lang__opt is-active" href="index.html" hreflang="bg" lang="bg" aria-current="true">BG</a>
+      </div>
+
+      <a class="btn btn--red btn--sm nav__cta" href="#about">За нас</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navmenu" aria-label="Отвори менюто">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__progress" aria-hidden="true"><span></span></div>
+  </header>
+
+  <main id="main" class="main">
+
+    <!-- ===== Hero ===== -->
+    <section id="hero" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <h1 class="hero__title">
+            <span class="stitch-fallback">IYAC</span>
+            <span class="stitch stitch--hero" data-stitch="IYAC" data-cell="10" data-speed="8" data-repel aria-hidden="true"></span>
+            <span class="hero__country" data-split="mask">България</span>
+          </h1>
+          <p class="hero__tagline" data-underline="заедно"> Вярваме, че заедно можем да постигнем повече и да станем по-добри!</p>
+          <div class="hero__actions">
+            <a href="#about" class="btn btn--red btn--lg">Да започваме <i class="bi bi-arrow-down" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <figure class="hoop" id="hoop">
+          <div class="hoop__fabric">
+            <!-- PHOTO: hero photo (shown in the embroidery hoop) -->
+            <img src="../assets/img/hero-img.jpg" alt="Млади хора, седнали в кръг по време на уъркшоп" style="--focus: 50% 62%" width="800" height="752" fetchpriority="high">
+            <canvas class="hoop__stitches" aria-hidden="true"></canvas>
+          </div>
+          <span class="hoop__clasp" aria-hidden="true"></span>
+          <span class="hoop__brush" aria-hidden="true"></span>
+          <span class="hoop__hint" aria-hidden="true"><i class="bi bi-hand-index"></i> Превъртете или докоснете, за да разшиете</span>
+        </figure>
+      </div>
+    </section>
+
+    <div class="band" data-band="1" aria-hidden="true"><div class="band__track"></div></div>
+
+    <!-- ===== Numbers ===== -->
+    <section class="stats" aria-label="IYAC Bulgaria в цифри">
+      <div class="container stats__grid">
+        <p class="stat" data-parallax="0">
+          <span class="stat__label">От</span>
+          <span class="stat__num" data-odometer="2014">2014</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Values ===== -->
+    <section id="featured-projects" class="values section">
+      <div class="container values__grid">
+
+        <article class="vcard" data-reveal data-parallax="0" style="--d:0">
+          <span class="stitch vcard__icon" data-icon="heart" data-cell="10" data-speed="14" aria-hidden="true"></span>
+          <h3>Овластяване и участие на младите хора</h3>
+          <p>Ангажирани сме да включваме активно младите хора в местни и международни инициативи. Стремим се да създаваме възможности за развитие на умения, лидерство и гражданска ангажираност чрез неформално образование и доброволчество.</p>
+        </article>
+
+        <article class="vcard" data-reveal data-parallax="0.08" style="--d:1">
+          <span class="stitch vcard__icon" data-icon="globe" data-cell="10" data-speed="14" aria-hidden="true"></span>
+          <h3>Приобщаване и междукултурен диалог</h3>
+          <p>Насърчаваме многообразието, като ангажираме млади хора с различен произход, включително от малцинствени групи и бежанци, и подкрепяме сътрудничеството между културите чрез проекти по Еразъм+ и международни обмени.</p>
+        </article>
+
+        <article class="vcard" data-reveal data-parallax="0.16" style="--d:2">
+          <span class="stitch vcard__icon" data-icon="home" data-cell="10" data-speed="14" aria-hidden="true"></span>
+          <h3>Ангажираност с общността и сътрудничество</h3>
+          <p>Ценим сътрудничеството – както на местно, така и на международно ниво – и вярваме в изграждането на силни мрежи с други организации, институции и младежки структури, за да реализираме въздействащи и социално значими проекти.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="about section">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <h2 class="eyebrow">За нас</h2>
+          <p class="section-head__sub" data-split="mask">Международен център за младежки дейности – България</p>
+        </header>
+      </div>
+
+      <div class="zoom">
+        <div class="zoom__stage">
+          <figure class="zoom__frame">
+            <!-- PHOTO: about photo (opens to full screen on scroll; best at 2400px+ wide) -->
+            <img class="zoom__img" src="../assets/img/about.jpg" alt="Участници в IYAC Bulgaria, събрани около банера на IYAC" style="--focus: 50% 62%" width="800" height="565" loading="lazy" decoding="async">
+            <div class="zoom__scrim" aria-hidden="true"></div>
+          </figure>
+          <div class="zoom__caption">
+            <div class="container">
+              <span class="zoom__kicker" aria-hidden="true">За нас</span>
+              <h3 class="display-2">Даваме сила на младите чрез действие и връзки</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container about__story">
+        <p class="lede" data-scrub-words>IYAC Bulgaria (Международен център за младежки дейности) е динамична неправителствена младежка организация, посветена на това да вдъхновява и овластява младите хора чрез образование, доброволчество и международно сътрудничество. От 2014 г. създаваме значими възможности младите хора да се развиват личностно и професионално и да стават активни граждани в своите общности и извън тях. Работата ни обхваща местни и международни инициативи – от организирането на младежки обмени и обучителни курсове по Еразъм+ до водещи културни и образователни проекти в цяла Европа. Чрез силни партньорства, приобщаващи ценности и страст към социалното въздействие се стремим да подкрепяме младите хора да откриват потенциала си, да укрепват уменията си и да изграждат по-свързан, отворен и ангажиран свят.</p>
+        <ul class="checks">
+          <li data-reveal style="--d:0"><span class="checks__i"><i class="bi bi-globe-europe-africa" aria-hidden="true"></i></span> <span>Подкрепяме младите хора да опознават нови култури чрез международни проекти за мобилност.</span></li>
+          <li data-reveal style="--d:1"><span class="checks__i"><i class="bi bi-lightbulb" aria-hidden="true"></i></span> <span>Насърчаваме креативността и лидерството чрез практическо учене.</span></li>
+          <li data-reveal style="--d:2"><span class="checks__i"><i class="bi bi-megaphone" aria-hidden="true"></i></span> <span>Повишаваме осведомеността по ключови социални теми чрез уъркшопи, кампании и събития.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Projects: patches on a washing line ===== -->
+    <section id="projects" class="projects section">
+
+      <div class="container">
+        <header class="section-head section-head--split" data-reveal>
+          <div>
+            <h2 class="eyebrow">Нашите проекти</h2>
+            <p class="intro" data-scrub-words>Вижте как превръщаме идеите в реално въздействие чрез местни и международни проекти, които овластяват, образоват и свързват младите хора.</p>
+          </div>
+          <div class="carousel__controls" data-carousel-controls>
+            <button class="icon-btn" type="button" data-prev aria-label="Предишен проект"><i class="bi bi-arrow-left" aria-hidden="true"></i></button>
+            <button class="icon-btn" type="button" data-next aria-label="Следващ проект"><i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </header>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel__viewport">
+          <span class="carousel__cord" aria-hidden="true"></span>
+          <ul class="carousel__track">
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="writeitdown.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/writeitdown.jpg" alt="Плакат на „Write It Down!“" width="432" height="648" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Обучителен курс · март 2025</span>
+                  <h3>Write It Down!</h3>
+                  <p>„Write It Down“ беше обучителен курс, проведен от 11 до 19 март 2025 г., който даде на младежките работници практически умения да планират и пишат успешни проектни предложения по Ключова дейност 1 на Еразъм+.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="doityourself.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/doityourself.jpg" alt="Плакат на „Do It Yourself!“" width="498" height="648" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Обучителен курс · март 2025</span>
+                  <h3>Do It Yourself!</h3>
+                  <p>„Do It Yourself!“ беше обучителен курс по Еразъм+, организиран от IYAC Bulgaria през март 2025 г., в който участниците разработиха и водиха свои собствени уъркшопи, развивайки уменията си в младежката работа и неформалното образование.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="stepforward.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/stepforward.jpg" alt="Плакат на „Step Forward!“" width="436" height="647" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Младежки обмен · януари 2025</span>
+                  <h3>Step Forward!</h3>
+                  <p>„Step Forward!“ беше младежки обмен по Еразъм+, домакинстван от IYAC Bulgaria през януари 2025 г. в Стара Загора, в който участниците развиха умения за лидерство, работа в екип и публично говорене, докато откриваха креативни начини да използват изкуствен интелект при създаването на CV и автобиографии, за да подобрят кариерните си възможности.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="keeptalking.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/keeptalking.jpg" alt="Плакат на „Keep Talking!“" width="430" height="648" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Младежки обмен · януари 2025</span>
+                  <h3>Keep Talking!</h3>
+                  <p>„Keep Talking!“ беше младежки обмен по Еразъм+, посветен на развитието на комуникационните умения на участниците чрез техники на ненасилствената комуникация и импровизационен театър, насърчаващ междукултурния диалог и активното гражданство.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="letuscook.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/letuscook.jpg" alt="Плакат на „Let us cook!“" width="458" height="648" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Младежки обмен · януари 2026</span>
+                  <h3>Let us cook!</h3>
+                  <p>Междукултурен младежки обмен, в който участниците опознаха европейските култури и ценности чрез готвене, неформално образование и споделени кулинарни преживявания.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="democracyunderpressure.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/democracyunderpressure.jpg" alt="Плакат на „Democracy Under Pressure“" width="458" height="648" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Обучителен курс · януари 2026</span>
+                  <h3>Democracy Under Pressure</h3>
+                  <p>Обучителен курс, който помага на младежките работници да разбират и да се справят със съвременните заплахи за демокрацията чрез критично мислене, медийна грамотност и учене чрез преживяване.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+            <li class="patch">
+              <span class="patch__peg" aria-hidden="true"></span>
+              <a class="patch__link" href="faciliteasy.html">
+                <div class="patch__media"><img src="../assets/img/home/posters/faciliteasy.jpg" alt="Плакат на „Faciliteasy“" width="458" height="648" loading="lazy" decoding="async" draggable="false"></div>
+                <div class="patch__body">
+                  <span class="patch__meta">Обучителен курс · февруари–март 2026</span>
+                  <h3>Faciliteasy</h3>
+                  <p>Практически обучителен курс за укрепване на уменията за фасилитация и младежка работа чрез симулации, ролеви игри и практически методи на неформалното образование.</p>
+                  <span class="patch__go" aria-hidden="true"><i class="bi bi-arrow-up-right"></i></span>
+                </div>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+        <div class="container">
+          <div class="carousel__progress" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Call to action ===== -->
+    <section id="call-to-action" class="cta section">
+      <div class="collage" aria-hidden="true">
+        <!-- PHOTOS: collage around the call to action -->
+        <figure class="collage__item" data-depth="0.9" style="--r:-6deg"><img src="../assets/img/home/outdoor-game.jpg" alt="" loading="lazy" decoding="async"></figure>
+        <figure class="collage__item" data-depth="0.4" style="--r:5deg"><img src="../assets/img/home/masks.jpg" alt="" loading="lazy" decoding="async"></figure>
+        <figure class="collage__item" data-depth="1.3" style="--r:-3deg"><img src="../assets/img/home/laughing.jpg" alt="" loading="lazy" decoding="async"></figure>
+        <figure class="collage__item" data-depth="0.6" style="--r:4deg"><img src="../assets/img/home/group-city.jpg" alt="" loading="lazy" decoding="async"></figure>
+        <figure class="collage__item" data-depth="1.1" style="--r:3deg"><img src="../assets/img/home/cooking.jpg" alt="" loading="lazy" decoding="async"></figure>
+        <figure class="collage__item" data-depth="0.25" style="--r:-4deg"><img src="../assets/img/home/certificates.jpg" alt="" loading="lazy" decoding="async"></figure>
+      </div>
+      <div class="container cta__inner">
+        <h3 class="cta__title" data-split="mask">Открийте нови възможности</h3>
+        <p class="cta__text" data-reveal style="--d:1">Бъдете в крак с най-новите ни младежки проекти, обмени и събития – последвайте ни във Facebook и кандидатствайте първи!</p>
+        <div data-reveal style="--d:2">
+          <a class="btn btn--linen btn--lg" href="https://www.facebook.com/iyac.bulgaria" target="_blank" rel="noopener">Разгледайте проектите във Facebook <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="contact section">
+
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <h2 class="eyebrow">Контакти</h2>
+          <p class="intro" data-scrub-words>Имате въпрос или искате да се включите? Свържете се с нас – ще се радваме да ви чуем!</p>
+        </header>
+
+        <div class="contact__grid">
+          <a class="tile" href="tel:+359887928282" data-reveal style="--d:0">
+            <span class="tile__icon"><i class="bi bi-telephone" aria-hidden="true"></i></span>
+            <span class="tile__label">Обадете ни се</span>
+            <span class="tile__value">+359 88 792 8282</span>
+          </a>
+
+          <div class="tile" data-reveal style="--d:1">
+            <a class="tile__hit" href="mailto:iyac.bulgaria@gmail.com" aria-label="Пишете ни: iyac.bulgaria@gmail.com"></a>
+            <span class="tile__icon"><i class="bi bi-envelope" aria-hidden="true"></i></span>
+            <span class="tile__label">Пишете ни</span>
+            <span class="tile__value">iyac.bulgaria@gmail.com</span>
+            <button class="tile__copy icon-btn icon-btn--sm" type="button" data-copy="iyac.bulgaria@gmail.com" aria-label="Копирай имейл адреса">
+              <i class="bi bi-copy" aria-hidden="true"></i><i class="bi bi-check2" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="map" data-reveal style="--d:2">
+            <iframe title="Карта на Стара Загора, България" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47126.37911016957!2d25.583662149912143!3d42.41924777369604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a8690b30e83935%3A0x74baed1462879fb1!2sStara%20Zagora%2C%20Bulgaria!5e0!3m2!1sen!2sro!4v1748811727081!5m2!1sen!2sro" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__about">
+          <a href="index.html" class="footer__brand"><span class="sitename">IYAC Bulgaria</span></a>
+          <p><strong>Имейл:</strong> <a href="mailto:iyac.bulgaria@gmail.com">iyac.bulgaria@gmail.com</a></p>
+        </div>
+
+        <div class="footer__links">
+          <h4>Полезни връзки</h4>
+          <ul>
+            <li><a href="index.html">Начало</a></li>
+            <li><a href="#about">За нас</a></li>
+            <li><a href="#projects">Проекти</a></li>
+            <li><a href="#contact">Контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__links">
+          <h4>Нашите проекти</h4>
+          <ul>
+            <li><a href="writeitdown.html">Write it Down!</a></li>
+            <li><a href="doityourself.html">Do It Yourself!</a></li>
+            <li><a href="stepforward.html">Step Forward!</a></li>
+            <li><a href="keeptalking.html">Keep Talking!</a></li>
+            <li><a href="letuscook.html">Let Us Cook!</a></li>
+            <li><a href="faciliteasy.html">Faciliteasy</a></li>
+            <li><a href="democracyunderpressure.html">Democracy Under Pressure</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__social">
+          <h4>Последвайте ни в социалните мрежи</h4>
+          <p>Последвайте ни и бъдете в течение с най-новите ни проекти и младежки инициативи!</p>
+          <div class="footer__icons">
+            <a class="icon-btn icon-btn--linen" href="https://www.facebook.com/iyac.bulgaria" target="_blank" rel="noopener" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+            <a class="icon-btn icon-btn--linen" href="https://www.instagram.com/iyac_bulgaria" target="_blank" rel="noopener" aria-label="Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>© <span>Авторско право</span> <strong class="sitename">IYAC Bulgaria</strong> <span>Всички права запазени</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#hero" class="to-top icon-btn" aria-label="Към началото"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+
+</body>
+
+</html>

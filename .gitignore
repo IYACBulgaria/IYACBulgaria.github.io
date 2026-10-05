@@ -1,0 +1,5 @@
+# Local-only: full copy of the original site, kept as a safety net
+backup-original/
+# Local preview settings
+.claude/
+__pycache__/
