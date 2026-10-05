@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '6'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '7'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -160,7 +160,14 @@ PROJECTS = {
         },
     },
 }
-ORDER = ['writeitdown', 'doityourself', 'stepforward', 'keeptalking', 'letuscook', 'democracyunderpressure', 'faciliteasy']
+ORDER = ['writeitdown', 'doityourself', 'stepforward', 'keeptalking', 'letuscook', 'democracyunderpressure', 'faciliteasy',
+         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope']
+
+# 2026 projects written from the Project Summaries document (no original page)
+sys.path.insert(0, str(Path(__file__).parent))
+from projects_2026 import PROJECTS_2026, PLACEHOLDER_LINK, PHOTOS, PLACEHOLDER_ALT  # noqa: E402
+for _slug, _p in PROJECTS_2026.items():
+    PROJECTS[_slug] = dict(_p, poster_slug=_slug, alts={n: PLACEHOLDER_ALT for n in PHOTOS})
 
 # ---------------------------------------------------------------------------
 def read(p):
@@ -206,6 +213,15 @@ def extract_original(slug):
                 h3=h3, blocks=blocks, gal_h2=gal_h2, gal_intro=gal_intro, imgs=imgs, disclaimer=disclaimer)
 
 
+def from_document(slug, cfg):
+    """Same shape as extract_original, for projects written from the 2026 document."""
+    disclaimer = extract_original('letuscook')['disclaimer']  # the standard EU wording, as on every page
+    return dict(title=cfg['title'], sidebar_title='Download Catalog', link=PLACEHOLDER_LINK, link_label='Materials & Videos',
+                h3=cfg['tagline'], blocks=[('p', p) for p in cfg['paragraphs']], gal_h2='Gallery',
+                gal_intro=f'Scroll down to see some of the most memorable highlights from the "{cfg["title"]}" experience.',
+                imgs=list(PHOTOS), disclaimer=disclaimer)
+
+
 def split_sentences(text, breaks):
     """Split at the given sentence starts; the pieces joined back equal the original."""
     chunks, rest = [], text
@@ -235,7 +251,7 @@ def stitch_flag(code, cls='facts__flag'):
 def build(slug):
     cfg = PROJECTS[slug]
     gdir = f'assets/img/projects/{slug}'
-    o = extract_original(slug)
+    o = from_document(slug, cfg) if 'paragraphs' in cfg else extract_original(slug)
     footer, patches = shared_from_home()
 
     # The last paragraph closes the story on the crimson band; the rest become chapters
@@ -303,8 +319,38 @@ def build(slug):
                      f'<img src="{src}" alt="{html.escape(cfg["alts"][name])}" width="{w}" height="{h}" loading="lazy" decoding="async"></button>')
 
     others = [p for p in patches if f'href="{slug}.html"' not in p]
-    poster = f'assets/img/home/posters/{cfg["poster_slug"]}.jpg'
+    poster = f'assets/img/home/posters/{cfg["poster_slug"]}.jpg'  # PHOTO: replace the placeholder poster with the real one
     pw, ph = image_size(poster)
+    if o['link'].startswith('#'):
+        drive_link = (f'<!-- PLACEHOLDER: replace href with the Google Drive link -->\n            '
+                      f'<a class="btn btn--red btn--lg" href="{o["link"]}"><i class="bi bi-camera-reels" aria-hidden="true"></i> {o["link_label"]} <i class="bi bi-arrow-down" aria-hidden="true"></i></a>')
+    else:
+        drive_link = (f'<a class="btn btn--red btn--lg" href="{o["link"]}" target="_blank" rel="noopener"><i class="bi bi-camera-reels" aria-hidden="true"></i> '
+                      f'{o["link_label"]} <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>')
+
+    # Main impacts and results (2026 document projects)
+    outcomes = ''
+    if cfg.get('impacts'):
+        imp = '\n'.join(f'            <li data-reveal style="--d:{k % 3}"><span class="highlights__n" aria-hidden="true">{k + 1:02d}</span><span>{t}</span></li>'
+                        for k, t in enumerate(cfg['impacts']))
+        res = '\n'.join(f'            <li data-reveal style="--d:{k}"><i class="bi bi-check2-circle" aria-hidden="true"></i><span>{t}</span></li>'
+                        for k, t in enumerate(cfg.get('results', [])))
+        outcomes = f'''
+    <!-- ===== Impacts and results ===== -->
+    <section class="outcomes section">
+      <div class="container">
+        <header class="section-head" data-reveal><h2 class="eyebrow">Main impacts</h2></header>
+        <ol class="highlights">
+{imp}
+        </ol>
+        <header class="section-head outcomes__results" data-reveal><h2 class="eyebrow">Results and outputs</h2></header>
+        <ul class="results">
+{res}
+        </ul>
+      </div>
+    </section>
+'''
+
     description = html.escape(re.sub('<[^>]+>', '', next(v for k, v in story_blocks if k == 'chapter')))
 
     page = f'''<!DOCTYPE html>
@@ -394,7 +440,7 @@ def build(slug):
           </dl>
           <div class="phero__actions" data-reveal style="--d:1">
             <span class="phero__label">{o['sidebar_title']}</span>
-            <a class="btn btn--red btn--lg" href="{o['link']}" target="_blank" rel="noopener"><i class="bi bi-camera-reels" aria-hidden="true"></i> {o['link_label']} <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            {drive_link}
           </div>
         </div>
 
@@ -423,6 +469,7 @@ def build(slug):
       </div>
     </section>
 
+{outcomes}
     <!-- ===== Gallery ===== -->
     <section id="gallery" class="gallery section">
       <div class="container">
