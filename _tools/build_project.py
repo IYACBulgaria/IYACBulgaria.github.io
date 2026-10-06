@@ -167,7 +167,7 @@ ORDER = ['writeitdown', 'doityourself', 'stepforward', 'keeptalking', 'letuscook
 sys.path.insert(0, str(Path(__file__).parent))
 from projects_2026 import PROJECTS_2026, PLACEHOLDER_LINK, PHOTOS, PLACEHOLDER_ALT  # noqa: E402
 for _slug, _p in PROJECTS_2026.items():
-    PROJECTS[_slug] = dict(_p, poster_slug=_slug, alts={n: PLACEHOLDER_ALT for n in PHOTOS})
+    PROJECTS[_slug] = dict(_p, poster_slug=_slug, alts={n: _p.get('alts', {}).get(n, PLACEHOLDER_ALT) for n in PHOTOS})
 
 # ---------------------------------------------------------------------------
 def read(p):

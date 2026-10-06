@@ -662,4 +662,22 @@ BG = {
         "13–21 юни 2026 г.",
     "10–18 August 2026":
         "10–18 август 2026 г.",
+    "Participants with their ankles tied together huddle around a football in the garden, a green mountain behind them":
+        "Участници с вързани глезени са се скупчили около топката в градината, а зад тях се издига зелена планина",
+    "Two participants proudly holding their Youthpass certificates":
+        "Двама участници гордо държат своите сертификати Youthpass",
+    "A line of participants tied together at the ankles, ready to chase the ball across the lawn":
+        "Редица участници, вързани един за друг за глезените, готови да гонят топката по поляната",
+    "A participant in a Ronaldo 7 shirt controls the ball while sitting on the grass as others watch":
+        "Участник с фланелка „Роналдо 7“ овладява топката, седнал на тревата, докато другите гледат",
+    "Two smiling participants holding their Youthpass certificates":
+        "Двама усмихнати участници държат своите сертификати Youthpass",
+    "A match in the garden while the rest of the group watches from the wall":
+        "Мач в градината, докато останалите от групата гледат от оградата",
+    "Pairs tied together at the ankles try to dribble the ball together":
+        "Двойки, вързани за глезените, се опитват заедно да водят топката",
+    "Participants gather on the lawn before the next game":
+        "Участниците се събират на поляната преди следващата игра",
+    "A lively tackle for the ball during a garden match, with teammates cheering from the side":
+        "Оспорвана борба за топката по време на мач в градината, а съотборниците подкрепят отстрани",
 }
