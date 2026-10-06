@@ -5,7 +5,6 @@ from "IYAC Bulgaria – Project Summaries 2026" (Google Doc).
 PLACEHOLDERS to replace when ready:
   - 'link': the Google Drive "Materials & Videos" link (for now it jumps to the gallery)
   - photos: assets/img/projects/<slug>/photo-1.jpg ... photo-9.jpg
-  - poster: assets/img/home/posters/<slug>.jpg
 Drop real files in with the same names, then run:
   python _tools/build_project.py && python _tools/i18n.py
 """
