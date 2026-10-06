@@ -46,6 +46,17 @@ PROJECTS_2026 = {
         'after': {1: ('photo', 'photo-1'), 4: ('duo', 'photo-2', 'photo-5')},
     },
     'beyondthegame': {
+        'alts': {
+            'photo-1': 'Participants with their ankles tied together huddle around a football in the garden, a green mountain behind them',
+            'photo-2': 'Two participants proudly holding their Youthpass certificates',
+            'photo-3': 'A line of participants tied together at the ankles, ready to chase the ball across the lawn',
+            'photo-4': 'A participant in a Ronaldo 7 shirt controls the ball while sitting on the grass as others watch',
+            'photo-5': 'Two smiling participants holding their Youthpass certificates',
+            'photo-6': 'A match in the garden while the rest of the group watches from the wall',
+            'photo-7': 'Pairs tied together at the ankles try to dribble the ball together',
+            'photo-8': 'Participants gather on the lawn before the next game',
+            'photo-9': 'A lively tackle for the ball during a garden match, with teammates cheering from the side',
+        },
         'title': 'Beyond the Game',
         'tagline': 'Football as a tool for teamwork, inclusion, intercultural learning and understanding society',
         'facts': [('Dates', '13–21 June 2026'), ('Location', 'Youtopia Riverside guest house, Stara Zagora, Bulgaria'),
