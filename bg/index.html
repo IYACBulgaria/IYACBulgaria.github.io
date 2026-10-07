@@ -25,12 +25,12 @@
   <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
 
   <!-- Shevitsa design system -->
-  <link href="../assets/css/shevitsa.css?v=9" rel="stylesheet">
+  <link href="../assets/css/shevitsa.css?v=10" rel="stylesheet">
 
   <!-- Motion (the page works fully without these) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
-  <script src="../assets/js/shevitsa.js?v=9" defer></script>
+  <script src="../assets/js/shevitsa.js?v=10" defer></script>
 
   <!--
     PHOTO GUIDE
@@ -399,8 +399,22 @@
             </button>
           </div>
 
-          <div class="map" data-reveal style="--d:2">
-            <iframe title="Карта на Стара Загора, България" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47126.37911016957!2d25.583662149912143!3d42.41924777369604!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40a8690b30e83935%3A0x74baed1462879fb1!2sStara%20Zagora%2C%20Bulgaria!5e0!3m2!1sen!2sro!4v1748811727081!5m2!1sen!2sro" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <!-- Social: two embroidery hoops joined by a running stitch -->
+          <div class="social" data-reveal style="--d:2">
+            <h3 class="social__label">Последвайте ни</h3>
+            <div class="social__hoops">
+              <svg class="social__thread" viewBox="0 0 400 100" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M100 0 C 150 100, 250 100, 300 0"/></svg>
+              <a class="hooplink" href="https://www.instagram.com/iyac_bulgaria" target="_blank" rel="noopener">
+                <span class="hooplink__ring"><span class="stitch hooplink__icon" data-icon="instagram" data-cell="10" data-speed="10" aria-hidden="true"></span></span>
+                <span class="hooplink__name">Instagram <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                <span class="hooplink__handle">@iyac_bulgaria</span>
+              </a>
+              <a class="hooplink" href="https://www.facebook.com/iyac.bulgaria" target="_blank" rel="noopener">
+                <span class="hooplink__ring"><span class="stitch hooplink__icon" data-icon="facebook" data-cell="10" data-speed="10" aria-hidden="true"></span></span>
+                <span class="hooplink__name">Facebook <i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                <span class="hooplink__handle">IYAC Bulgaria</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
