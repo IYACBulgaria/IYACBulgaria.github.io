@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '8'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '9'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -167,7 +167,8 @@ ORDER = ['writeitdown', 'doityourself', 'stepforward', 'keeptalking', 'letuscook
 sys.path.insert(0, str(Path(__file__).parent))
 from projects_2026 import PROJECTS_2026, PLACEHOLDER_LINK, PHOTOS, PLACEHOLDER_ALT  # noqa: E402
 for _slug, _p in PROJECTS_2026.items():
-    PROJECTS[_slug] = dict(_p, poster_slug=_slug, alts={n: _p.get('alts', {}).get(n, PLACEHOLDER_ALT) for n in PHOTOS})
+    PROJECTS[_slug] = dict(_p, poster_slug=_slug, photos=_p.get('photos', PHOTOS),
+                          alts={n: _p.get('alts', {}).get(n, PLACEHOLDER_ALT) for n in _p.get('photos', PHOTOS)})
 
 # ---------------------------------------------------------------------------
 def read(p):
@@ -219,7 +220,7 @@ def from_document(slug, cfg):
     return dict(title=cfg['title'], sidebar_title='Download Catalog', link=PLACEHOLDER_LINK, link_label='Materials & Videos',
                 h3=cfg['tagline'], blocks=[('p', p) for p in cfg['paragraphs']], gal_h2='Gallery',
                 gal_intro=f'Scroll down to see some of the most memorable highlights from the "{cfg["title"]}" experience.',
-                imgs=list(PHOTOS), disclaimer=disclaimer)
+                imgs=list(cfg['photos']), disclaimer=disclaimer)
 
 
 def split_sentences(text, breaks):
@@ -246,6 +247,81 @@ def shared_from_home():
 
 def stitch_flag(code, cls='facts__flag'):
     return f'<span class="stitch {cls}" data-flag="{code}" data-cell="10" data-speed="5" aria-hidden="true"></span>'
+
+
+def chrome_top(title, description, slug, body_class, generated):
+    """Everything above <main>: head, skip link, navigation and language switch."""
+    # "Projects" is the current page on the projects page; on a project page it is the section
+    current = ' aria-current="page"' if slug == 'projects' else ''
+    return f'''<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>{title}</title>
+  <meta name="description" content="{description}">
+  <meta name="theme-color" content="#F2ECE3">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Shevitsa design system -->
+  <link href="assets/css/shevitsa.css?v={ASSET_V}" rel="stylesheet">
+
+  <!-- Motion (the page works fully without these) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+  <script src="assets/js/shevitsa.js?v={ASSET_V}" defer></script>
+
+  <!-- {generated} -->
+</head>
+
+<body class="{body_class}">
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="header" class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="IYAC Bulgaria home">
+        <img src="assets/img/logo.png" alt="IYAC Bulgaria" width="140" height="140">
+      </a>
+
+      <nav id="navmenu" class="nav__menu" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="is-active"{current}>Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li class="only-mobile"><a href="index.html#about">About</a></li>
+        </ul>
+        <span class="nav__seam" aria-hidden="true"></span>
+      </nav>
+
+      <div class="lang" role="group" aria-label="Language">
+        <a class="lang__opt is-active" href="{slug}.html" hreflang="en" lang="en" aria-current="true">EN</a>
+        <a class="lang__opt" href="bg/{slug}.html" hreflang="bg" lang="bg">BG</a>
+      </div>
+
+      <a class="btn btn--red btn--sm nav__cta" href="index.html#about">About</a>
+
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navmenu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__progress" aria-hidden="true"><span></span></div>
+  </header>
+
+'''
 
 
 def build(slug):
@@ -353,75 +429,7 @@ def build(slug):
 
     description = html.escape(re.sub('<[^>]+>', '', next(v for k, v in story_blocks if k == 'chapter')))
 
-    page = f'''<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>{o['title']}</title>
-  <meta name="description" content="{description}">
-  <meta name="theme-color" content="#F2ECE3">
-  <script>document.documentElement.classList.add('js');</script>
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
-
-  <!-- Shevitsa design system -->
-  <link href="assets/css/shevitsa.css?v={ASSET_V}" rel="stylesheet">
-
-  <!-- Motion (the page works fully without these) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
-  <script src="assets/js/shevitsa.js?v={ASSET_V}" defer></script>
-
-  <!-- Generated by _tools/build_project.py — the text comes from the original page. -->
-</head>
-
-<body class="project-page">
-
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header id="header" class="nav">
-    <div class="nav__inner">
-      <a href="index.html" class="nav__logo" aria-label="IYAC Bulgaria home">
-        <img src="assets/img/logo.png" alt="IYAC Bulgaria" width="140" height="140">
-      </a>
-
-      <nav id="navmenu" class="nav__menu" aria-label="Main">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#projects" class="is-active" aria-current="page">Projects</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-          <li class="only-mobile"><a href="index.html#about">About</a></li>
-        </ul>
-        <span class="nav__seam" aria-hidden="true"></span>
-      </nav>
-
-      <div class="lang" role="group" aria-label="Language">
-        <a class="lang__opt is-active" href="{slug}.html" hreflang="en" lang="en" aria-current="true">EN</a>
-        <a class="lang__opt" href="bg/{slug}.html" hreflang="bg" lang="bg">BG</a>
-      </div>
-
-      <a class="btn btn--red btn--sm nav__cta" href="index.html#about">About</a>
-
-      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="navmenu" aria-label="Open menu">
-        <span></span><span></span>
-      </button>
-    </div>
-    <div class="nav__progress" aria-hidden="true"><span></span></div>
-  </header>
-
-  <main id="main" class="main">
+    page = f'''{chrome_top(o['title'], description, slug, 'project-page', 'Generated by _tools/build_project.py — the text comes from the original page.')}  <main id="main" class="main">
 
     <!-- ===== Project hero ===== -->
     <section class="phero">
@@ -430,6 +438,7 @@ def build(slug):
           <nav class="crumbs" aria-label="Breadcrumb">
             <ol>
               <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
               <li aria-current="page">{o['title']}</li>
             </ol>
           </nav>
@@ -517,6 +526,9 @@ def build(slug):
         <div class="container">
           <div class="carousel__progress" aria-hidden="true"><span></span></div>
         </div>
+        <div class="container carousel__all">
+          <a class="btn btn--red btn--lg" href="projects.html">See all projects <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+        </div>
       </div>
     </section>
 
@@ -547,6 +559,137 @@ def build(slug):
     print(f'built {slug}.html: {chapters} chapters, {len(tiles)} photos')
 
 
+
+MONTHS = {m: i for i, m in enumerate(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], 1)}
+
+
+def project_cards():
+    """Every project as shown on the homepage line: poster, type, month, title and its one-sentence summary."""
+    s = read('index.html')
+    cards = []
+    for p in re.findall(r'<li class="patch">.*?</li>', s, re.S):
+        slug = re.search(r'href="([^"]+)\.html"', p).group(1)
+        meta = tidy(re.search(r'class="patch__meta">(.*?)</span>', p, re.S).group(1))
+        kind, when = [x.strip() for x in meta.split('·')]
+        year = int(when[-4:])
+        cards.append(dict(slug=slug, kind=kind, when=when, year=year, sort=(year, MONTHS[when[:3]]),
+                          title=tidy(re.search(r'<h3>(.*?)</h3>', p, re.S).group(1)),
+                          summary=tidy(re.search(r'<p>(.*?)</p>', p, re.S).group(1)),
+                          flags=PROJECTS[slug].get('flags', [])))
+    return sorted(cards, key=lambda c: c['sort'], reverse=True)
+
+
+def build_projects_page():
+    footer, _ = shared_from_home()
+    home = read('index.html')
+    intro = tidy(re.search(r'<h2 class="eyebrow">Our Projects</h2>\s*<p class="intro"[^>]*>(.*?)</p>', home, re.S).group(1))
+    cards = project_cards()
+    kinds = [('exchange', 'Youth Exchange', 'Youth exchanges'), ('training', 'Training Course', 'Training courses')]
+    kind_key = {label: key for key, label, _ in kinds}
+
+    chips = [f'          <button class="chip" type="button" data-filter="all" aria-pressed="true"><span>All projects</span><span class="chip__n">{len(cards)}</span></button>']
+    for key, label, plural in kinds:
+        n = sum(1 for c in cards if c['kind'] == label)
+        chips.append(f'          <button class="chip" type="button" data-filter="{key}" aria-pressed="false"><span>{plural}</span><span class="chip__n">{n}</span></button>')
+
+    years = []
+    for year in sorted({c['year'] for c in cards}, reverse=True):
+        mine = [c for c in cards if c['year'] == year]
+        items = []
+        for k, c in enumerate(mine):
+            poster = f'assets/img/home/posters/{c["slug"]}.jpg'
+            w, h = image_size(poster)
+            flags = ''.join(stitch_flag(f, 'pcard__flag') for f in c['flags'])
+            flags = f'\n                  <span class="pcard__flags" aria-hidden="true">{flags}</span>' if flags else ''
+            items.append(f'''            <li class="pcard" data-kind="{kind_key[c['kind']]}" data-reveal style="--d:{k % 3}">
+              <a class="pcard__link" href="{c['slug']}.html">
+                <figure class="pcard__poster">
+                  <span class="patch__peg" aria-hidden="true"></span>
+                  <img src="{poster}" alt="{c['title']} poster" width="{w}" height="{h}" loading="{'eager' if year == cards[0]['year'] and k < 3 else 'lazy'}" decoding="async">
+                </figure>
+                <div class="pcard__body">
+                  <span class="pcard__meta"><span class="pcard__kind">{c['kind']}</span><span class="pcard__when">{c['when']}</span></span>
+                  <h3 class="pcard__title">{c['title']}</h3>{flags}
+                  <p class="pcard__text">{c['summary']}</p>
+                  <span class="pcard__go"><span>View project</span><i class="bi bi-arrow-right" aria-hidden="true"></i></span>
+                </div>
+              </a>
+            </li>''')
+        years.append(f'''    <section class="pyear" aria-labelledby="y{year}">
+      <div class="container">
+        <header class="pyear__head">
+          <h2 id="y{year}" class="pyear__year" data-reveal>{year}</h2>
+          <p class="pyear__count" data-reveal style="--d:1">{len(mine)} projects</p>
+        </header>
+        <ul class="pgrid">
+{chr(10).join(items)}
+        </ul>
+      </div>
+    </section>''')
+
+    fan = []
+    for c in cards[:3]:
+        poster = f'assets/img/home/posters/{c["slug"]}.jpg'
+        w, h = image_size(poster)
+        fan.append(f'          <img class="pfan__p" src="{poster}" alt="" width="{w}" height="{h}">')
+    fan = '\n'.join(fan)
+
+    description = html.escape(re.sub('<[^>]+>', '', intro))
+    page = f'''{chrome_top('Our Projects', description, 'projects', 'project-page projects-page', 'Generated by _tools/build_project.py from the projects on the homepage.')}
+  <main id="main" class="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="phero phero--index">
+      <div class="container pindex__hero">
+        <div>
+        <nav class="crumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page"><span>Projects</span></li>
+          </ol>
+        </nav>
+        <h1 class="phero__title" data-split="mask">Our Projects</h1>
+        <p class="phero__tag pindex__intro" data-reveal>{intro}</p>
+        <div class="pfilter" role="group" aria-label="Show projects" data-reveal style="--d:1">
+{chr(10).join(chips)}
+        </div>
+        </div>
+        <!-- The three newest posters, fanned out (large screens only) -->
+        <div class="pfan" aria-hidden="true">
+{fan}
+        </div>
+      </div>
+    </section>
+
+    <div class="band" data-band="1" aria-hidden="true"><div class="band__track"></div></div>
+
+    <!-- ===== Projects by year (newest first) ===== -->
+    <div class="pindex" data-pindex>
+{chr(10).join(years)}
+    </div>
+
+    <!-- ===== Funding ===== -->
+    <section class="funding">
+      <div class="container funding__inner" data-reveal>
+        <img src="assets/img/cofounded.png" alt="Co-funded by the European Union" width="4119" height="919" loading="lazy" decoding="async">
+        <p>{extract_original('letuscook')['disclaimer']}</p>
+      </div>
+    </section>
+
+  </main>
+
+{footer}
+
+  <a href="#main" class="to-top icon-btn" aria-label="Back to top"><i class="bi bi-arrow-up" aria-hidden="true"></i></a>
+
+</body>
+
+</html>
+'''
+    (ROOT / 'projects.html').write_text(page, encoding='utf-8')
+    print(f'built projects.html: {len(cards)} projects')
+
+
 if __name__ == '__main__':
-    for slug in (sys.argv[1:] or ORDER):
-        build(slug)
+    for slug in (sys.argv[1:] or ORDER + ['projects']):
+        build_projects_page() if slug == 'projects' else build(slug)

@@ -680,4 +680,59 @@ BG = {
         "Участниците се събират на поляната преди следващата игра",
     "A lively tackle for the ball during a garden match, with teammates cheering from the side":
         "Оспорвана борба за топката по време на мач в градината, а съотборниците подкрепят отстрани",
+    # Projects page
+    "4 projects":
+        "4 проекта",
+    "7 projects":
+        "7 проекта",
+    "All projects":
+        "Всички проекти",
+    "Aug 2026":
+        "август 2026",
+    "Feb–Mar 2026":
+        "февруари–март 2026",
+    "Jan 2025":
+        "януари 2025",
+    "Jan 2026":
+        "януари 2026",
+    "Jun 2026":
+        "юни 2026",
+    "Mar 2025":
+        "март 2025",
+    "May 2026":
+        "май 2026",
+    "See all projects":
+        "Виж всички проекти",
+    "Show projects":
+        "Покажи проекти",
+    "Training Course":
+        "Обучителен курс",
+    "Training courses":
+        "Обучителни курсове",
+    "View project":
+        "Към проекта",
+    "Youth exchanges":
+        "Младежки обмени",
+    "The whole group holding their Youthpass certificates at the end of the exchange":
+        "Цялата група със своите сертификати Youthpass в края на обмена",
+    "Two participants smiling with their Youthpass certificates":
+        "Двама усмихнати участници със своите сертификати Youthpass",
+    "Participants in a circle during a warm-up game, the Theatre of the Oppressed flip chart behind them":
+        "Участници в кръг по време на загряваща игра, зад тях е флипчартът за Театъра на потиснатите",
+    "Participants sharing Bulgarian food at the cultural evening":
+        "Участници опитват българска храна на културната вечер",
+    "Four participants rehearse a Forum Theatre scene next to the Theatre of the Oppressed flip chart":
+        "Четирима участници репетират сцена от Форум театър до флипчарта за Театъра на потиснатите",
+    "An evening scene in progress while the rest of the group watches":
+        "Вечерна сцена, докато останалите от групата гледат",
+    "A participant walks through a scene while others watch from their chairs":
+        "Участник минава през сцена, докато другите гледат от столовете си",
+    "A participant performs a monologue as two others look on":
+        "Участник изпълнява монолог, а двама други го гледат",
+    "Participants laugh together during a theatre game":
+        "Участници се смеят заедно по време на театрална игра",
+    "A fast-moving theatre game in the training room":
+        "Динамична театрална игра в залата за обучение",
+    "The group gathers close together for an exercise led by a facilitator":
+        "Групата се събира плътно за упражнение, водено от фасилитатор",
 }

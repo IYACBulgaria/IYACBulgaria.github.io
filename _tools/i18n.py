@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = ['index', 'writeitdown', 'doityourself', 'stepforward', 'keeptalking',
+PAGES = ['index', 'projects', 'writeitdown', 'doityourself', 'stepforward', 'keeptalking',
          'letuscook', 'democracyunderpressure', 'faciliteasy',
          'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope']
 
