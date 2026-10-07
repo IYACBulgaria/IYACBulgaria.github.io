@@ -735,4 +735,14 @@ BG = {
         "Динамична театрална игра в залата за обучение",
     "The group gathers close together for an exercise led by a facilitator":
         "Групата се събира плътно за упражнение, водено от фасилитатор",
+    "Follow us":
+        "Последвайте ни",
+    "@iyac_bulgaria":
+        "@iyac_bulgaria",
+    "gyros, shrimp saganaki and tzatziki":
+        "гирос, скариди саганаки и дзадзики",
+    "tarator, kebapche and kompot":
+        "таратор, кебапче и компот",
+    "Dishes from each country":
+        "Ястия от всяка страна",
 }

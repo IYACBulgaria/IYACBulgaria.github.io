@@ -157,8 +157,9 @@ PROJECTS_2026 = {
             "Cooking workshops on Greek, Slovak, Polish and Romanian cuisine, each paired with a presentation on that country's culture and history.",
         ],
         # Dish cards (the dishes are quoted from the text above)
-        'menu': [('sk', 'smotanová torta, a sour cream cake'), ('pl', 'borscht, handmade pierogi and cakes'),
-                 ('ro', 'ardei umpluți (stuffed peppers)')],
+        'menu': [('gr', 'gyros, shrimp saganaki and tzatziki'), ('sk', 'smotanová torta, a sour cream cake'),
+                 ('pl', 'borscht, handmade pierogi and cakes'), ('ro', 'ardei umpluți (stuffed peppers)'),
+                 ('bg', 'tarator, kebapche and kompot')],
         'after': {1: ('photo', 'photo-1'), 4: ('duo', 'photo-2', 'photo-5'), 5: ('menu',)},
     },
 }

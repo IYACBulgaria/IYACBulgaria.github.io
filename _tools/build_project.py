@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '9'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '10'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -377,8 +377,8 @@ def build(slug):
                 f'            <li class="dish" data-reveal style="--d:{k}">{stitch_flag(c, "dish__flag")}'
                 f'<span class="dish__name">{t}</span></li>'
                 for k, (c, t) in enumerate(cfg['menu']))
-            # The dishes are already named in the text above, so this is visual only
-            story.append(f'        <div class="container">\n          <ul class="menu" aria-hidden="true">\n{cards}\n          </ul>\n        </div>')
+            # Some dishes appear only here, so the list is read out too (the flags stay decorative)
+            story.append(f'        <div class="container">\n          <ul class="menu" aria-label="Dishes from each country">\n{cards}\n          </ul>\n        </div>')
 
     facts = []
     for label, value in cfg['facts']:

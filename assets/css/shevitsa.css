@@ -436,11 +436,12 @@ html:not(.js) .carousel__controls { display: none; }
 /* ---------- Contact ---------- */
 .contact { overflow: clip; }
 .contact__grid { position: relative; z-index: 1; display: grid; gap: 18px; grid-template-columns: 1fr; }
-@media (min-width: 768px) { .contact__grid { grid-template-columns: 1fr 1fr; } .map { grid-column: 1 / -1; } }
-@media (min-width: 1100px) { .contact__grid { grid-template-columns: 1fr 1fr 2fr; } .map { grid-column: auto; } }
+@media (min-width: 768px) { .contact__grid { grid-template-columns: 1fr 1fr; } .social { grid-column: 1 / -1; } }
+@media (min-width: 1100px) { .contact__grid { grid-template-columns: 1fr 1fr 2fr; } .social { grid-column: auto; } }
 .tile {
   position: relative; display: flex; flex-direction: column; justify-content: flex-end; gap: 6px;
-  min-height: clamp(170px, 22vw, 220px); padding: 28px; border-radius: var(--radius); background: var(--paper);
+  /* the top padding keeps room for the icon, so the text never reaches it */
+  min-height: clamp(170px, 22vw, 220px); padding: calc(28px + 50px + 20px) 28px 28px; border-radius: var(--radius); background: var(--paper);
   box-shadow: 0 1px 0 var(--line);
   -webkit-tap-highlight-color: transparent;
   transition: transform 0.55s var(--ease-spring), box-shadow 0.4s ease;
@@ -463,8 +464,40 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 .tile__copy.is-done { background: var(--red); color: var(--paper); }
 .tile__copy.is-done .bi-copy { display: none; }
 .tile__copy.is-done .bi-check2 { display: block; }
-.map { position: relative; overflow: hidden; border-radius: var(--radius); background: var(--paper); min-height: 320px; }
-.map iframe { display: block; width: 100%; height: 100%; min-height: 320px; border: 0; filter: sepia(0.3) saturate(0.85) hue-rotate(-12deg); }
+/* Social: Instagram and Facebook as embroidery hoops on crimson */
+.social {
+  position: relative; display: flex; flex-direction: column; gap: 18px; padding: 26px 28px 30px;
+  border-radius: var(--radius); background: var(--red); color: var(--paper); overflow: hidden; isolation: isolate;
+  box-shadow: 0 30px 50px -30px rgba(92, 0, 17, 0.6);
+}
+.social::before { content: ""; position: absolute; inset: 0; z-index: -1; background-image: var(--weave); opacity: 0.6; mix-blend-mode: overlay; }
+.social__label { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+.social__hoops { --ring: clamp(108px, 30vw, 150px); position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+/* The thread that runs from one hoop to the other */
+.social__thread { position: absolute; left: 0; width: 100%; top: calc(6px + var(--ring) * 0.62); height: calc(var(--ring) * 0.42); z-index: 0; overflow: visible; pointer-events: none; }
+.social__thread path { fill: none; stroke: var(--gold); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 0.03 0.02; vector-effect: non-scaling-stroke; opacity: 0.85; }
+.hooplink { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 6px 4px 8px; border-radius: 16px; text-align: center; -webkit-tap-highlight-color: transparent; }
+.hooplink__ring {
+  position: relative; display: grid; place-items: center; width: var(--ring); aspect-ratio: 1; margin-bottom: 10px;
+  border-radius: 50%; background-color: var(--linen); background-image: var(--weave);
+  /* inner and outer wooden rings */
+  box-shadow: inset 0 0 0 5px #C9965A, inset 0 0 0 7px #A8743C, inset 0 0 0 11px #D9AE74, 0 18px 30px -16px rgba(0, 0, 0, 0.55);
+  transition: transform 0.7s var(--ease-spring);
+}
+/* the hoop's brass clasp */
+.hooplink__ring::before { content: ""; position: absolute; top: -9px; left: 50%; width: 20px; height: 14px; margin-left: -10px; border-radius: 4px; background: linear-gradient(#E9C27A, #B8873C); box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3); }
+.hooplink__icon { width: 48%; color: var(--red); }
+.hooplink__name { display: inline-flex; align-items: center; gap: 6px; font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+.hooplink__name i { line-height: 0; font-size: 0.85em; transition: transform 0.45s var(--ease-spring); }
+.hooplink__handle { font-size: 0.875rem; color: rgba(251, 248, 243, 0.75); }
+.hooplink:active .hooplink__ring { transform: scale(0.95); transition-duration: 0.12s; }
+.hooplink:focus-visible { outline-color: var(--gold); }
+@media (hover: hover) {
+  .hooplink:hover .hooplink__ring { transform: rotate(-8deg) translateY(-4px); }
+  .hooplink:nth-child(2):hover .hooplink__ring { transform: rotate(8deg) translateY(-4px); }
+  .hooplink:hover .hooplink__name i { transform: translate(2px, -2px); }
+}
+@media (prefers-reduced-motion: reduce) { .hooplink__ring { transition: none; } .hooplink:hover .hooplink__ring, .hooplink:nth-child(2):hover .hooplink__ring { transform: none; } }
 
 /* ---------- Footer ---------- */
 .footer { position: relative; background: var(--red-deep); color: var(--paper); padding-bottom: calc(32px + env(safe-area-inset-bottom)); font-size: 0.9375rem; }
@@ -604,7 +637,9 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 
 /* The menu: one card per country, flag embroidered */
 .menu { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; max-width: var(--maxw); margin: clamp(8px, 2vw, 20px) auto; }
-@media (min-width: 900px) { .menu { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
+/* An odd last dish spans the row on phones; on computers every dish shares one row */
+@media (max-width: 899px) { .dish:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+@media (min-width: 900px) { .menu { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; } }
 .dish {
   display: flex; flex-direction: column; gap: 18px; padding: clamp(20px, 2.6vw, 28px);
   border-radius: var(--radius); background: var(--paper);
