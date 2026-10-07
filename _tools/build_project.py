@@ -377,8 +377,8 @@ def build(slug):
                 f'            <li class="dish" data-reveal style="--d:{k}">{stitch_flag(c, "dish__flag")}'
                 f'<span class="dish__name">{t}</span></li>'
                 for k, (c, t) in enumerate(cfg['menu']))
-            # The dishes are already named in the text above, so this is visual only
-            story.append(f'        <div class="container">\n          <ul class="menu" aria-hidden="true">\n{cards}\n          </ul>\n        </div>')
+            # Some dishes appear only here, so the list is read out too (the flags stay decorative)
+            story.append(f'        <div class="container">\n          <ul class="menu" aria-label="Dishes from each country">\n{cards}\n          </ul>\n        </div>')
 
     facts = []
     for label, value in cfg['facts']:

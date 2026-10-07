@@ -637,7 +637,9 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 
 /* The menu: one card per country, flag embroidered */
 .menu { display: grid; gap: 14px; grid-template-columns: 1fr 1fr; max-width: var(--maxw); margin: clamp(8px, 2vw, 20px) auto; }
-@media (min-width: 900px) { .menu { grid-template-columns: repeat(4, 1fr); gap: 18px; } }
+/* An odd last dish spans the row on phones; on computers every dish shares one row */
+@media (max-width: 899px) { .dish:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+@media (min-width: 900px) { .menu { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 18px; } }
 .dish {
   display: flex; flex-direction: column; gap: 18px; padding: clamp(20px, 2.6vw, 28px);
   border-radius: var(--radius); background: var(--paper);

@@ -739,4 +739,10 @@ BG = {
         "Последвайте ни",
     "@iyac_bulgaria":
         "@iyac_bulgaria",
+    "gyros, shrimp saganaki and tzatziki":
+        "гирос, скариди саганаки и дзадзики",
+    "tarator, kebapche and kompot":
+        "таратор, кебапче и компот",
+    "Dishes from each country":
+        "Ястия от всяка страна",
 }
