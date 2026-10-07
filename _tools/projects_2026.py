@@ -15,6 +15,21 @@ PLACEHOLDER_ALT = 'Photo coming soon'
 
 PROJECTS_2026 = {
     'writethechange': {
+        'photos': [f'photo-{i}' for i in range(1, 13)],
+        'alts': {
+            'photo-1': 'The participants holding their Youthpass certificates at the end of the training course',
+            'photo-2': 'An experienced youth worker and a newcomer work through a project idea together on a laptop',
+            'photo-3': 'Participants laughing during a team-building game',
+            'photo-4': 'The Greek team presents their country, with a photo of a Greek beach on the wall',
+            'photo-5': 'A pair of participants reviews their project plan on their laptops',
+            'photo-6': 'Participants among the Roman columns during the field trip to Plovdiv',
+            'photo-7': 'Participants listen closely during a session',
+            'photo-8': 'A participant works on two laptops at once on the sofa',
+            'photo-9': 'A participant writes a project application at a laptop',
+            'photo-10': 'A participant shows a game on the big screen',
+            'photo-11': 'A participant works on a laptop outdoors on the terrace',
+            'photo-12': 'A participant smiles next to her laptop during an evening work session',
+        },
         'title': 'Write the Change',
         'tagline': 'Erasmus+ project writing, from identifying community needs to applications, dissemination, evaluation and reporting',
         'facts': [('Dates', '8–16 May 2026'), ('Location', 'Youtopia Riverside guest house, Stara Zagora, Bulgaria'),

@@ -745,4 +745,28 @@ BG = {
         "таратор, кебапче и компот",
     "Dishes from each country":
         "Ястия от всяка страна",
+    "The participants holding their Youthpass certificates at the end of the training course":
+        "Участниците със своите сертификати Youthpass в края на обучителния курс",
+    "An experienced youth worker and a newcomer work through a project idea together on a laptop":
+        "Опитен младежки работник и новак разработват заедно проектна идея на лаптоп",
+    "Participants laughing during a team-building game":
+        "Участници се смеят по време на игра за изграждане на екип",
+    "The Greek team presents their country, with a photo of a Greek beach on the wall":
+        "Гръцкият екип представя страната си, а на стената е снимка на гръцки плаж",
+    "A pair of participants reviews their project plan on their laptops":
+        "Двойка участници преглежда проектния си план на лаптопите си",
+    "Participants among the Roman columns during the field trip to Plovdiv":
+        "Участници сред римските колони по време на посещението в Пловдив",
+    "Participants listen closely during a session":
+        "Участници слушат внимателно по време на сесия",
+    "A participant works on two laptops at once on the sofa":
+        "Участник работи на два лаптопа едновременно на дивана",
+    "A participant writes a project application at a laptop":
+        "Участник пише проектно предложение на лаптоп",
+    "A participant shows a game on the big screen":
+        "Участник показва игра на големия екран",
+    "A participant works on a laptop outdoors on the terrace":
+        "Участник работи на лаптоп навън на терасата",
+    "A participant smiles next to her laptop during an evening work session":
+        "Участничка се усмихва до лаптопа си по време на вечерна работна сесия",
 }
