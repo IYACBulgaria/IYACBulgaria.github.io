@@ -74,7 +74,8 @@
 
     <!-- ===== Hero ===== -->
     <section class="phero phero--index">
-      <div class="container">
+      <div class="container pindex__hero">
+        <div>
         <nav class="crumbs" aria-label="Breadcrumb">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -88,6 +89,13 @@
           <button class="chip" type="button" data-filter="exchange" aria-pressed="false"><span>Youth exchanges</span><span class="chip__n">5</span></button>
           <button class="chip" type="button" data-filter="training" aria-pressed="false"><span>Training courses</span><span class="chip__n">6</span></button>
         </div>
+        </div>
+        <!-- The three newest posters, fanned out (large screens only) -->
+        <div class="pfan" aria-hidden="true">
+          <img class="pfan__p" src="assets/img/home/posters/atasteofeurope.jpg" alt="" width="916" height="1296">
+          <img class="pfan__p" src="assets/img/home/posters/breakthesilence.jpg" alt="" width="916" height="1296">
+          <img class="pfan__p" src="assets/img/home/posters/beyondthegame.jpg" alt="" width="916" height="1296">
+        </div>
       </div>
     </section>
 
@@ -96,7 +104,7 @@
     <!-- ===== Projects by year (newest first) ===== -->
     <div class="pindex" data-pindex>
     <section class="pyear" aria-labelledby="y2026">
-      <div class="container pyear__grid">
+      <div class="container">
         <header class="pyear__head">
           <h2 id="y2026" class="pyear__year" data-reveal>2026</h2>
           <p class="pyear__count" data-reveal style="--d:1">7 projects</p>
@@ -211,7 +219,7 @@
       </div>
     </section>
     <section class="pyear" aria-labelledby="y2025">
-      <div class="container pyear__grid">
+      <div class="container">
         <header class="pyear__head">
           <h2 id="y2025" class="pyear__year" data-reveal>2025</h2>
           <p class="pyear__count" data-reveal style="--d:1">4 projects</p>
