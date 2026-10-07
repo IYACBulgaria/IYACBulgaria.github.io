@@ -713,4 +713,26 @@ BG = {
         "Към проекта",
     "Youth exchanges":
         "Младежки обмени",
+    "The whole group holding their Youthpass certificates at the end of the exchange":
+        "Цялата група със своите сертификати Youthpass в края на обмена",
+    "Two participants smiling with their Youthpass certificates":
+        "Двама усмихнати участници със своите сертификати Youthpass",
+    "Participants in a circle during a warm-up game, the Theatre of the Oppressed flip chart behind them":
+        "Участници в кръг по време на загряваща игра, зад тях е флипчартът за Театъра на потиснатите",
+    "Participants sharing Bulgarian food at the cultural evening":
+        "Участници опитват българска храна на културната вечер",
+    "Four participants rehearse a Forum Theatre scene next to the Theatre of the Oppressed flip chart":
+        "Четирима участници репетират сцена от Форум театър до флипчарта за Театъра на потиснатите",
+    "An evening scene in progress while the rest of the group watches":
+        "Вечерна сцена, докато останалите от групата гледат",
+    "A participant walks through a scene while others watch from their chairs":
+        "Участник минава през сцена, докато другите гледат от столовете си",
+    "A participant performs a monologue as two others look on":
+        "Участник изпълнява монолог, а двама други го гледат",
+    "Participants laugh together during a theatre game":
+        "Участници се смеят заедно по време на театрална игра",
+    "A fast-moving theatre game in the training room":
+        "Динамична театрална игра в залата за обучение",
+    "The group gathers close together for an exercise led by a facilitator":
+        "Групата се събира плътно за упражнение, водено от фасилитатор",
 }
