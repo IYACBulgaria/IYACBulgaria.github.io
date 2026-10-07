@@ -680,4 +680,37 @@ BG = {
         "Участниците се събират на поляната преди следващата игра",
     "A lively tackle for the ball during a garden match, with teammates cheering from the side":
         "Оспорвана борба за топката по време на мач в градината, а съотборниците подкрепят отстрани",
+    # Projects page
+    "4 projects":
+        "4 проекта",
+    "7 projects":
+        "7 проекта",
+    "All projects":
+        "Всички проекти",
+    "Aug 2026":
+        "август 2026",
+    "Feb–Mar 2026":
+        "февруари–март 2026",
+    "Jan 2025":
+        "януари 2025",
+    "Jan 2026":
+        "януари 2026",
+    "Jun 2026":
+        "юни 2026",
+    "Mar 2025":
+        "март 2025",
+    "May 2026":
+        "май 2026",
+    "See all projects":
+        "Виж всички проекти",
+    "Show projects":
+        "Покажи проекти",
+    "Training Course":
+        "Обучителен курс",
+    "Training courses":
+        "Обучителни курсове",
+    "View project":
+        "Към проекта",
+    "Youth exchanges":
+        "Младежки обмени",
 }

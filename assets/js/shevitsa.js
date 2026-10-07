@@ -572,6 +572,29 @@
     reveals.forEach((el) => io.observe(el));
   } else reveals.forEach((el) => el.classList.add('is-in'));
 
+  /* ---------- Projects page: filter by type ---------- */
+  const pindex = document.querySelector('[data-pindex]');
+  if (pindex) {
+    const chips = [...document.querySelectorAll('.pfilter [data-filter]')];
+    const cards = [...pindex.querySelectorAll('.pcard')];
+    chips.forEach((chip) => chip.addEventListener('click', () => {
+      const f = chip.dataset.filter;
+      chips.forEach((c) => c.setAttribute('aria-pressed', String(c === chip)));
+      let k = 0;
+      cards.forEach((card) => {
+        const show = f === 'all' || card.dataset.kind === f;
+        card.hidden = !show;
+        if (!show) return;
+        // Shown cards settle in again, one after another
+        card.classList.remove('is-in');
+        card.style.setProperty('--d', String(Math.min(k++, 5)));
+      });
+      pindex.querySelectorAll('.pyear').forEach((y) => y.classList.toggle('is-empty', !y.querySelector('.pcard:not([hidden])')));
+      requestAnimationFrame(() => requestAnimationFrame(() => cards.forEach((c) => !c.hidden && c.classList.add('is-in'))));
+      window.ScrollTrigger && window.ScrollTrigger.refresh();
+    }));
+  }
+
   /* =========================================================
      Projects: patches pegged on a washing line.
      1:1 drag, velocity hand-off, flick projection, rubber-band
