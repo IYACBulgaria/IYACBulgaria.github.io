@@ -769,4 +769,36 @@ BG = {
         "Участник работи на лаптоп навън на терасата",
     "A participant smiles next to her laptop during an evening work session":
         "Участничка се усмихва до лаптопа си по време на вечерна работна сесия",
+    "The whole group at a long table in the garden, sharing the dishes they cooked together":
+        "Цялата група на дълга маса в градината споделя ястията, които приготви заедно",
+    "Participants fill peppers with a cheese filling":
+        "Участници пълнят чушки с плънка от сирене",
+    "Dinner in the garden under the Greek flag, with pitas, skewers and tzatziki":
+        "Вечеря в градината под гръцкия флаг с питки, шишчета и дзадзики",
+    "A member of the Greek team talks the group through the dinner, with skewers and pitas on the table":
+        "Член на гръцкия екип представя вечерята пред групата, а на масата има шишчета и питки",
+    "Participants chop tomatoes, onions and peppers at a cooking station":
+        "Участници режат домати, лук и чушки на кулинарна станция",
+    "A team with fresh tomatoes, peppers and lettuce, ready to start cooking":
+        "Екип с пресни домати, чушки и маруля, готов да започне да готви",
+    "Chopping beetroot for borscht":
+        "Рязане на цвекло за борш",
+    "Participants knead dough together at the long table":
+        "Участници месят тесто заедно на дългата маса",
+    "Shaping dough by hand during a cooking workshop":
+        "Оформяне на тесто на ръка по време на кулинарен уъркшоп",
+    "Participants hull strawberries for dessert":
+        "Участници почистват ягоди за десерт",
+    "Rolling out pastry, with cherries and a cheese filling ready for the pies":
+        "Разточване на тесто, а вишните и плънката от сирене чакат за баниците",
+    "The Romanian team peels roasted eggplant for an eggplant salad":
+        "Румънският екип бели печени патладжани за салата от патладжан",
+    "Filling peppers with meat and rice for ardei umpluți":
+        "Пълнене на чушки с месо и ориз за ardei umpluți",
+    "The table set for the Bulgarian evening, with Bulgarian flags in the garden":
+        "Масата, подредена за българската вечер, с български флагове в градината",
+    "Participants gather around the table for an evening meal in the garden":
+        "Участниците се събират около масата за вечеря в градината",
+    "The participants holding their Youthpass certificates on the last evening":
+        "Участниците със своите сертификати Youthpass в последната вечер",
 }
