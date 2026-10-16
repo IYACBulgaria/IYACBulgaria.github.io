@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PAGES = ['index', 'projects', 'writeitdown', 'doityourself', 'stepforward', 'keeptalking',
          'letuscook', 'democracyunderpressure', 'faciliteasy',
-         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope']
+         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope', 'safeclick']
 
 TEXT_TAGS = 'p|h1|h2|h3|h4|dt|dd|span|a|button|title|label|figcaption|small'
 INLINE = r'(?:[^<]|<(?:/?(?:b|strong|em)\b[^>]*|br\s*/?)>|<a\b[^>]*>[^<]*</a>|<i\b[^>]*></i>)'
@@ -32,7 +32,8 @@ META_DESC = re.compile(r'(<meta name="description" content=")([^"]*)(")')
 KEEP = {'IYAC', 'EN', 'BG', 'IYAC Bulgaria', '+359 88 792 8282', 'iyac.bulgaria@gmail.com',
         'Write It Down!', 'Do It Yourself!', 'Step Forward!', 'Keep Talking!', 'Let us cook!',
         'Democracy Under Pressure', 'Faciliteasy', 'Write it Down!', 'Let Us Cook!', 'Facebook', 'Instagram',
-        'Write the Change', 'Beyond the Game', 'Break the Silence', 'A Taste of Europe'}
+        'Write the Change', 'Beyond the Game', 'Break the Silence', 'A Taste of Europe',
+        'SAFE CLICK', 'Inicijativa Vizija', 'Asociația Colțul Tinerilor din Vest'}
 
 # Patterns for text that contains numbers
 PATTERNS = [

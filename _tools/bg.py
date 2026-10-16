@@ -801,4 +801,133 @@ BG = {
         "Участниците се събират около масата за вечеря в градината",
     "The participants holding their Youthpass certificates on the last evening":
         "Участниците със своите сертификати Youthpass в последната вечер",
+    # SAFE CLICK
+    "Building Digital Resilience and Cyber Capacity in Youth Work":
+        "Изграждане на дигитална устойчивост и киберкапацитет в младежката работа",
+    "SAFE CLICK – Building Digital Resilience and Cyber Capacity in Youth Work":
+        "SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа",
+    "SAFE CLICK – Building Digital Resilience and Cyber Capacity in Youth Work logo":
+        "Лого на SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа",
+    "We are excited to announce the launch of our new Erasmus+ project “SAFE CLICK – Building Digital Resilience and Cyber Capacity in Youth Work” (2026-1-BG01-KA210-YOU-000453902).":
+        "С радост обявяваме старта на нашия нов проект по Еразъм+ „SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа“ (2026-1-BG01-KA210-YOU-000453902).",
+    "The project officially starts on <b>1 September 2026</b> and will run until <b>31 August 2027</b>, bringing together organisations from Bulgaria, Serbia, and Romania to strengthen digital resilience, cybersecurity awareness, and digital safety in the youth and NGO sector.":
+        "Проектът стартира официално на <b>1 септември 2026 г.</b> и ще продължи до <b>31 август 2027 г.</b>, като обединява организации от България, Сърбия и Румъния за укрепване на дигиталната устойчивост, осведомеността за киберсигурността и дигиталната безопасност в младежкия и неправителствения сектор.",
+    "The project is coordinated by International Youth Activity Center (Bulgaria) in partnership with Inicijativa Vizija (Serbia) and Asociația Colțul Tinerilor din Vest (Romania).":
+        "Проектът се координира от Международен център за младежки дейности (България) в партньорство с Inicijativa Vizija (Сърбия) и Asociația Colțul Tinerilor din Vest (Румъния).",
+    "Together, we aim to support youth workers and non-governmental organisations in becoming more aware of digital risks and better prepared to protect their organisations, data, and the young people they work with.":
+        "Заедно се стремим да подкрепим младежките работници и неправителствените организации да бъдат по-осведомени за дигиталните рискове и по-добре подготвени да защитават своите организации, данни и младите хора, с които работят.",
+    "Coordinator":
+        "Координатор",
+    "Partner":
+        "Партньор",
+    "Partnership":
+        "Партньорство",
+    "International Youth Activity Center":
+        "Международен център за младежки дейности",
+    "Bulgaria, Serbia, Romania":
+        "България, Сърбия, Румъния",
+    "Serbia":
+        "Сърбия",
+    "Romania":
+        "Румъния",
+    "What do we aim to achieve?":
+        "Какво искаме да постигнем?",
+    "Our main goals are:":
+        "Основните ни цели са:",
+    "Assessing the level of cybersecurity awareness and digital preparedness among NGOs and youth workers.":
+        "Оценка на нивото на осведоменост за киберсигурността и дигиталната подготвеност сред неправителствените организации и младежките работници.",
+    "Identifying the most common knowledge gaps, risky organisational practices, and digital threats.":
+        "Идентифициране на най-честите пропуски в знанията, рисковите организационни практики и дигиталните заплахи.",
+    "Developing a web-based tool for self-assessment of digital risks, providing practical and personalised recommendations.":
+        "Разработване на уеб базиран инструмент за самооценка на дигиталните рискове, който дава практични и персонализирани препоръки.",
+    "Strengthening the cybersecurity knowledge and skills of youth workers through an international training course.":
+        "Укрепване на знанията и уменията на младежките работници в областта на киберсигурността чрез международен обучителен курс.",
+    "Developing practical methodologies, educational sessions, and realistic cybersecurity scenarios for use in non-formal education.":
+        "Разработване на практични методологии, образователни сесии и реалистични сценарии за киберсигурност за използване в неформалното образование.",
+    "Activities ahead":
+        "Предстоящи дейности",
+    "Over the course of the project, the partners will work together on several key activities:":
+        "По време на проекта партньорите ще работят заедно по няколко ключови дейности:",
+    "Cybersecurity Awareness Assessment and Threat Mapping":
+        "Оценка на осведомеността за киберсигурността и картографиране на заплахите",
+    "Development of a Digital Tool for NGO Cyber Resilience":
+        "Разработване на дигитален инструмент за киберустойчивост на неправителствените организации",
+    "Capacity Building Training Course and Joint Development of Educational Tools":
+        "Обучителен курс за изграждане на капацитет и съвместно разработване на образователни инструменти",
+    "National multiplier events":
+        "Национални мултипликационни събития",
+    "Research will be conducted in the three partner countries through surveys and interviews with NGOs and youth workers in order to identify their main cybersecurity challenges, vulnerabilities, and level of preparedness.":
+        "В трите партньорски държави ще бъде проведено проучване чрез анкети и интервюта с неправителствени организации и младежки работници, за да се идентифицират основните им предизвикателства, уязвимости и ниво на подготвеност в областта на киберсигурността.",
+    "Based on the research findings, the partners will develop a free web-based self-assessment tool that will help organisations evaluate their digital risks and receive practical recommendations on how to improve their cybersecurity.":
+        "Въз основа на резултатите от проучването партньорите ще разработят безплатен уеб базиран инструмент за самооценка, който ще помага на организациите да оценяват своите дигитални рискове и да получават практични препоръки как да подобрят киберсигурността си.",
+    "Youth workers from the partner countries will take part in an international training course focused on digital safety and cybersecurity. During the activity, participants will also contribute to the development of practical educational methodologies and materials.":
+        "Младежки работници от партньорските държави ще участват в международен обучителен курс, посветен на дигиталната безопасност и киберсигурността. По време на дейността участниците ще допринесат и за разработването на практични образователни методологии и материали.",
+    "Three final events, one in each partner country, will present the project results, demonstrate the digital self-assessment tool, and introduce the educational resources developed during the project.":
+        "Три заключителни събития, по едно във всяка партньорска държава, ще представят резултатите от проекта, ще демонстрират дигиталния инструмент за самооценка и ще запознаят с образователните ресурси, разработени по време на проекта.",
+    "Who will benefit?":
+        "Кой ще има полза?",
+    "The main target groups of SAFE CLICK are youth workers and staff members of non-governmental organisations.":
+        "Основните целеви групи на SAFE CLICK са младежките работници и служителите на неправителствените организации.",
+    "Young people will also benefit from the project through local workshops, campaigns, and educational activities delivered by trained youth workers.":
+        "Младите хора също ще имат полза от проекта чрез местни уъркшопи, кампании и образователни дейности, провеждани от обучени младежки работници.",
+    "The project aims to involve at least 50 organisations, train at least 24 youth workers, organise at least 12 local educational activities, and reach at least 300 young people. A library of at least 15 realistic digital threat scenarios will also be developed as part of the project’s educational resources.":
+        "Проектът цели да включи най-малко 50 организации, да обучи най-малко 24 младежки работници, да организира най-малко 12 местни образователни дейности и да достигне до най-малко 300 млади хора. Като част от образователните ресурси на проекта ще бъде разработена и библиотека от най-малко 15 реалистични сценария на дигитални заплахи.",
+    "at least":
+        "най-малко",
+    "organisations involved":
+        "включени организации",
+    "youth workers trained":
+        "обучени младежки работници",
+    "local educational activities":
+        "местни образователни дейности",
+    "young people reached":
+        "достигнати млади хора",
+    "realistic digital threat scenarios":
+        "реалистични сценария на дигитални заплахи",
+    "Expected results":
+        "Очаквани резултати",
+    "By the end of the project, NGOs and youth workers will have access to practical and freely available resources that can help them better understand and manage digital risks.":
+        "До края на проекта неправителствените организации и младежките работници ще имат достъп до практични и свободно достъпни ресурси, които могат да им помогнат да разбират и управляват по-добре дигиталните рискове.",
+    "The project will produce a web-based digital risk self-assessment tool, a collection of realistic cybersecurity scenarios, and a toolkit containing methodologies and educational materials that youth workers can use and adapt in their own activities.":
+        "Проектът ще създаде уеб базиран инструмент за самооценка на дигиталните рискове, колекция от реалистични сценарии за киберсигурност и наръчник с методологии и образователни материали, които младежките работници могат да използват и адаптират в собствените си дейности.",
+    "All project results will remain freely available online, allowing other youth organisations and NGOs across Europe to use them beyond the lifetime of the project.":
+        "Всички резултати от проекта ще останат свободно достъпни онлайн, което ще позволи на други младежки и неправителствени организации в Европа да ги използват и след края на проекта.",
+    "Digital risk self-assessment tool":
+        "Инструмент за самооценка на дигиталните рискове",
+    "Realistic cybersecurity scenarios":
+        "Реалистични сценарии за киберсигурност",
+    "Toolkit of methodologies and educational materials":
+        "Наръчник с методологии и образователни материали",
+    "open access":
+        "свободен достъп",
+    "Why does it matter?":
+        "Защо е важно?",
+    "Digital safety is becoming increasingly important for youth organisations and NGOs, which regularly work with personal and sensitive information but often have limited access to specialised IT support and cybersecurity training.":
+        "Дигиталната безопасност става все по-важна за младежките и неправителствените организации, които редовно работят с лична и чувствителна информация, но често имат ограничен достъп до специализирана ИТ поддръжка и обучения по киберсигурност.",
+    "SAFE CLICK aims to make cybersecurity more practical, understandable, and accessible, helping organisations develop safer digital practices and enabling youth workers to transfer this knowledge to young people in their communities.":
+        "SAFE CLICK цели да направи киберсигурността по-практична, разбираема и достъпна, като помага на организациите да развият по-безопасни дигитални практики и дава възможност на младежките работници да предават тези знания на младите хора в своите общности.",
+    "Stay tuned!":
+        "Очаквайте скоро!",
+    "More information about the project research, international training, digital self-assessment tool, local activities, and opportunities to get involved will be shared soon.":
+        "Скоро ще споделим повече информация за проучването по проекта, международното обучение, дигиталния инструмент за самооценка, местните дейности и възможностите за включване.",
+    "Follow the SAFE CLICK journey and join us in building a safer and more digitally resilient youth sector.":
+        "Следвайте пътя на SAFE CLICK и се присъединете към нас в изграждането на по-безопасен и по-дигитално устойчив младежки сектор.",
+    "Project number":
+        "Номер на проекта",
+    "1 September 2026 – 31 August 2027":
+        "1 септември 2026 г. – 31 август 2027 г.",
+    "secure connection":
+        "защитена връзка",
+    "./safe_click --init":
+        "./safe_click --init",
+    "partners: BG · RS · RO":
+        "партньори: BG · RS · RO",
+    "status: launched":
+        "статус: стартиран",
+    "iyac@stara-zagora: ~/erasmus+":
+        "iyac@stara-zagora: ~/erasmus+",
+    "~/safe_click/updates":
+        "~/safe_click/updates",
+    "2026-1-BG01-KA210-YOU-000453902":
+        "2026-1-BG01-KA210-YOU-000453902",
 }
