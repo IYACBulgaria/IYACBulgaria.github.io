@@ -808,8 +808,8 @@ BG = {
         "SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа",
     "SAFE CLICK – Building Digital Resilience and Cyber Capacity in Youth Work logo":
         "Лого на SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа",
-    "We are excited to announce the launch of our new Erasmus+ project “SAFE CLICK – Building Digital Resilience and Cyber Capacity in Youth Work” (2026-1-BG01-KA210-YOU-000453902).":
-        "С радост обявяваме старта на нашия нов проект по Еразъм+ „SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа“ (2026-1-BG01-KA210-YOU-000453902).",
+    "We are excited to announce the launch of our new Erasmus+ project “SAFE CLICK – Building Digital Resilience and Cyber Capacity in Youth Work”.":
+        "С радост обявяваме старта на нашия нов проект по Еразъм+ „SAFE CLICK – Изграждане на дигитална устойчивост и киберкапацитет в младежката работа“.",
     "The project officially starts on <b>1 September 2026</b> and will run until <b>31 August 2027</b>, bringing together organisations from Bulgaria, Serbia, and Romania to strengthen digital resilience, cybersecurity awareness, and digital safety in the youth and NGO sector.":
         "Проектът стартира официално на <b>1 септември 2026 г.</b> и ще продължи до <b>31 август 2027 г.</b>, като обединява организации от България, Сърбия и Румъния за укрепване на дигиталната устойчивост, осведомеността за киберсигурността и дигиталната безопасност в младежкия и неправителствения сектор.",
     "The project is coordinated by International Youth Activity Center (Bulgaria) in partnership with Inicijativa Vizija (Serbia) and Asociația Colțul Tinerilor din Vest (Romania).":

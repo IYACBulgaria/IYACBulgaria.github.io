@@ -22,7 +22,7 @@ NUMBER = '2026-1-BG01-KA210-YOU-000453902'
 
 INTRO = [
     'We are excited to announce the launch of our new Erasmus+ project “SAFE CLICK – Building Digital Resilience '
-    f'and Cyber Capacity in Youth Work” ({NUMBER}).',
+    'and Cyber Capacity in Youth Work”.',
     'The project officially starts on <b>1 September 2026</b> and will run until <b>31 August 2027</b>, bringing together '
     'organisations from Bulgaria, Serbia, and Romania to strengthen digital resilience, cybersecurity awareness, and '
     'digital safety in the youth and NGO sector.',
