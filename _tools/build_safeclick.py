@@ -205,7 +205,6 @@ def build():
               <dl class="sc-facts">
                 <div><dt>Dates</dt><dd>1 September 2026 – 31 August 2027</dd></div>
                 <div><dt>Countries</dt><dd><span class="sc-facts__flags">{stitch_flag('bg')}{stitch_flag('rs')}{stitch_flag('ro')}</span><span>Bulgaria, Serbia, Romania</span></dd></div>
-                <div class="sc-facts__wide"><dt>Project number</dt><dd><span class="sc-mono">{NUMBER}</span></dd></div>
               </dl>
             </div>
           </div>

@@ -62,27 +62,37 @@
   const canvas = document.querySelector('.sc-rain');
   if (canvas && !reduceMotion) {
     const ctx = canvas.getContext('2d');
-    const CELL = 16, CHARS = ['×', '×', '×', '0', '1'];
+    // A gentle drizzle: few threads, slow, and each stitch drawn once as a thread enters a new cell
+    const CELL = 18, CHARS = ['×', '×', '×', '0', '1'];
+    const thread = (h) => ({ y: Math.random() * -h, v: 14 + Math.random() * 22, cell: -1, on: Math.random() < 0.45 });
     let cols = [], w = 0, h = 0, running = false, visible = false, last = 0;
     const resize = () => {
+      const nw = canvas.clientWidth, nh = canvas.clientHeight;
+      if (nw === w && Math.abs(nh - h) < 2) return;
+      const widthChanged = nw !== w;
       const dpr = Math.min(devicePixelRatio || 1, 2);
-      w = canvas.clientWidth; h = canvas.clientHeight;
+      w = nw; h = nh;
       canvas.width = w * dpr; canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       ctx.font = '600 13px "JetBrains Mono", monospace';
-      cols = Array.from({ length: Math.ceil(w / CELL) }, () => ({ y: Math.random() * -h, v: 30 + Math.random() * 70 }));
+      if (widthChanged || !cols.length) cols = Array.from({ length: Math.ceil(w / CELL) }, () => thread(h));
     };
     const tick = (t) => {
       if (!running) return;
       const dt = Math.min((t - last) / 1000 || 0.016, 0.05); last = t;
-      ctx.fillStyle = 'rgba(23, 10, 13, 0.16)';
+      // slow fade, so stitches leave soft trails instead of strobing
+      ctx.fillStyle = 'rgba(23, 10, 13, 0.06)';
       ctx.fillRect(0, 0, w, h);
       cols.forEach((c, i) => {
+        if (!c.on) return;
         c.y += c.v * dt;
-        const y = Math.floor(c.y / CELL) * CELL;
-        ctx.fillStyle = Math.random() < 0.08 ? 'rgba(242, 236, 227, 0.9)' : (i % 3 ? 'rgba(240, 160, 24, 0.75)' : 'rgba(200, 30, 60, 0.8)');
-        ctx.fillText(CHARS[(Math.random() * CHARS.length) | 0], i * CELL + 3, y);
-        if (c.y > h + 40) { c.y = Math.random() * -200; c.v = 30 + Math.random() * 70; }
+        const cell = Math.floor(c.y / CELL);
+        if (cell !== c.cell && c.y > 0) {
+          c.cell = cell;
+          ctx.fillStyle = i % 3 ? 'rgba(240, 160, 24, 0.55)' : 'rgba(200, 30, 60, 0.6)';
+          ctx.fillText(CHARS[(Math.random() * CHARS.length) | 0], i * CELL + 3, cell * CELL);
+        }
+        if (c.y > h + 60) Object.assign(c, thread(h), { y: Math.random() * -160 });
       });
       requestAnimationFrame(tick);
     };
@@ -91,8 +101,13 @@
       if (should && !running) { running = true; last = performance.now(); requestAnimationFrame(tick); }
       else if (!should) running = false;
     };
-    resize();
-    addEventListener('resize', resize);
+    // The rain fades away as the hero scrolls up, rather than following the page
+    const hero = canvas.closest('.sc-hero') || canvas;
+    const fade = () => { canvas.style.opacity = String(0.4 * Math.max(0, 1 - scrollY / (hero.offsetHeight * 0.6))); };
+    resize(); fade();
+    // Only real size changes reset it (phone address bars change the height while scrolling)
+    ('ResizeObserver' in window) ? new ResizeObserver(resize).observe(canvas) : addEventListener('resize', resize);
+    addEventListener('scroll', fade, { passive: true });
     document.addEventListener('visibilitychange', toggle);
     new IntersectionObserver((e) => { visible = e[0].isIntersecting; toggle(); }).observe(canvas);
   }
