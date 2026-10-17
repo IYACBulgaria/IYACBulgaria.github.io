@@ -86,7 +86,7 @@
   background-color: #FFFFFF; background-image: var(--weave);
   box-shadow: inset 0 0 0 6px #C9965A, inset 0 0 0 8px #A8743C, inset 0 10px 24px rgba(0, 0, 0, 0.12);
 }
-.sc-badge__logo { width: 76%; height: auto; }
+.sc-badge__logo { width: 70%; height: auto; }
 .js .sc-badge__logo { clip-path: inset(0 0 100% 0); }
 .js .sc-badge.is-scanned .sc-badge__logo { clip-path: inset(0 0 0 0); transition: clip-path 1.6s cubic-bezier(0.65, 0, 0.35, 1); }
 .sc-badge__scan { position: absolute; left: 0; right: 0; top: 0; height: 3px; background: var(--gold); box-shadow: 0 0 18px 4px rgba(240, 160, 24, 0.6); opacity: 0; pointer-events: none; }
