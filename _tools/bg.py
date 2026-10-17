@@ -930,4 +930,15 @@ BG = {
         "~/safe_click/updates",
     "2026-1-BG01-KA210-YOU-000453902":
         "2026-1-BG01-KA210-YOU-000453902",
+    # SAFE CLICK card
+    "A new Erasmus+ partnership between Bulgaria, Serbia and Romania that helps youth workers and NGOs protect their data, spot digital threats and pass safer online habits on to young people.":
+        "Ново партньорство по Еразъм+ между България, Сърбия и Румъния, което помага на младежките работници и неправителствените организации да защитават данните си, да разпознават дигиталните заплахи и да предават по-безопасни онлайн навици на младите хора.",
+    "Partnership · Sep 2026":
+        "Партньорство · септември 2026",
+    "Partnerships":
+        "Партньорства",
+    "SAFE CLICK poster":
+        "Плакат на SAFE CLICK",
+    "Sep 2026":
+        "септември 2026",
 }

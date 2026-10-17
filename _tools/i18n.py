@@ -38,6 +38,7 @@ KEEP = {'IYAC', 'EN', 'BG', 'IYAC Bulgaria', '+359 88 792 8282', 'iyac.bulgaria@
 # Patterns for text that contains numbers
 PATTERNS = [
     (re.compile(r'^Open photo (\d+) of (\d+)$'), r'Отвори снимка \1 от \2'),
+    (re.compile(r'^(\d+) projects$'), r'\1 проекта'),
 ]
 
 

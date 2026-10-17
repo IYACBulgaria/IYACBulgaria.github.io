@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '11'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '12'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -560,6 +560,9 @@ def build(slug):
 
 
 
+# Projects with their own page builder (not in PROJECTS), and their countries
+EXTRA_FLAGS = {'safeclick': ['bg', 'rs', 'ro']}
+
 MONTHS = {m: i for i, m in enumerate(['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'], 1)}
 
 
@@ -575,7 +578,7 @@ def project_cards():
         cards.append(dict(slug=slug, kind=kind, when=when, year=year, sort=(year, MONTHS[when[:3]]),
                           title=tidy(re.search(r'<h3>(.*?)</h3>', p, re.S).group(1)),
                           summary=tidy(re.search(r'<p>(.*?)</p>', p, re.S).group(1)),
-                          flags=PROJECTS[slug].get('flags', [])))
+                          flags=PROJECTS.get(slug, {}).get('flags', EXTRA_FLAGS.get(slug, []))))
     return sorted(cards, key=lambda c: c['sort'], reverse=True)
 
 
@@ -584,7 +587,8 @@ def build_projects_page():
     home = read('index.html')
     intro = tidy(re.search(r'<h2 class="eyebrow">Our Projects</h2>\s*<p class="intro"[^>]*>(.*?)</p>', home, re.S).group(1))
     cards = project_cards()
-    kinds = [('exchange', 'Youth Exchange', 'Youth exchanges'), ('training', 'Training Course', 'Training courses')]
+    kinds = [('exchange', 'Youth Exchange', 'Youth exchanges'), ('training', 'Training Course', 'Training courses'),
+             ('partnership', 'Partnership', 'Partnerships')]
     kind_key = {label: key for key, label, _ in kinds}
 
     chips = [f'          <button class="chip" type="button" data-filter="all" aria-pressed="true"><span>All projects</span><span class="chip__n">{len(cards)}</span></button>']

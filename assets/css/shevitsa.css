@@ -847,6 +847,40 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 /* "All projects" links under the washing line */
 .carousel__all { display: flex; justify-content: center; margin-top: clamp(28px, 4vw, 40px); }
 
+/* ---------- SAFE CLICK: a card in "terminal" mode ---------- */
+.patch__link--cyber, .pcard[data-kind="partnership"] .pcard__link {
+  --cy-term: #170A0D; --cy-muted: rgba(242, 236, 227, 0.68);
+  background: var(--cy-term); color: var(--linen);
+  box-shadow: 0 30px 50px -28px rgba(60, 0, 12, 0.85), 0 0 0 1px rgba(138, 0, 25, 0.4);
+}
+.patch__link--cyber .patch__media { background: var(--cy-term); }
+.patch__link--cyber .patch__body, .pcard[data-kind="partnership"] .pcard__body {
+  background-image:
+    linear-gradient(45deg, transparent 46%, rgba(240, 160, 24, 0.06) 47% 53%, transparent 54%),
+    linear-gradient(-45deg, transparent 46%, rgba(240, 160, 24, 0.06) 47% 53%, transparent 54%);
+  background-size: 14px 14px;
+}
+.patch__link--cyber .patch__meta { color: var(--gold); font-family: ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: 0.06em; }
+.patch__link--cyber h3 { color: var(--gold); letter-spacing: 0.02em; }
+.patch__link--cyber p, .pcard[data-kind="partnership"] .pcard__text { color: var(--cy-muted); }
+.patch__link--cyber .patch__go { color: var(--gold); box-shadow: inset 0 0 0 1px rgba(240, 160, 24, 0.45); }
+.patch__status { display: inline-flex; align-items: center; gap: 8px; margin-top: 14px; font: 600 0.75rem/1 ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
+.patch__led { width: 8px; height: 8px; border-radius: 50%; background: #2FB84F; box-shadow: 0 0 0 3px rgba(47, 184, 79, 0.2); }
+@media (prefers-reduced-motion: no-preference) {
+  .patch__led { animation: patch-led 2s ease-in-out infinite; }
+  @keyframes patch-led { 50% { box-shadow: 0 0 0 7px rgba(47, 184, 79, 0); } }
+}
+@media (hover: hover) {
+  .patch__link--cyber:hover { box-shadow: 0 40px 60px -28px rgba(60, 0, 12, 0.9), 0 0 0 1px var(--gold); }
+  .patch__link--cyber:hover .patch__go { background: var(--gold); color: #170A0D; }
+  .pcard[data-kind="partnership"] .pcard__link:hover { box-shadow: 0 40px 60px -32px rgba(60, 0, 12, 0.9), 0 0 0 1px var(--gold); }
+}
+.pcard[data-kind="partnership"] .pcard__poster { background-color: #221015; background-image: none; }
+.pcard[data-kind="partnership"] .pcard__kind { background: rgba(240, 160, 24, 0.14); color: var(--gold); }
+.pcard[data-kind="partnership"] .pcard__when { color: var(--cy-muted); }
+.pcard[data-kind="partnership"] .pcard__title, .pcard[data-kind="partnership"] .pcard__go { color: var(--gold); }
+.pcard[data-kind="partnership"] .pcard__flag { background: rgba(242, 236, 227, 0.1); }
+
 /* =========================================================
    Accessibility preferences
    ========================================================= */
