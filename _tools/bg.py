@@ -1036,4 +1036,37 @@ BG = {
         "PDF · 1,7 MB",
     "PDF · 1.7 MB · English":
         "PDF · 1,7 MB · на английски",
+    # Smart Youth Worker photos
+    "Participants sitting in a circle on the first day of the training course":
+        "Участниците седят в кръг в първия ден на обучителния курс",
+    "Participants build a human pyramid during a teambuilding game":
+        "Участници правят човешка пирамида по време на игра за изграждане на екип",
+    "A participant writes a prompt on her laptop during the AI workshop":
+        "Участничка пише промпт на лаптопа си по време на уъркшопа за изкуствен интелект",
+    "The target images of the Prompt Pictionary game on a laptop screen":
+        "Целевите изображения от играта Prompt Pictionary на екрана на лаптоп",
+    "Two participants laughing between sessions":
+        "Двама участници се смеят между сесиите",
+    "A team working together around a table with laptops":
+        "Екип работи заедно около маса с лаптопи",
+    "A participant gives a thumbs up while building his website with vibe coding":
+        "Участник вдига палец, докато създава уебсайта си с vibe coding",
+    "Two participants work on a project together on a tablet":
+        "Двама участници работят заедно по проект на таблет",
+    "Participants in traditional costume at a cultural evening":
+        "Участници в традиционни носии на културна вечер",
+    "A participant presents her website “Politics made simple”":
+        "Участничка представя уебсайта си „Politics made simple“",
+    "A participant presents Vollearn, his app for learning volleyball":
+        "Участник представя Vollearn – приложението си за обучение по волейбол",
+    "A participant presents the website he built for a tiling business":
+        "Участник представя уебсайта, който създаде за фирма за плочки",
+    "A participant presents his habit tracker, which rewards users with EXP":
+        "Участник представя своя тракер за навици, който награждава потребителите с EXP",
+    "Teams follow the clues during the OSINT treasure hunt":
+        "Екипите проследяват уликите по време на OSINT лова на съкровища",
+    "A slide on staying safe before you ever touch crypto, from the blockchain session":
+        "Слайд за безопасността преди да докоснете криптовалути, от сесията за блокчейн",
+    "The group during the final session of the training course":
+        "Групата по време на последната сесия на обучителния курс",
 }

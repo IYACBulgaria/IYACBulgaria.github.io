@@ -15,6 +15,25 @@ PLACEHOLDER_ALT = 'Photo coming soon'
 
 PROJECTS_2026 = {
     'smartyouthworker': {
+        'photos': [f'photo-{i}' for i in range(1, 17)],
+        'alts': {
+            'photo-1': 'Participants sitting in a circle on the first day of the training course',
+            'photo-2': 'Participants build a human pyramid during a teambuilding game',
+            'photo-3': 'A participant writes a prompt on her laptop during the AI workshop',
+            'photo-4': 'The target images of the Prompt Pictionary game on a laptop screen',
+            'photo-5': 'Two participants laughing between sessions',
+            'photo-6': 'A team working together around a table with laptops',
+            'photo-7': 'A participant gives a thumbs up while building his website with vibe coding',
+            'photo-8': 'Two participants work on a project together on a tablet',
+            'photo-9': 'Participants in traditional costume at a cultural evening',
+            'photo-10': 'A participant presents her website “Politics made simple”',
+            'photo-11': 'A participant presents Vollearn, his app for learning volleyball',
+            'photo-12': 'A participant presents the website he built for a tiling business',
+            'photo-13': 'A participant presents his habit tracker, which rewards users with EXP',
+            'photo-14': 'Teams follow the clues during the OSINT treasure hunt',
+            'photo-15': 'A slide on staying safe before you ever touch crypto, from the blockchain session',
+            'photo-16': 'The group during the final session of the training course',
+        },
         'title': 'Smart Youth Worker',
         'tagline': 'AI and digital skills for youth work',
         'facts': [('Dates', '2–10 November 2026'), ('Location', 'Stara Zagora, Bulgaria'),
