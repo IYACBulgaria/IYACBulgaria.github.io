@@ -41,6 +41,14 @@ PROJECTS_2026 = {
                   ('Format', 'Erasmus+ Training Course')],
         'flags': ['bg', 'es', 'al', 'ro', 'md', 'lt'],
         'meta': 'Training Course · Nov 2026',
+        # Highlighted right under the hero
+        'topics': [
+            ('bi-shield-exclamation', 'Fighting cyber crime and scams', 'Participants learned to spot the red flags of online scams, analysed famous hacks and saw how most attacks trick people, not code.'),
+            ('bi-shield-lock', 'Security', 'Strong passphrases, two-factor authentication and data-leak checks, researched by the teams and turned into lessons for teenagers.'),
+            ('bi-eye-slash', 'Online safety', 'OSINT on their own digital footprint, photo metadata, public cameras, GDPR and the safe use of AI tools.'),
+            ('bi-currency-bitcoin', 'Blockchain', 'How blockchain and crypto work, learned by becoming a blockchain in the riddle chain, plus how to stay safe from crypto scams.'),
+            ('bi-code-slash', 'Vibe coding', 'Building real websites and apps by describing them to AI in plain language, then publishing them online with GitHub Pages.'),
+        ],
         # The playbook replaces the Drive link: a download button in the hero and its own section
         'download': {
             'file': 'assets/docs/smart-youth-worker-playbook.pdf',
@@ -52,7 +60,7 @@ PROJECTS_2026 = {
                          'Deploy and pitch', 'OSINT and the treasure hunt', 'Blockchain in 10 minutes',
                          'Live tracking and public data', 'GDPR in youth work', 'Communication and visibility',
                          'Reflection and Youthpass', 'Templates'],
-            'cover': 'assets/img/home/posters/smartyouthworker.jpg',
+            'cover': 'assets/docs/smart-youth-worker-playbook-cover.jpg',
         },
         'paragraphs': [
             '"Smart Youth Worker – AI and digital skills for youth work" was an Erasmus+ training course that brought youth workers from Bulgaria, Spain, Albania, Romania, Moldova and Lithuania to Stara Zagora to learn how to teach digital skills to young people. None of it required a tech background. Every theory input was followed straight away by something participants did, and by the end of the week every participant had built and published their own website, app or learning platform.',

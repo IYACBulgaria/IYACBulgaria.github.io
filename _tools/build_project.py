@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '13'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '14'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -434,6 +434,29 @@ def build(slug):
     </section>
 '''
 
+    topics = ''
+    if cfg.get('topics'):
+        cards = '\n'.join(f'''          <li class="topic" data-reveal style="--d:{k}">
+            <span class="topic__icon"><i class="bi {icon}" aria-hidden="true"></i></span>
+            <span class="topic__n" aria-hidden="true">0{k + 1}</span>
+            <h3 class="topic__title">{title}</h3>
+            <p class="topic__text">{text}</p>
+          </li>''' for k, (icon, title, text) in enumerate(cfg['topics']))
+        topics = f'''
+    <!-- ===== Core topics ===== -->
+    <section class="topics section">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <h2 class="eyebrow">What the course tackled</h2>
+          <p class="topics__lead">Five topics at the heart of the week</p>
+        </header>
+        <ul class="topics__grid">
+{cards}
+        </ul>
+      </div>
+    </section>
+'''
+
     playbook = ''
     if dl:
         cw, ch = image_size(dl['cover'])
@@ -504,7 +527,7 @@ def build(slug):
     </section>
 
     <div class="band" data-band="1" aria-hidden="true"><div class="band__track"></div></div>
-
+{topics}
     <!-- ===== Story ===== -->
     <article class="story">
 {chr(10).join(story)}

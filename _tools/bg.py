@@ -1069,4 +1069,27 @@ BG = {
         "Слайд за безопасността преди да докоснете криптовалути, от сесията за блокчейн",
     "The group during the final session of the training course":
         "Групата по време на последната сесия на обучителния курс",
+    # Smart Youth Worker topics
+    "What the course tackled":
+        "Какво разгледа курсът",
+    "Five topics at the heart of the week":
+        "Пет теми в сърцето на седмицата",
+    "Fighting cyber crime and scams":
+        "Борба с киберпрестъпленията и измамите",
+    "Security":
+        "Сигурност",
+    "Online safety":
+        "Онлайн безопасност",
+    "Blockchain":
+        "Блокчейн",
+    "Participants learned to spot the red flags of online scams, analysed famous hacks and saw how most attacks trick people, not code.":
+        "Участниците се научиха да разпознават тревожните сигнали на онлайн измамите, анализираха известни хакерски атаки и видяха как повечето атаки подвеждат хората, а не кода.",
+    "Strong passphrases, two-factor authentication and data-leak checks, researched by the teams and turned into lessons for teenagers.":
+        "Силни пароли, двуфакторно удостоверяване и проверки за изтекли данни, проучени от екипите и превърнати в уроци за тийнейджъри.",
+    "OSINT on their own digital footprint, photo metadata, public cameras, GDPR and the safe use of AI tools.":
+        "OSINT върху собствения дигитален отпечатък, метаданни в снимките, публични камери, GDPR и безопасно използване на инструменти с изкуствен интелект.",
+    "How blockchain and crypto work, learned by becoming a blockchain in the riddle chain, plus how to stay safe from crypto scams.":
+        "Как работят блокчейн и криптовалутите – научено, като групата сама се превърна в блокчейн във веригата от гатанки, – и как да се пазим от крипто измами.",
+    "Building real websites and apps by describing them to AI in plain language, then publishing them online with GitHub Pages.":
+        "Създаване на истински уебсайтове и приложения чрез описание на обикновен език пред изкуствен интелект и публикуването им онлайн с GitHub Pages.",
 }

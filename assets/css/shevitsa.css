@@ -905,6 +905,29 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 .playbook__meta { font: 600 0.8125rem/1 ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: 0.06em; color: #9AA6C4; }
 @media (prefers-reduced-motion: reduce) { .playbook__cover { transform: none; transition: box-shadow 0.4s ease; } .playbook__cover:hover { transform: none; } }
 
+/* ---------- Core topics (Smart Youth Worker): cyber cards on navy ---------- */
+.topics { background: #0A1024; color: #E6EBF7; overflow: clip; }
+.topics::before { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0.5;
+  background-image: linear-gradient(rgba(63, 216, 255, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(63, 216, 255, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px; -webkit-mask-image: radial-gradient(80% 70% at 50% 40%, #000, transparent); mask-image: radial-gradient(80% 70% at 50% 40%, #000, transparent); }
+.topics .container { position: relative; }
+.topics .eyebrow { color: #39F58A; }
+.topics .eyebrow::before { background: #39F58A; }
+.topics__lead { margin-top: 14px; font-size: clamp(2rem, 4.6vw, 3.4rem); line-height: 1; letter-spacing: -0.035em; font-weight: 700; font-stretch: 85%; color: #FFFFFF; }
+.topics__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin: 0; padding: 0; list-style: none; }
+.topic { --c: #39F58A; position: relative; display: flex; flex-direction: column; gap: 12px; padding: 24px 22px 26px; border-radius: var(--radius);
+  background: #121C3A; box-shadow: inset 0 0 0 1px #24305A, 0 30px 50px -36px rgba(0, 0, 0, 0.9); transition: transform 0.6s var(--ease-spring), box-shadow 0.4s ease; }
+.topic:nth-child(1) { --c: #FF5D73; } .topic:nth-child(2) { --c: #3FD8FF; } .topic:nth-child(3) { --c: #A98BFF; }
+.topic:nth-child(4) { --c: #FFB547; } .topic:nth-child(5) { --c: #39F58A; }
+.topic::before { content: ""; position: absolute; left: 22px; top: 0; width: 56px; height: 3px; border-radius: 0 0 3px 3px; background: var(--c); box-shadow: 0 0 14px var(--c); }
+.topic__icon { display: grid; place-items: center; width: 54px; height: 54px; border-radius: 14px; font-size: 1.5rem; color: var(--c);
+  background: color-mix(in srgb, var(--c) 14%, transparent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--c) 40%, transparent); }
+.topic__n { position: absolute; top: 22px; right: 22px; font: 700 0.8125rem/1 ui-monospace, "SFMono-Regular", Consolas, monospace; color: #5F6C92; }
+.topic__title { font-size: 1.3rem; line-height: 1.15; letter-spacing: -0.015em; font-weight: 700; font-stretch: 92%; color: #FFFFFF; }
+.topic__text { font-size: 0.96875rem; line-height: 1.6; color: #A9B3CF; }
+@media (hover: hover) { .topic:hover { transform: translateY(-6px); box-shadow: inset 0 0 0 1px var(--c), 0 40px 60px -36px rgba(0, 0, 0, 0.95), 0 0 40px -18px var(--c); } }
+@media (prefers-reduced-motion: reduce) { .topic { transition: box-shadow 0.4s ease; } .topic:hover { transform: none; } }
+
 /* =========================================================
    Accessibility preferences
    ========================================================= */
