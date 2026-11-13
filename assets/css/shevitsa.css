@@ -925,6 +925,16 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 .topic__n { position: absolute; top: 22px; right: 22px; font: 700 0.8125rem/1 ui-monospace, "SFMono-Regular", Consolas, monospace; color: #5F6C92; }
 .topic__title { font-size: 1.3rem; line-height: 1.15; letter-spacing: -0.015em; font-weight: 700; font-stretch: 92%; color: #FFFFFF; }
 .topic__text { font-size: 0.96875rem; line-height: 1.6; color: #A9B3CF; }
+/* Computers: all five topics on one row */
+@media (min-width: 900px) {
+  .topics__grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+  .topic { padding: 22px 18px 24px; }
+  .topic::before { left: 18px; }
+  .topic__n { top: 20px; right: 18px; }
+  .topic__icon { width: 48px; height: 48px; font-size: 1.35rem; }
+  .topic__title { font-size: clamp(1.05rem, 1.35vw, 1.3rem); }
+  .topic__text { font-size: clamp(0.875rem, 1vw, 0.96875rem); }
+}
 @media (hover: hover) { .topic:hover { transform: translateY(-6px); box-shadow: inset 0 0 0 1px var(--c), 0 40px 60px -36px rgba(0, 0, 0, 0.95), 0 0 40px -18px var(--c); } }
 @media (prefers-reduced-motion: reduce) { .topic { transition: box-shadow 0.4s ease; } .topic:hover { transform: none; } }
 
