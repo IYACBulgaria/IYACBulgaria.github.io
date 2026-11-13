@@ -202,6 +202,12 @@
     },
     pl: (x, y) => (y < 5 ? '#FFFFFF' : '#DC143C'),
     lu: (x, y) => band3(y, H_FLAG, '#ED2939', '#FFFFFF', '#00A1DE'),
+    // Spain: red, a double yellow band, red
+    es: (x, y) => (y >= 2 && y <= 6 ? '#F1BF00' : '#AA151B'),
+    lt: (x, y) => band3(y, H_FLAG, '#FDB913', '#006A44', '#C1272D'),
+    // Albania: the black double-headed eagle on red
+    al: (x, y) => ([[4, 1], [7, 1], [3, 2], [4, 2], [7, 2], [8, 2], [4, 3], [5, 3], [6, 3], [7, 3], [5, 4], [6, 4],
+      [4, 5], [5, 5], [6, 5], [7, 5], [5, 6], [6, 6], [5, 7], [6, 7]].some(([a, b]) => a === x && b === y) ? '#161616' : '#E41E20'),
     md: (x, y) => {
       // Blue, yellow, red, with the eagle as a small brown-gold emblem in the centre
       if (x >= 5 && x <= 6 && y >= 3 && y <= 5) return y === 5 ? '#CC092F' : '#A6772D';

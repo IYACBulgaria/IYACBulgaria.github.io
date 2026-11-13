@@ -881,6 +881,30 @@ a.tile:active, .tile:has(.tile__hit:active) { transform: scale(0.98); transition
 .pcard[data-kind="partnership"] .pcard__title, .pcard[data-kind="partnership"] .pcard__go { color: var(--gold); }
 .pcard[data-kind="partnership"] .pcard__flag { background: rgba(242, 236, 227, 0.1); }
 
+/* ---------- Project download (Smart Youth Worker Playbook) ---------- */
+.btn__meta { padding-left: 10px; margin-left: 2px; border-left: 1px solid rgba(251, 248, 243, 0.35); font-size: 0.8125em; font-weight: 600; opacity: 0.85; }
+.playbook { background: #0A1024; color: #E6EBF7; overflow: clip; }
+.playbook__grid { display: grid; gap: clamp(36px, 6vw, 72px); align-items: center; }
+@media (min-width: 900px) { .playbook__grid { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); } }
+.playbook__cover { display: block; width: min(100%, 380px); margin: 0 auto; border-radius: 10px; transform: rotate(-3deg);
+  box-shadow: 0 50px 90px -40px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(57, 245, 138, 0.25), 0 0 60px -20px rgba(57, 245, 138, 0.35);
+  transition: transform 0.7s var(--ease-spring), box-shadow 0.4s ease; }
+.playbook__cover img { width: 100%; height: auto; border-radius: 10px; }
+@media (hover: hover) { .playbook__cover:hover { transform: rotate(0deg) translateY(-8px); box-shadow: 0 60px 100px -40px rgba(0, 0, 0, 0.95), 0 0 0 1px #39F58A, 0 0 80px -16px rgba(57, 245, 138, 0.5); } }
+.playbook .eyebrow { color: #39F58A; }
+.playbook .eyebrow::before { background: #39F58A; }
+.playbook .section-head { margin-bottom: 18px; }
+.playbook__title { margin-top: 14px; font-size: clamp(2.2rem, 5vw, 3.6rem); line-height: 0.98; letter-spacing: -0.035em; font-weight: 700; font-stretch: 85%; color: #FFFFFF; }
+.playbook__text { max-width: 54ch; font-size: clamp(1.0625rem, 1.4vw, 1.2rem); line-height: 1.65; color: #C3CBE2; }
+.playbook__chapters { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 18px; margin: 26px 0 0; padding: 0; list-style: none;
+  font: 500 0.875rem/1.4 ui-monospace, "SFMono-Regular", Consolas, monospace; color: #C3CBE2; }
+.playbook__n { color: #39F58A; font-weight: 700; }
+.playbook__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px; margin-top: 32px; }
+.playbook .btn--red { background: #39F58A; color: #0A1024; box-shadow: 0 14px 30px -14px rgba(57, 245, 138, 0.7); }
+.playbook .btn--red:hover { background: #6BFAAA; }
+.playbook__meta { font: 600 0.8125rem/1 ui-monospace, "SFMono-Regular", Consolas, monospace; letter-spacing: 0.06em; color: #9AA6C4; }
+@media (prefers-reduced-motion: reduce) { .playbook__cover { transform: none; transition: box-shadow 0.4s ease; } .playbook__cover:hover { transform: none; } }
+
 /* =========================================================
    Accessibility preferences
    ========================================================= */

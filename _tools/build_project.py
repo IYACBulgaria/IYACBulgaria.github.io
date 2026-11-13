@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '12'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '13'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -161,7 +161,7 @@ PROJECTS = {
     },
 }
 ORDER = ['writeitdown', 'doityourself', 'stepforward', 'keeptalking', 'letuscook', 'democracyunderpressure', 'faciliteasy',
-         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope']
+         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope', 'smartyouthworker']
 
 # 2026 projects written from the Project Summaries document (no original page)
 sys.path.insert(0, str(Path(__file__).parent))
@@ -217,7 +217,9 @@ def extract_original(slug):
 def from_document(slug, cfg):
     """Same shape as extract_original, for projects written from the 2026 document."""
     disclaimer = extract_original('letuscook')['disclaimer']  # the standard EU wording, as on every page
-    return dict(title=cfg['title'], sidebar_title='Download Catalog', link=PLACEHOLDER_LINK, link_label='Materials & Videos',
+    dl = cfg.get('download')
+    return dict(title=cfg['title'], sidebar_title='The Playbook' if dl else 'Download Catalog',
+                link=dl['file'] if dl else PLACEHOLDER_LINK, link_label=dl['label'] if dl else 'Materials & Videos',
                 h3=cfg['tagline'], blocks=[('p', p) for p in cfg['paragraphs']], gal_h2='Gallery',
                 gal_intro=f'Scroll down to see some of the most memorable highlights from the "{cfg["title"]}" experience.',
                 imgs=list(cfg['photos']), disclaimer=disclaimer)
@@ -397,7 +399,12 @@ def build(slug):
     others = [p for p in patches if f'href="{slug}.html"' not in p]
     poster = f'assets/img/home/posters/{cfg["poster_slug"]}.jpg'  # PHOTO: replace the placeholder poster with the real one
     pw, ph = image_size(poster)
-    if o['link'].startswith('#'):
+    dl = cfg.get('download')
+    if dl:
+        size = (ROOT / dl['file']).stat().st_size / 1e6
+        drive_link = (f'<a class="btn btn--red btn--lg" href="{dl["file"]}" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> '
+                      f'<span>{dl["label"]}</span> <span class="btn__meta">PDF · {size:.1f} MB</span></a>')
+    elif o['link'].startswith('#'):
         drive_link = (f'<!-- PLACEHOLDER: replace href with the Google Drive link -->\n            '
                       f'<a class="btn btn--red btn--lg" href="{o["link"]}"><i class="bi bi-camera-reels" aria-hidden="true"></i> {o["link_label"]} <i class="bi bi-arrow-down" aria-hidden="true"></i></a>')
     else:
@@ -423,6 +430,38 @@ def build(slug):
         <ul class="results">
 {res}
         </ul>
+      </div>
+    </section>
+'''
+
+    playbook = ''
+    if dl:
+        cw, ch = image_size(dl['cover'])
+        size = (ROOT / dl['file']).stat().st_size / 1e6
+        chips = '\n'.join(f'            <li><span class="playbook__n" aria-hidden="true">{k + 1:02d}</span> <span>{c}</span></li>'
+                          if c != 'Templates' else f'            <li><span class="playbook__n" aria-hidden="true">++</span> <span>{c}</span></li>'
+                          for k, c in enumerate(dl['chapters']))
+        playbook = f'''
+    <!-- ===== The playbook (download) ===== -->
+    <section id="playbook" class="playbook section">
+      <div class="container playbook__grid">
+        <a class="playbook__cover" href="{dl['file']}" download data-reveal aria-label="{dl['label']} (PDF)">
+          <img src="{dl['cover']}" alt="{dl['title']} cover" width="{cw}" height="{ch}" loading="lazy" decoding="async">
+        </a>
+        <div class="playbook__copy">
+          <header class="section-head" data-reveal>
+            <h2 class="eyebrow">Download</h2>
+            <p class="playbook__title">{dl['title']}</p>
+          </header>
+          <p class="playbook__text" data-reveal>{dl['text']}</p>
+          <ol class="playbook__chapters" data-reveal>
+{chips}
+          </ol>
+          <div class="playbook__actions" data-reveal>
+            <a class="btn btn--red btn--lg" href="{dl['file']}" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> {dl['label']}</a>
+            <span class="playbook__meta">PDF · {size:.1f} MB · English</span>
+          </div>
+        </div>
       </div>
     </section>
 '''
@@ -478,7 +517,7 @@ def build(slug):
       </div>
     </section>
 
-{outcomes}
+{outcomes}{playbook}
     <!-- ===== Gallery ===== -->
     <section id="gallery" class="gallery section">
       <div class="container">

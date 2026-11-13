@@ -941,4 +941,99 @@ BG = {
         "Плакат на SAFE CLICK",
     "Sep 2026":
         "септември 2026",
+    # Smart Youth Worker
+    "\"Smart Youth Worker – AI and digital skills for youth work\" was an Erasmus+ training course that brought youth workers from Bulgaria, Spain, Albania, Romania, Moldova and Lithuania to Stara Zagora to learn how to teach digital skills to young people. None of it required a tech background. Every theory input was followed straight away by something participants did, and by the end of the week every participant had built and published their own website, app or learning platform.":
+        "„Smart Youth Worker – AI and digital skills for youth work“ беше обучителен курс по Еразъм+, който събра младежки работници от България, Испания, Албания, Румъния, Молдова и Литва в Стара Загора, за да се научат как да преподават дигитални умения на младите хора. Нищо от това не изискваше технически опит. Всяко теоретично въведение беше последвано веднага от нещо, което участниците правеха сами, и до края на седмицата всеки участник изгради и публикува свой собствен уебсайт, приложение или образователна платформа.",
+    "The course opened on 3 November with teambuilding, the project's objectives and a first look at the threat everyone has already met: online scams. In the \"Spot the Scam\" activity, teams raced to find four red flags hidden in a fake prize message: an unknown sender, free stuff, fake urgency and a look-alike link. The stories participants shared afterwards were the real lesson.":
+        "Курсът започна на 3 ноември с изграждане на екип, представяне на целите на проекта и първи поглед към заплахата, която всеки вече е срещал: онлайн измамите. В дейността „Spot the Scam“ екипите се състезаваха да открият четири тревожни сигнала, скрити във фалшиво съобщение за награда: непознат подател, нещо безплатно, изкуствена спешност и подвеждащ линк. Историите, които участниците споделиха след това, бяха истинският урок.",
+    "Day two was dedicated to AI in youth work. In the \"Prompt Like a Pro\" workshop, participants learned the R-T-C-F formula (Role, Task, Context, Format) and put it straight into practice in two team games. In the first, each team used AI to research and design a five-slide presentation for teenagers on keeping their Google, Facebook and Steam accounts safe, with a source for every fact. In the second, Prompt Pictionary, teams wrote and rewrote prompts until their AI image matched a secret target. The afternoon brought an AI tool map of the group and the first round of vibe coding: building software by describing it to an AI in plain language.":
+        "Вторият ден беше посветен на изкуствения интелект в младежката работа. В уъркшопа „Prompt Like a Pro“ участниците научиха формулата R-T-C-F (Роля, Задача, Контекст, Формат) и веднага я приложиха в две отборни игри. В първата всеки екип използва изкуствен интелект, за да проучи и изготви презентация от пет слайда за тийнейджъри как да пазят профилите си в Google, Facebook и Steam, с източник за всеки факт. Във втората, Prompt Pictionary, екипите пишеха и пренаписваха промптове, докато изображението им, създадено с изкуствен интелект, не съвпадне с тайно изображение. Следобедът донесе карта на инструментите с изкуствен интелект, които групата използва, и първия кръг на vibe coding: създаване на софтуер чрез описание на обикновен език пред изкуствен интелект.",
+    "On day three, participants turned their first drafts into working projects and tested them on their phones. They built a city guide with missions around Stara Zagora, a volleyball learning app, a site that makes politics simple for first-time voters, a habit tracker with game-style rewards, a website for a small tiling business and creative portfolios. The evening belonged to the Albanian, Lithuanian and Bulgarian teams.":
+        "През третия ден участниците превърнаха първите си чернови в работещи проекти и ги тестваха на телефоните си. Те създадоха градски пътеводител с мисии из Стара Загора, приложение за обучение по волейбол, сайт, който прави политиката разбираема за гласуващите за първи път, тракер за навици с награди като в игра, уебсайт за малка фирма за плочки и творчески портфолиа. Вечерта принадлежеше на албанския, литовския и българския екип.",
+    "After three intense days in front of screens, day four was a cultural day without them: participants explored Bulgarian culture and the city of Stara Zagora, rested and recharged.":
+        "След три интензивни дни пред екраните четвъртият ден беше културен ден без тях: участниците опознаха българската култура и град Стара Загора, почиваха и презаредиха.",
+    "On day five, participants finished their projects, published them online with GitHub Pages and presented them in short pitches. The afternoon workshop on OSINT (open-source intelligence) began with participants investigating their own digital footprint: searching their names, checking data leaks, following their usernames and looking at what their photos reveal. The group then analysed famous online hacks and how they could have been prevented.":
+        "През петия ден участниците завършиха проектите си, публикуваха ги онлайн с GitHub Pages и ги представиха в кратки презентации. Следобедният уъркшоп по OSINT (разузнаване от открити източници) започна с това, че участниците изследваха собствения си дигитален отпечатък: търсеха имената си, проверяваха за изтекли данни, проследяваха потребителските си имена и разглеждаха какво разкриват снимките им. След това групата анализира известни онлайн хакерски атаки и как е можело да бъдат предотвратени.",
+    "Day six turned participants into investigators. In a digital treasure hunt, teams followed a fictional developer's trail of clues across GitHub, X, Instagram, Reddit and the web archive, from hidden photo metadata to deleted files still sitting in the code history. The story behind it was a data protection case, which made GDPR feel real. Teams also gave each other feedback on their projects and improved them.":
+        "Шестият ден превърна участниците в разследващи. В дигитален лов на съкровища екипите проследиха следите на измислен програмист в GitHub, X, Instagram, Reddit и уеб архива – от скрити метаданни в снимка до изтрити файлове, които все още стоят в историята на кода. Историята зад играта беше случай със защита на личните данни, което направи GDPR истински осезаем. Екипите си дадоха и обратна връзка по проектите и ги подобриха.",
+    "On the final day, the group learned how blockchain works in ten minutes and then became one: in the riddle chain, three teams solved riddles to \"seal\" each block, until a hacker changed the first block and the whole chain broke. A session on live tracking and public cameras asked where the line is between public and private.":
+        "В последния ден групата научи как работи блокчейн за десет минути и след това се превърна в такъв: в играта „верига от гатанки“ три екипа решаваха гатанки, за да „запечатат“ всеки блок, докато хакер не промени първия блок и цялата верига се разпадна. Сесия за проследяването в реално време и публичните камери постави въпроса къде е границата между публичното и личното.",
+    "The course ended with reflection, evaluation and Youthpass certificates for all participants. Each of them returned home with a live project on their phone, five ready-to-use methods and a guide for teaching digital skills to young people.":
+        "Курсът завърши с рефлексия, оценка и сертификати Youthpass за всички участници. Всеки от тях се прибра у дома с работещ проект на телефона си, пет готови за използване метода и наръчник за преподаване на дигитални умения на младите хора.",
+    "Youth workers gained the confidence to teach digital skills without a tech background, using free tools that work for every young person.":
+        "Младежките работници придобиха увереност да преподават дигитални умения без технически опит, като използват безплатни инструменти, достъпни за всеки млад човек.",
+    "Participants learned to use AI effectively and critically, writing clear prompts and checking AI's answers against real sources.":
+        "Участниците се научиха да използват изкуствения интелект ефективно и критично, като пишат ясни промптове и проверяват отговорите му спрямо реални източници.",
+    "Online safety became part of everyday youth work: recognising scams, securing accounts, protecting one's digital footprint and applying GDPR in practice.":
+        "Онлайн безопасността стана част от ежедневната младежка работа: разпознаване на измами, защита на профилите, опазване на дигиталния отпечатък и прилагане на GDPR на практика.",
+    "Participants strengthened their entrepreneurial and freelancing skills by developing ideas, building products for real users and pitching them.":
+        "Участниците укрепиха предприемаческите си умения и уменията си за работа на свободна практика, като развиваха идеи, създаваха продукти за реални потребители и ги представяха.",
+    "Intercultural competence grew through daily teamwork in international groups and cultural evenings from across the partner countries.":
+        "Междукултурната компетентност се разви чрез ежедневна работа в международни екипи и културни вечери от партньорските държави.",
+    "Every participant built and published their own website, app, portfolio or learning platform with vibe coding, hosted on GitHub Pages.":
+        "Всеки участник изгради и публикува свой собствен уебсайт, приложение, портфолио или образователна платформа чрез vibe coding, хоствани в GitHub Pages.",
+    "A guide on teaching digital skills to young people and using vibe coding in youth work: the Smart Youth Worker Playbook.":
+        "Наръчник за преподаване на дигитални умения на младите хора и за използване на vibe coding в младежката работа: Smart Youth Worker Playbook.",
+    "Five ready-to-use non-formal methods: Spot the Scam, Prompt Pictionary, the AI safety presentation challenge, the OSINT treasure hunt and the blockchain riddle chain.":
+        "Пет готови за използване метода на неформалното образование: Spot the Scam, Prompt Pictionary, предизвикателството за презентация за онлайн безопасност с изкуствен интелект, OSINT ловът на съкровища и блокчейн веригата от гатанки.",
+    "Youthpass certificates for all participants.":
+        "Сертификати Youthpass за всички участници.",
+    "Designing a digital training":
+        "Проектиране на дигитално обучение",
+    "Online scams":
+        "Онлайн измами",
+    "Prompt Like a Pro":
+        "Prompt Like a Pro",
+    "Vibe coding":
+        "Vibe coding",
+    "Deploy and pitch":
+        "Публикуване и представяне",
+    "OSINT and the treasure hunt":
+        "OSINT и ловът на съкровища",
+    "Blockchain in 10 minutes":
+        "Блокчейн за 10 минути",
+    "Live tracking and public data":
+        "Проследяване в реално време и публични данни",
+    "GDPR in youth work":
+        "GDPR в младежката работа",
+    "Communication and visibility":
+        "Комуникация и видимост",
+    "Reflection and Youthpass":
+        "Рефлексия и Youthpass",
+    "Templates":
+        "Шаблони",
+    "AI and digital skills for youth work":
+        "Изкуствен интелект и дигитални умения за младежката работа",
+    "2–10 November 2026":
+        "2–10 ноември 2026 г.",
+    "Bulgaria, Spain, Albania, Romania, Moldova, Lithuania":
+        "България, Испания, Албания, Румъния, Молдова, Литва",
+    "Training Course · Nov 2026":
+        "Обучителен курс · ноември 2026",
+    "Nov 2026":
+        "ноември 2026",
+    "\"Smart Youth Worker\" was an Erasmus+ training course that brought youth workers from Bulgaria, Spain, Albania, Romania, Moldova and Lithuania to Stara Zagora to learn how to teach digital skills to young people.":
+        "„Smart Youth Worker“ беше обучителен курс по Еразъм+, който събра младежки работници от България, Испания, Албания, Румъния, Молдова и Литва в Стара Загора, за да се научат как да преподават дигитални умения на младите хора.",
+    "Smart Youth Worker poster":
+        "Плакат на Smart Youth Worker",
+    "Scroll down to see some of the most memorable highlights from the \"Smart Youth Worker\" experience.":
+        "Превъртете надолу, за да видите някои от най-запомнящите се моменти от „Smart Youth Worker“.",
+    "The Playbook":
+        "Наръчникът",
+    "Download":
+        "Изтегляне",
+    "Download the Playbook":
+        "Изтеглете наръчника",
+    "Download the Playbook (PDF)":
+        "Изтеглете наръчника (PDF)",
+    "Smart Youth Worker Playbook":
+        "Smart Youth Worker Playbook",
+    "Smart Youth Worker Playbook cover":
+        "Корица на Smart Youth Worker Playbook",
+    "How to design and run digital skills trainings for youth work, from AI prompting and vibe coding to OSINT and blockchain. Every method was tested with a real international group.":
+        "Как да проектирате и провеждате обучения по дигитални умения в младежката работа – от промптове за изкуствен интелект и vibe coding до OSINT и блокчейн. Всеки метод е изпитан с реална международна група.",
+    "PDF · 1.7 MB":
+        "PDF · 1,7 MB",
+    "PDF · 1.7 MB · English":
+        "PDF · 1,7 MB · на английски",
 }
