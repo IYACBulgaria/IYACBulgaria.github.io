@@ -1092,4 +1092,6 @@ BG = {
         "Как работят блокчейн и криптовалутите – научено, като групата сама се превърна в блокчейн във веригата от гатанки, – и как да се пазим от крипто измами.",
     "Building real websites and apps by describing them to AI in plain language, then publishing them online with GitHub Pages.":
         "Създаване на истински уебсайтове и приложения чрез описание на обикновен език пред изкуствен интелект и публикуването им онлайн с GitHub Pages.",
+    "The whole room watches a participant present his project":
+        "Цялата зала гледа как участник представя проекта си",
 }

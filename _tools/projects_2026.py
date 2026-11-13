@@ -15,7 +15,8 @@ PLACEHOLDER_ALT = 'Photo coming soon'
 
 PROJECTS_2026 = {
     'smartyouthworker': {
-        'photos': [f'photo-{i}' for i in range(1, 17)],
+        # photo-17 (a pitch) leads the story, and sits with the other pitches in the gallery
+        'photos': [f'photo-{i}' for i in range(1, 10)] + ['photo-17'] + [f'photo-{i}' for i in range(10, 17)],
         'alts': {
             'photo-1': 'Participants sitting in a circle on the first day of the training course',
             'photo-2': 'Participants build a human pyramid during a teambuilding game',
@@ -33,6 +34,7 @@ PROJECTS_2026 = {
             'photo-14': 'Teams follow the clues during the OSINT treasure hunt',
             'photo-15': 'A slide on staying safe before you ever touch crypto, from the blockchain session',
             'photo-16': 'The group during the final session of the training course',
+            'photo-17': 'The whole room watches a participant present his project',
         },
         'title': 'Smart Youth Worker',
         'tagline': 'AI and digital skills for youth work',
@@ -86,7 +88,7 @@ PROJECTS_2026 = {
             'Five ready-to-use non-formal methods: Spot the Scam, Prompt Pictionary, the AI safety presentation challenge, the OSINT treasure hunt and the blockchain riddle chain.',
             'Youthpass certificates for all participants.',
         ],
-        'after': {1: ('photo', 'photo-1'), 3: ('duo', 'photo-2', 'photo-5')},
+        'after': {1: ('photo', 'photo-17'), 3: ('duo', 'photo-2', 'photo-5')},
     },
     'writethechange': {
         'photos': [f'photo-{i}' for i in range(1, 13)],
