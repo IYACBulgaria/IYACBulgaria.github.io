@@ -161,7 +161,7 @@ PROJECTS = {
     },
 }
 ORDER = ['writeitdown', 'doityourself', 'stepforward', 'keeptalking', 'letuscook', 'democracyunderpressure', 'faciliteasy',
-         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope', 'smartyouthworker']
+         'writethechange', 'beyondthegame', 'breakthesilence', 'atasteofeurope', 'greenfacilitator', 'smartyouthworker']
 
 # 2026 projects written from the Project Summaries document (no original page)
 sys.path.insert(0, str(Path(__file__).parent))

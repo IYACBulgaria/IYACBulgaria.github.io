@@ -14,6 +14,59 @@ PHOTOS = [f'photo-{i}' for i in range(1, 10)]
 PLACEHOLDER_ALT = 'Photo coming soon'
 
 PROJECTS_2026 = {
+    'greenfacilitator': {
+        'photos': [f'photo-{i}' for i in range(1, 17)],
+        'alts': {
+            'photo-1': 'A facilitator speaks to the group sitting in a circle on the first day',
+            'photo-2': 'Two participants talking during a getting-to-know-each-other activity',
+            'photo-3': 'Two participants collecting waste during the forest clean-up',
+            'photo-4': 'Three participants with their junk-art sculpture made from collected waste',
+            'photo-5': 'A junk-art sculpture reading “Contemporary art be like”',
+            'photo-6': 'The group on a nature trail, with a dog leading the way',
+            'photo-7': 'Participants testing a workshop outdoors among the trees',
+            'photo-8': 'A game from a participant-led workshop in the village street',
+            'photo-9': 'Participants in the courtyard during an outdoor workshop, with the hills behind',
+            'photo-10': 'Participants sharing a meal together',
+            'photo-11': 'The group on their feet during a Liberating Structures activity',
+            'photo-12': 'A small group working together on the sofas',
+            'photo-13': 'A Blooket quiz game on the big screen',
+            'photo-14': 'The final standings of a Blooket quiz made by the participants',
+            'photo-15': 'Participants planning youth exchanges on ecology and climate action',
+            'photo-16': 'The group in a big circle for the final reflection',
+        },
+        'title': 'Green Facilitator',
+        'tagline': 'Environmental workshops that turn eco-anxiety into action',
+        'facts': [('Dates', '25 October – 2 November 2026'), ('Location', 'Youtopia Centre, Sarnena Gora, near Stara Zagora, Bulgaria'),
+                  ('Focus', 'Eco-anxiety, participatory methods and climate action'),
+                  ('Format', 'Erasmus+ Training Course')],
+        'flags': [],  # partner countries still to be confirmed
+        'meta': 'Training Course · Oct 2026',
+        'paragraphs': [
+            '"Green Facilitator" was an Erasmus+ training course that brought youth workers and young people to Youtopia Centre, a nature-based venue in the forests of Sarnena Gora just outside Stara Zagora, to learn how to run environmental workshops that really reach young people. Instead of lecturing about catastrophes, participants learned to work with eco-anxiety and climate apathy, to use participatory methods where every voice is heard, and to turn concern for the planet into hope, creativity and practical action. Much of the programme took place outdoors, in nature.',
+            'The course opened on 26 October with teambuilding, icebreakers and conversations in pairs and small groups. In a big circle, everyone shared what had brought them there, along with their expectations, fears and motivations, before the team introduced the goal of the week: giving youth workers the tools to run environmental workshops that inspire young people and turn eco-anxiety and apathy into action.',
+            'Day two began with a blind walk. In pairs, one blindfolded and one guiding, participants explored the nature around the venue through sound, touch and smell, discovering how much we miss when we only look. The group then cleaned up the forest and the nearby village and turned what they collected, from old tyres and plastic bottles to a broken lamp and a lot of duct tape, into junk art and sculptures. One piece carried the message "Contemporary art be like: sometimes junk is just junk", a reminder that every piece of waste ends up somewhere.',
+            'On day three, participants stepped into the facilitator role and designed their own environmental workshops: setting goals, choosing methods and planning how to reach young people in a fun, active and meaningful way. They then ran their first tests with the group, many of them outdoors in the courtyard, the village streets and on nature trails, followed by honest peer feedback and improvements. These workshops will be collected into a guidebook for youth workers.',
+            'Day four was a cultural day to rest and recharge, with visits to Stara Zagora and Plovdiv, two of Bulgaria\'s oldest cities.',
+            'Day five, "Every Voice Counts", was dedicated to Liberating Structures: simple group formats that make sure everyone is heard, not just the loudest. In 1-2-4-All, participants moved from silent thinking to pairs, fours and the whole group to answer: "If you were 10 times bolder, what environmental action would you do with young people this year?" In 25/10 Crowd Sourcing, they wrote, swapped and anonymously rated ideas for a nearly zero-waste Erasmus+ project. In TRIZ, they planned "the worst and least sustainable youth exchange about ecology ever", then asked honestly which of those habits they already have, and committed to stopping them.',
+            'On day six, small groups brainstormed, debated and shaped their own ideas for Erasmus+ youth exchanges on ecology and climate action, using the Erasmus+ Programme Guide and lessons from earlier projects. Teams also built interactive quiz games on Blooket and ran them for the rest of the group, testing a ready-to-use digital tool that works for any topic.',
+            'On the final day, the group gathered in a big circle to reflect on the whole week, from the blind walk and junk art to their own workshops and youth exchange ideas, and talked about what they had learned and what they would take home. Each participant left with a toolbox of methods and the motivation to inspire young people to act for the planet.',
+        ],
+        'impacts': [
+            'Youth workers learned to recognise eco-anxiety and apathy in young people and to respond with hope and practical action rather than guilt or fear.',
+            'Participants gained confidence as facilitators by designing, testing and improving their own environmental workshops.',
+            'Participatory methods such as Liberating Structures, design thinking, World Café and Open Space made sure every voice in a group could be heard.',
+            'Learning in nature, through the senses and through creativity, built a stronger connection to the environment.',
+            'Participants reflected on their own habits and made personal commitments to live more sustainably.',
+        ],
+        'results': [
+            'Every participant designed, tested and improved their own environmental workshop for young people.',
+            'A guidebook of the participants\' workshops for youth workers, to be published on the IYAC website.',
+            'Ideas for future Erasmus+ youth exchanges on ecology and climate action, plus a top-10 list of ideas for nearly zero-waste Erasmus+ projects.',
+            'A toolbox of ready-to-use methods: the blind walk, clean-up and junk art, 1-2-4-All, 25/10 Crowd Sourcing, TRIZ, design thinking, World Café, Open Space and Blooket quizzes.',
+            'Youthpass certificates for participants.',
+        ],
+        'after': {2: ('photo', 'photo-4'), 3: ('duo', 'photo-3', 'photo-7')},
+    },
     'smartyouthworker': {
         # photo-17 (a pitch) leads the story, and sits with the other pitches in the gallery
         'photos': [f'photo-{i}' for i in range(1, 10)] + ['photo-17'] + [f'photo-{i}' for i in range(10, 17)],

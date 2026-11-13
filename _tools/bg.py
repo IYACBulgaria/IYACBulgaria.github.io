@@ -1094,4 +1094,93 @@ BG = {
         "Създаване на истински уебсайтове и приложения чрез описание на обикновен език пред изкуствен интелект и публикуването им онлайн с GitHub Pages.",
     "The whole room watches a participant present his project":
         "Цялата зала гледа как участник представя проекта си",
+    # Green Facilitator
+    "\"Green Facilitator\" was an Erasmus+ training course that brought youth workers and young people to Youtopia Centre, a nature-based venue in the forests of Sarnena Gora just outside Stara Zagora, to learn how to run environmental workshops that really reach young people. Instead of lecturing about catastrophes, participants learned to work with eco-anxiety and climate apathy, to use participatory methods where every voice is heard, and to turn concern for the planet into hope, creativity and practical action. Much of the programme took place outdoors, in nature.":
+        "„Green Facilitator“ беше обучителен курс по Еразъм+, който събра младежки работници и млади хора в центъра „Ютопия“ – място сред природата в горите на Сърнена Гора, точно до Стара Загора, за да се научат как да провеждат екологични уъркшопи, които наистина достигат до младите хора. Вместо да говорят за катастрофи, участниците се научиха да работят с еко тревожността и климатичната апатия, да използват методи на участие, при които всеки глас е чут, и да превръщат грижата за планетата в надежда, креативност и практически действия. Голяма част от програмата се проведе навън, сред природата.",
+    "The course opened on 26 October with teambuilding, icebreakers and conversations in pairs and small groups. In a big circle, everyone shared what had brought them there, along with their expectations, fears and motivations, before the team introduced the goal of the week: giving youth workers the tools to run environmental workshops that inspire young people and turn eco-anxiety and apathy into action.":
+        "Курсът започна на 26 октомври с изграждане на екип, игри за разчупване на леда и разговори по двойки и в малки групи. В голям кръг всеки сподели какво го е довело тук, както и своите очаквания, страхове и мотивация, преди екипът да представи целта на седмицата: да даде на младежките работници инструменти за провеждане на екологични уъркшопи, които вдъхновяват младите хора и превръщат еко тревожността и апатията в действие.",
+    "Day two began with a blind walk. In pairs, one blindfolded and one guiding, participants explored the nature around the venue through sound, touch and smell, discovering how much we miss when we only look. The group then cleaned up the forest and the nearby village and turned what they collected, from old tyres and plastic bottles to a broken lamp and a lot of duct tape, into junk art and sculptures. One piece carried the message \"Contemporary art be like: sometimes junk is just junk\", a reminder that every piece of waste ends up somewhere.":
+        "Вторият ден започна с разходка със затворени очи. По двойки – единият със завързани очи, а другият водач – участниците опознаха природата около мястото чрез звуци, допир и мирис и откриха колко много пропускаме, когато само гледаме. След това групата почисти гората и близкото село и превърна събраното – от стари гуми и пластмасови бутилки до счупена лампа и много тиксо – в junk art и скулптури. Една от творбите носеше посланието „Contemporary art be like: sometimes junk is just junk“ – напомняне, че всеки отпадък стига някъде.",
+    "On day three, participants stepped into the facilitator role and designed their own environmental workshops: setting goals, choosing methods and planning how to reach young people in a fun, active and meaningful way. They then ran their first tests with the group, many of them outdoors in the courtyard, the village streets and on nature trails, followed by honest peer feedback and improvements. These workshops will be collected into a guidebook for youth workers.":
+        "През третия ден участниците влязоха в ролята на фасилитатори и проектираха свои собствени екологични уъркшопи: поставиха цели, избраха методи и планираха как да достигнат до младите хора по забавен, активен и смислен начин. След това проведоха първите тестове с групата – много от тях навън, в двора, по улиците на селото и по горските пътеки, – последвани от честна обратна връзка и подобрения. Тези уъркшопи ще бъдат събрани в наръчник за младежки работници.",
+    "Day four was a cultural day to rest and recharge, with visits to Stara Zagora and Plovdiv, two of Bulgaria's oldest cities.":
+        "Четвъртият ден беше културен ден за почивка и презареждане, с посещения в Стара Загора и Пловдив – два от най-старите градове в България.",
+    "Day five, \"Every Voice Counts\", was dedicated to Liberating Structures: simple group formats that make sure everyone is heard, not just the loudest. In 1-2-4-All, participants moved from silent thinking to pairs, fours and the whole group to answer: \"If you were 10 times bolder, what environmental action would you do with young people this year?\" In 25/10 Crowd Sourcing, they wrote, swapped and anonymously rated ideas for a nearly zero-waste Erasmus+ project. In TRIZ, they planned \"the worst and least sustainable youth exchange about ecology ever\", then asked honestly which of those habits they already have, and committed to stopping them.":
+        "Петият ден, „Every Voice Counts“, беше посветен на Liberating Structures – прости групови формати, които гарантират, че всеки е чут, а не само най-гръмките. В 1-2-4-All участниците преминаха от тихо обмисляне към работа по двойки, по четирима и с цялата група, за да отговорят на въпроса: „Ако бяхте 10 пъти по-смели, какво екологично действие бихте направили с младите хора тази година?“ В 25/10 Crowd Sourcing те написаха, размениха и анонимно оцениха идеи за почти безотпадъчен проект по Еразъм+. В TRIZ планираха „най-лошия и най-неустойчив младежки обмен за екология в историята“, след което честно се запитаха кои от тези навици вече имат, и поеха ангажимент да ги спрат.",
+    "On day six, small groups brainstormed, debated and shaped their own ideas for Erasmus+ youth exchanges on ecology and climate action, using the Erasmus+ Programme Guide and lessons from earlier projects. Teams also built interactive quiz games on Blooket and ran them for the rest of the group, testing a ready-to-use digital tool that works for any topic.":
+        "През шестия ден малки групи обсъждаха, спореха и оформяха свои идеи за младежки обмени по Еразъм+ на тема екология и климатични действия, като използваха Ръководството за програма „Еразъм+“ и поуките от предишни проекти. Екипите създадоха и интерактивни игри-викторини в Blooket и ги проведоха с останалата част от групата, като изпробваха готов за използване дигитален инструмент, подходящ за всяка тема.",
+    "On the final day, the group gathered in a big circle to reflect on the whole week, from the blind walk and junk art to their own workshops and youth exchange ideas, and talked about what they had learned and what they would take home. Each participant left with a toolbox of methods and the motivation to inspire young people to act for the planet.":
+        "В последния ден групата се събра в голям кръг, за да направи рефлексия върху цялата седмица – от разходката със затворени очи и junk art до собствените уъркшопи и идеите за младежки обмени, – и обсъди какво е научила и какво ще отнесе у дома. Всеки участник си тръгна с набор от методи и с мотивацията да вдъхновява младите хора да действат за планетата.",
+    "Youth workers learned to recognise eco-anxiety and apathy in young people and to respond with hope and practical action rather than guilt or fear.":
+        "Младежките работници се научиха да разпознават еко тревожността и апатията у младите хора и да отговарят с надежда и практически действия, а не с вина или страх.",
+    "Participants gained confidence as facilitators by designing, testing and improving their own environmental workshops.":
+        "Участниците придобиха увереност като фасилитатори, като проектираха, тестваха и подобриха свои собствени екологични уъркшопи.",
+    "Participatory methods such as Liberating Structures, design thinking, World Café and Open Space made sure every voice in a group could be heard.":
+        "Методи на участие като Liberating Structures, дизайн мислене, World Café и Open Space дадоха възможност всеки глас в групата да бъде чут.",
+    "Learning in nature, through the senses and through creativity, built a stronger connection to the environment.":
+        "Ученето сред природата, чрез сетивата и чрез креативност, изгради по-силна връзка с околната среда.",
+    "Participants reflected on their own habits and made personal commitments to live more sustainably.":
+        "Участниците направиха рефлексия върху собствените си навици и поеха лични ангажименти да живеят по-устойчиво.",
+    "Every participant designed, tested and improved their own environmental workshop for young people.":
+        "Всеки участник проектира, тества и подобри свой собствен екологичен уъркшоп за млади хора.",
+    "A guidebook of the participants' workshops for youth workers, to be published on the IYAC website.":
+        "Наръчник с уъркшопите на участниците за младежки работници, който ще бъде публикуван на уебсайта на IYAC.",
+    "Ideas for future Erasmus+ youth exchanges on ecology and climate action, plus a top-10 list of ideas for nearly zero-waste Erasmus+ projects.":
+        "Идеи за бъдещи младежки обмени по Еразъм+ на тема екология и климатични действия, както и списък с 10-те най-добри идеи за почти безотпадъчни проекти по Еразъм+.",
+    "A toolbox of ready-to-use methods: the blind walk, clean-up and junk art, 1-2-4-All, 25/10 Crowd Sourcing, TRIZ, design thinking, World Café, Open Space and Blooket quizzes.":
+        "Набор от готови за използване методи: разходка със затворени очи, почистване и junk art, 1-2-4-All, 25/10 Crowd Sourcing, TRIZ, дизайн мислене, World Café, Open Space и викторини в Blooket.",
+    "Youthpass certificates for participants.":
+        "Сертификати Youthpass за участниците.",
+    "A facilitator speaks to the group sitting in a circle on the first day":
+        "Фасилитатор говори пред групата, седнала в кръг в първия ден",
+    "Two participants talking during a getting-to-know-each-other activity":
+        "Двама участници разговарят по време на дейност за опознаване",
+    "Two participants collecting waste during the forest clean-up":
+        "Двама участници събират отпадъци по време на почистването на гората",
+    "Three participants with their junk-art sculpture made from collected waste":
+        "Трима участници със своята скулптура от събрани отпадъци",
+    "A junk-art sculpture reading “Contemporary art be like”":
+        "Скулптура от отпадъци с надпис „Contemporary art be like“",
+    "The group on a nature trail, with a dog leading the way":
+        "Групата на горска пътека, а куче води пътя",
+    "Participants testing a workshop outdoors among the trees":
+        "Участници тестват уъркшоп навън сред дърветата",
+    "A game from a participant-led workshop in the village street":
+        "Игра от уъркшоп, воден от участник, на улицата в селото",
+    "Participants in the courtyard during an outdoor workshop, with the hills behind":
+        "Участници в двора по време на уъркшоп навън, а зад тях се виждат хълмовете",
+    "Participants sharing a meal together":
+        "Участници споделят обща трапеза",
+    "The group on their feet during a Liberating Structures activity":
+        "Групата на крака по време на дейност от Liberating Structures",
+    "A small group working together on the sofas":
+        "Малка група работи заедно на диваните",
+    "A Blooket quiz game on the big screen":
+        "Игра-викторина в Blooket на големия екран",
+    "The final standings of a Blooket quiz made by the participants":
+        "Крайното класиране на викторина в Blooket, създадена от участниците",
+    "Participants planning youth exchanges on ecology and climate action":
+        "Участници планират младежки обмени на тема екология и климатични действия",
+    "The group in a big circle for the final reflection":
+        "Групата в голям кръг за заключителната рефлексия",
+    "Environmental workshops that turn eco-anxiety into action":
+        "Екологични уъркшопи, които превръщат еко тревожността в действие",
+    "25 October – 2 November 2026":
+        "25 октомври – 2 ноември 2026 г.",
+    "Youtopia Centre, Sarnena Gora, near Stara Zagora, Bulgaria":
+        "Център „Ютопия“, Сърнена Гора, край Стара Загора, България",
+    "Focus":
+        "Фокус",
+    "Eco-anxiety, participatory methods and climate action":
+        "Еко тревожност, методи на участие и климатични действия",
+    "Training Course · Oct 2026":
+        "Обучителен курс · октомври 2026",
+    "Oct 2026":
+        "октомври 2026",
+    "Green Facilitator poster":
+        "Плакат на Green Facilitator",
+    "\"Green Facilitator\" was an Erasmus+ training course in the forests near Stara Zagora that trained youth workers to run environmental workshops that turn eco-anxiety and apathy into hope and action.":
+        "„Green Facilitator“ беше обучителен курс по Еразъм+ в горите край Стара Загора, който подготви младежки работници да провеждат екологични уъркшопи, превръщащи еко тревожността и апатията в надежда и действие.",
+    "Scroll down to see some of the most memorable highlights from the \"Green Facilitator\" experience.":
+        "Превъртете надолу, за да видите някои от най-запомнящите се моменти от „Green Facilitator“.",
 }
