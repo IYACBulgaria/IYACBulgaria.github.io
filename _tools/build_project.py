@@ -16,7 +16,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ASSET_V = '15'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
+ASSET_V = '16'  # bump when shevitsa.css / shevitsa.js change, so browsers refetch them
 
 # ---------------------------------------------------------------------------
 # Per-project layout choices. Fact values are quoted from each original text.
@@ -218,8 +218,9 @@ def from_document(slug, cfg):
     """Same shape as extract_original, for projects written from the 2026 document."""
     disclaimer = extract_original('letuscook')['disclaimer']  # the standard EU wording, as on every page
     dl = cfg.get('download')
-    return dict(title=cfg['title'], sidebar_title='The Playbook' if dl else 'Download Catalog',
-                link=dl['file'] if dl else PLACEHOLDER_LINK, link_label=dl['label'] if dl else 'Materials & Videos',
+    return dict(title=cfg['title'], sidebar_title=cfg.get('sidebar', 'The Playbook' if dl else 'Download Catalog'),
+                link=cfg.get('link', dl['file'] if dl else PLACEHOLDER_LINK),
+                link_label=cfg.get('link_label', dl['label'] if dl else 'Materials & Videos'),
                 h3=cfg['tagline'], blocks=[('p', p) for p in cfg['paragraphs']], gal_h2='Gallery',
                 gal_intro=f'Scroll down to see some of the most memorable highlights from the "{cfg["title"]}" experience.',
                 imgs=list(cfg['photos']), disclaimer=disclaimer)
@@ -404,6 +405,9 @@ def build(slug):
         size = (ROOT / dl['file']).stat().st_size / 1e6
         drive_link = (f'<a class="btn btn--red btn--lg" href="{dl["file"]}" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> '
                       f'<span>{dl["label"]}</span> <span class="btn__meta">PDF · {size:.1f} MB</span></a>')
+        if cfg.get('link'):  # a second button, e.g. the Google Drive photo folder
+            drive_link += (f'\n            <a class="btn btn--linen btn--lg" href="{cfg["link"]}" target="_blank" rel="noopener"><i class="bi bi-images" aria-hidden="true"></i> '
+                           f'{cfg["link_label"]} <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>')
     elif o['link'].startswith('#'):
         drive_link = (f'<!-- PLACEHOLDER: replace href with the Google Drive link -->\n            '
                       f'<a class="btn btn--red btn--lg" href="{o["link"]}"><i class="bi bi-camera-reels" aria-hidden="true"></i> {o["link_label"]} <i class="bi bi-arrow-down" aria-hidden="true"></i></a>')
@@ -461,19 +465,21 @@ def build(slug):
     if dl:
         cw, ch = image_size(dl['cover'])
         size = (ROOT / dl['file']).stat().st_size / 1e6
-        chips = '\n'.join(f'            <li><span class="playbook__n" aria-hidden="true">{k + 1:02d}</span> <span>{c}</span></li>'
-                          if c != 'Templates' else f'            <li><span class="playbook__n" aria-hidden="true">++</span> <span>{c}</span></li>'
-                          for k, c in enumerate(dl['chapters']))
+        # chapters are plain names (numbered automatically) or (mark, name) pairs
+        marks = [c if isinstance(c, tuple) else ('++' if c == 'Templates' else f'{k + 1:02d}', c) for k, c in enumerate(dl['chapters'])]
+        chips = '\n'.join(f'            <li><span class="playbook__n" aria-hidden="true">{m}</span> <span>{c}</span></li>' for m, c in marks)
+        read = (f'\n            <a class="btn btn--ghost-light btn--lg" href="{dl["read"]}"><i class="bi bi-book" aria-hidden="true"></i> {dl["read_label"]}</a>'
+                if dl.get('read') else '')
         playbook = f'''
     <!-- ===== The playbook (download) ===== -->
-    <section id="playbook" class="playbook section">
+    <section id="playbook" class="playbook section{' playbook--' + dl['theme'] if dl.get('theme') else ''}">
       <div class="container playbook__grid">
-        <a class="playbook__cover" href="{dl['file']}" download data-reveal aria-label="{dl['label']} (PDF)">
+        <a class="playbook__cover" href="{dl.get('read') or dl['file']}"{'' if dl.get('read') else ' download'} data-reveal aria-label="{dl.get('read_label') if dl.get('read') else dl['label'] + ' (PDF)'}">
           <img src="{dl['cover']}" alt="{dl['title']} cover" width="{cw}" height="{ch}" loading="lazy" decoding="async">
         </a>
         <div class="playbook__copy">
           <header class="section-head" data-reveal>
-            <h2 class="eyebrow">Download</h2>
+            <h2 class="eyebrow">{dl.get('eyebrow', 'Download')}</h2>
             <p class="playbook__title">{dl['title']}</p>
           </header>
           <p class="playbook__text" data-reveal>{dl['text']}</p>
@@ -481,7 +487,7 @@ def build(slug):
 {chips}
           </ol>
           <div class="playbook__actions" data-reveal>
-            <a class="btn btn--red btn--lg" href="{dl['file']}" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> {dl['label']}</a>
+            <a class="btn btn--red btn--lg" href="{dl['file']}" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> {dl['label']}</a>{read}
             <span class="playbook__meta">PDF · {size:.1f} MB · English</span>
           </div>
         </div>

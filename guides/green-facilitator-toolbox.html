@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Green Facilitator Toolbox – Outdoor workshops for youth workers</title>
+<meta name="description" content="Nature-based and participatory workshops designed and tested by youth workers during the Erasmus+ training course Green Facilitator, ready to use with young people.">
+<meta name="theme-color" content="#1F6B3A">
+<link href="../assets/img/favicon.png" rel="icon">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<link href="../assets/vendor/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet">
+<style>
+/* Green Facilitator Toolbox: an A4 book that also reads well on screen. */
+:root {
+  --cream: #FFF6E0; --paper: #FFFDF6; --forest: #1F6B3A; --forest-d: #0E3B1F; --leaf: #6DBF4B; --leaf-l: #DDEFC2;
+  --sun: #FFC93C; --clay: #C9572E; --ink: #1B2A1E; --ink-2: #4A5A4D; --line: rgba(31, 107, 58, 0.18);
+  --display: "Alfa Slab One", Georgia, serif;
+  --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--body); color: var(--ink); background: #2A4A33; font-size: 15px; line-height: 1.55; }
+h1, h2, h3, h4, p, ul, ol, figure { margin: 0; }
+img { display: block; max-width: 100%; }
+a { color: var(--forest); }
+
+/* ---------- screen chrome ---------- */
+.bar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 10px 16px;
+  background: rgba(14, 59, 31, 0.92); color: #FFF6E0; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.bar__title { font-weight: 700; margin-right: auto; font-size: 0.95rem; }
+.bar a { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border-radius: 999px; text-decoration: none; font-weight: 650; font-size: 0.875rem; }
+.bar .ghost { color: #FFF6E0; box-shadow: inset 0 0 0 1.5px rgba(255, 246, 224, 0.4); }
+.bar .solid { background: var(--sun); color: var(--ink); }
+.book { display: grid; gap: 28px; justify-items: center; padding: 28px 16px 64px; }
+
+/* ---------- pages ---------- */
+.page { position: relative; width: min(210mm, 100%); min-height: calc(min(210mm, 100vw - 32px) * 1.414); padding: 16mm 16mm 18mm;
+  background: var(--paper); border-radius: 6px; box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6); overflow: hidden; display: flex; flex-direction: column; }
+.page--cream { background: var(--cream); }
+.folio { position: absolute; left: 16mm; right: 16mm; bottom: 7mm; display: flex; justify-content: space-between; font-size: 0.7rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.folio b { color: var(--forest); }
+@media (max-width: 640px) { .page { padding: 28px 20px 46px; } .folio { left: 20px; right: 20px; bottom: 14px; } body { font-size: 14.5px; } }
+
+/* typography */
+.kicker { display: inline-flex; align-items: center; gap: 10px; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--forest); }
+.kicker::before { content: ""; width: 22px; height: 2px; background: var(--leaf); border-radius: 2px; }
+.h1 { font-family: var(--display); font-weight: 400; font-size: 2.35rem; line-height: 1.02; color: var(--forest); margin: 8px 0 6px; letter-spacing: -0.005em; }
+.h2 { font-family: var(--display); font-weight: 400; font-size: 1.35rem; line-height: 1.1; color: var(--forest); margin: 18px 0 8px; }
+.h3 { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--clay); margin: 14px 0 6px; }
+.lede { font-size: 1.08rem; line-height: 1.5; color: var(--ink); font-weight: 500; }
+p + p { margin-top: 8px; }
+.muted { color: var(--ink-2); }
+ul.dots, ol.dots { padding-left: 1.2em; } ul.dots li, ol.dots li { margin-bottom: 4px; } ul.dots li::marker { color: var(--leaf); }
+
+/* ---------- cover ---------- */
+.cover { background: var(--cream); padding: 0; }
+.cover__rays { position: absolute; inset: 0; background: repeating-conic-gradient(from 0deg at 50% 64%, var(--leaf-l) 0deg 7.5deg, transparent 7.5deg 15deg); opacity: 0.7; }
+.cover__inner { position: relative; display: flex; flex-direction: column; flex: 1; padding: 14mm 14mm 12mm; }
+.cover__logos { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.cover__logos .eu { height: 15mm; width: auto; background: #fff; padding: 2.2mm 3mm; border-radius: 3mm; }
+.cover__logos .iyac { width: 17mm; height: 17mm; background: #fff; padding: 1.5mm; border-radius: 3mm; }
+.garland { display: flex; justify-content: center; gap: 2.6%; margin: 9mm -14mm 0; padding-top: 2mm; border-top: 3px solid #8A5A2B; }
+.garland i { width: 5.2%; aspect-ratio: 0.62; border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%; border: 2px solid var(--ink); background: var(--leaf); transform: rotate(-10deg); }
+.garland i:nth-child(3n) { background: var(--forest); } .garland i:nth-child(4n) { background: #E8A33D; } .garland i:nth-child(5n) { background: var(--clay); }
+.garland i:nth-child(even) { transform: rotate(12deg); }
+.cover__title { margin-top: 9mm; text-align: center; font-family: var(--display); color: var(--forest); line-height: 0.9; text-shadow: 4px 4px 0 var(--forest-d); }
+.cover__title span { display: block; font-size: clamp(2.8rem, 12vw, 5.1rem); }
+.cover__title small { display: inline-block; margin-top: 5mm; padding: 2.5mm 6mm; border-radius: 999px; background: var(--sun); color: var(--ink); text-shadow: none; font-size: clamp(1.3rem, 5vw, 2rem); border: 3px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+.cover__sub { margin: 8mm auto 0; max-width: 125mm; text-align: center; font-size: 1.12rem; line-height: 1.45; font-weight: 600; }
+.cover__photos { display: grid; grid-template-columns: 1fr 1.25fr 1fr; gap: 4mm; margin-top: auto; padding-top: 9mm; align-items: end; }
+.cover__photos img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 4mm; border: 3px solid var(--ink); box-shadow: 5px 5px 0 var(--ink); }
+.cover__photos img:nth-child(2) { aspect-ratio: 4 / 4.4; }
+.cover__photos img:nth-child(1) { transform: rotate(-3deg); } .cover__photos img:nth-child(3) { transform: rotate(3deg); }
+.cover__foot { display: flex; justify-content: space-between; gap: 10px; margin-top: 8mm; font-weight: 700; font-size: 0.9rem; }
+.badge { display: inline-block; padding: 1.5mm 4mm; border-radius: 999px; background: var(--forest); color: #fff; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* ---------- workshop pages ---------- */
+.ws-head { display: grid; grid-template-columns: auto 1fr; gap: 6mm; align-items: center; padding-bottom: 5mm; border-bottom: 2px dashed var(--line); }
+.ws-num { display: grid; place-items: center; width: 20mm; height: 20mm; border-radius: 50%; background: var(--forest); color: var(--cream); font-family: var(--display); font-size: 1.9rem; box-shadow: 3px 3px 0 var(--forest-d); }
+.ws-head .h1 { margin: 2px 0 4px; font-size: 2rem; }
+.authors { font-size: 0.85rem; color: var(--ink-2); }
+.authors b { color: var(--ink); font-weight: 650; }
+.glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 5mm 0 0; border-radius: 4mm; overflow: hidden; background: var(--leaf-l); }
+.glance div { padding: 3mm 3.5mm; border-right: 1px solid rgba(31, 107, 58, 0.15); }
+.glance div:last-child { border-right: 0; }
+.glance dt { font-size: 0.66rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--forest); display: flex; gap: 6px; align-items: center; }
+.glance dd { margin: 3px 0 0; font-size: 0.86rem; font-weight: 600; line-height: 1.35; }
+@media (max-width: 640px) { .glance { grid-template-columns: 1fr 1fr; } .glance div:nth-child(2) { border-right: 0; } .glance div:nth-child(-n+2) { border-bottom: 1px solid rgba(31, 107, 58, 0.15); } }
+.cols { display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; margin-top: 2mm; }
+@media (max-width: 640px) { .cols { grid-template-columns: 1fr; } }
+.steps { list-style: none; padding: 0; counter-reset: s; margin-top: 2mm; }
+.steps li { counter-increment: s; position: relative; padding: 0 0 4mm 11mm; }
+.steps li::before { content: counter(s); position: absolute; left: 0; top: 0; display: grid; place-items: center; width: 7.5mm; height: 7.5mm; border-radius: 50%; background: var(--leaf); color: var(--ink); font-weight: 800; font-size: 0.85rem; }
+.steps li::after { content: ""; position: absolute; left: 3.6mm; top: 8.5mm; bottom: 1mm; width: 2px; background: var(--leaf-l); }
+.steps li:last-child::after { display: none; }
+.steps b { display: block; font-weight: 700; }
+.steps .t { display: inline-block; margin-left: 6px; padding: 0 7px; border-radius: 999px; background: var(--cream); color: var(--clay); font-size: 0.72rem; font-weight: 700; }
+.note { margin-top: 4mm; padding: 4mm 5mm; border-radius: 4mm; background: var(--cream); border-left: 5px solid var(--sun); }
+.note.tested { border-left-color: var(--clay); }
+.note .h3 { margin-top: 0; display: flex; gap: 8px; align-items: center; }
+.note ul { padding-left: 1.1em; margin: 0; } .note li { margin-bottom: 3px; }
+.photo { margin-top: 4mm; border-radius: 4mm; overflow: hidden; }
+.photo img { width: 100%; height: 62mm; object-fit: cover; }
+.photo figcaption { font-size: 0.75rem; color: var(--ink-2); padding-top: 1.5mm; }
+.qs { list-style: none; padding: 0; } .qs li { position: relative; padding-left: 7mm; margin-bottom: 2mm; }
+.qs li::before { content: "?"; position: absolute; left: 0; top: 0; width: 5mm; height: 5mm; border-radius: 50%; background: var(--forest); color: #fff; font-weight: 800; font-size: 0.7rem; display: grid; place-items: center; }
+
+/* cards (Walk of Shame appendix) */
+.cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3mm; margin-top: 4mm; }
+.card { position: relative; padding: 3.2mm 4mm 3.2mm 12mm; border: 1.5px dashed var(--forest); border-radius: 3mm; font-size: 0.82rem; line-height: 1.38; background: #fff; break-inside: avoid; }
+.card span { position: absolute; left: 3mm; top: 3mm; width: 6.5mm; height: 6.5mm; border-radius: 50%; background: var(--leaf-l); color: var(--forest); font-weight: 800; font-size: 0.7rem; display: grid; place-items: center; }
+.statements { counter-reset: st; list-style: none; padding: 0; columns: 2; column-gap: 7mm; margin-top: 3mm; }
+.statements li { counter-increment: st; position: relative; padding-left: 8mm; margin-bottom: 2.2mm; font-size: 0.84rem; break-inside: avoid; }
+.statements li::before { content: counter(st); position: absolute; left: 0; color: var(--clay); font-weight: 800; }
+@media (max-width: 640px) { .cards { grid-template-columns: 1fr; } .statements { columns: 1; } }
+.chips { display: flex; flex-wrap: wrap; gap: 2mm; list-style: none; padding: 0; margin-top: 3mm; }
+.chips li { padding: 1.5mm 4mm; border-radius: 999px; background: var(--leaf-l); font-weight: 600; font-size: 0.85rem; }
+
+/* intro / mindset */
+.principles { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 4mm; }
+.principle { padding: 4.5mm 5mm; border-radius: 4mm; background: #fff; border: 1.5px solid var(--line); }
+.principle i { font-size: 1.3rem; color: var(--forest); }
+.principle h3 { font-size: 1rem; margin: 2mm 0 1mm; color: var(--forest-d); }
+.principle p { font-size: 0.86rem; color: var(--ink-2); }
+@media (max-width: 640px) { .principles { grid-template-columns: 1fr; } }
+.toc { list-style: none; padding: 0; margin-top: 4mm; }
+.toc li { display: flex; align-items: baseline; gap: 3mm; padding: 2.6mm 0; border-bottom: 1px dashed var(--line); }
+.toc .n { font-family: var(--display); color: var(--leaf); min-width: 9mm; }
+.toc a { color: var(--ink); text-decoration: none; font-weight: 650; }
+.toc .who { margin-left: auto; font-size: 0.8rem; color: var(--ink-2); text-align: right; }
+.methods { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 3mm; }
+.method { padding: 4mm 4.5mm; border-radius: 4mm; background: #fff; border: 1.5px solid var(--line); break-inside: avoid; }
+.method h3 { font-family: var(--display); font-weight: 400; color: var(--forest); font-size: 1.05rem; }
+.method .meta { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--clay); margin: 1mm 0 2mm; }
+.method p, .method li { font-size: 0.84rem; color: var(--ink-2); }
+.method ol { padding-left: 1.1em; margin: 1.5mm 0 0; }
+@media (max-width: 640px) { .methods { grid-template-columns: 1fr; } }
+.form { display: grid; gap: 2.4mm; margin-top: 4mm; }
+.form div { border: 1.5px solid var(--line); border-radius: 3mm; padding: 2.4mm 3.5mm; min-height: 15mm; background: #fff; }
+.form div.tall { min-height: 40mm; } .form div.mid { min-height: 22mm; }
+.form b { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--forest); }
+.form small { display: block; color: var(--ink-2); font-size: 0.74rem; }
+.form .row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2.4mm; border: 0; padding: 0; min-height: 0; background: none; }
+.back { background: var(--forest); color: var(--cream); }
+.back .h1, .back .kicker { color: var(--cream); } .back .kicker::before { background: var(--sun); }
+.back p, .back li { color: rgba(255, 246, 224, 0.88); }
+.credits { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 8mm; margin-top: 5mm; }
+.credits h3 { font-size: 0.95rem; color: var(--sun); margin-bottom: 1mm; }
+.credits p { font-size: 0.86rem; }
+@media (max-width: 640px) { .credits { grid-template-columns: 1fr; } }
+.funding { margin-top: auto; padding: 5mm; border-radius: 4mm; background: var(--paper); color: var(--ink); display: grid; grid-template-columns: 52mm 1fr; gap: 5mm; align-items: center; }
+.funding p { color: var(--ink-2) !important; font-size: 0.74rem; line-height: 1.45; }
+@media (max-width: 640px) { .funding { grid-template-columns: 1fr; } }
+
+/* ---------- print: exact A4 pages ---------- */
+@page { size: A4; margin: 0; }
+@media print {
+  body { background: none; font-size: 10.4pt; }
+  .bar { display: none; }
+  .book { display: block; padding: 0; }
+  .page { width: 210mm; height: 297mm; min-height: 0; border-radius: 0; box-shadow: none; break-after: page; }
+  .page:last-child { break-after: auto; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+}
+</style>
+</head>
+<body>
+
+<nav class="bar" aria-label="Book">
+  <span class="bar__title">Green Facilitator Toolbox</span>
+  <a class="ghost" href="../greenfacilitator.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Project page</a>
+  <a class="solid" href="../assets/docs/green-facilitator-toolbox.pdf" download><i class="bi bi-file-earmark-arrow-down" aria-hidden="true"></i> Download PDF</a>
+</nav>
+
+<main class="book">
+
+<!-- ============ COVER ============ -->
+<section class="page cover" aria-label="Cover">
+  <div class="cover__rays" aria-hidden="true"></div>
+  <div class="cover__inner">
+    <div class="cover__logos">
+      <img class="eu" src="../assets/img/cofounded.png" alt="Co-funded by the European Union">
+      <img class="iyac" src="../assets/img/logo.png" alt="IYAC Bulgaria">
+    </div>
+    <div class="garland" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <h1 class="cover__title"><span>GREEN</span><span>FACILITATOR</span><small>TOOLBOX</small></h1>
+    <p class="cover__sub">Outdoor and participatory workshops for youth workers, designed and tested by the participants of an Erasmus+ training course</p>
+    <div class="cover__photos" aria-hidden="true">
+      <img src="../assets/img/projects/greenfacilitator/photo-6.jpg" alt="">
+      <img src="../assets/img/projects/greenfacilitator/photo-4.jpg" alt="">
+      <img src="../assets/img/projects/greenfacilitator/photo-7.jpg" alt="">
+    </div>
+    <div class="cover__foot"><span>IYAC Bulgaria</span><span>Stara Zagora, Bulgaria · 2026</span></div>
+  </div>
+</section>
+
+<!-- ============ ABOUT + CONTENTS ============ -->
+<section class="page" aria-labelledby="about">
+  <span class="kicker">Welcome</span>
+  <h2 class="h1" id="about">About this toolbox</h2>
+  <p class="lede">This book collects workshops that youth workers designed, ran and improved together during "Green Facilitator", an Erasmus+ training course held from 25 October to 2 November 2026 in the forests of Sarnena Gora near Stara Zagora, Bulgaria.</p>
+  <p>Participants from Poland, Bulgaria, Romania, Turkey, Spain and Hungary learned to run environmental workshops that really reach young people: activities that use nature, the senses and play instead of lectures, and that make room for every voice in the group. Each team then designed its own workshop, tested it with the group, listened to honest feedback and wrote down what they learned.</p>
+  <p>Everything here is ready to use with young people. Take it, adapt it to your group, and make it your own.</p>
+
+  <h3 class="h2">How each workshop is laid out</h3>
+  <ul class="dots">
+    <li><b>At a glance:</b> time, group size, space and materials, and who it is for.</li>
+    <li><b>What it is and why:</b> a short summary, the aims and what participants take away.</li>
+    <li><b>Step by step:</b> instructions you can follow on the day.</li>
+    <li><b>Tips and lessons from the test run:</b> what the authors learned when they ran it, so you can skip their mistakes.</li>
+    <li><b>Debrief questions:</b> to turn the experience into learning. These were added by the editors.</li>
+  </ul>
+
+  <h3 class="h2">Contents</h3>
+  <ol class="toc">
+    <li><span class="n">✿</span><a href="#mindset">The Green Facilitator mindset</a></li>
+    <li><span class="n">01</span><a href="#ws1">Color-hunting Photoshoot in Nature</a><span class="who">Turkey · Poland</span></li>
+    <li><span class="n">02</span><a href="#ws2">Blind Tourist Guide</a><span class="who">Romania · Bulgaria · Poland</span></li>
+    <li><span class="n">03</span><a href="#ws3">Dodgeball in Nature</a><span class="who">Turkey · Hungary</span></li>
+    <li><span class="n">04</span><a href="#ws4">Walk of Shame</a><span class="who">Turkey · Spain · Romania</span></li>
+    <li><span class="n">+</span><a href="#methods">Bonus: methods from the course</a></li>
+    <li><span class="n">✎</span><a href="#template">Design your own workshop</a></li>
+  </ol>
+  <div class="folio"><span><b>Green Facilitator</b> Toolbox</span><span>2</span></div>
+</section>
+
+<!-- ============ MINDSET ============ -->
+<section class="page page--cream" id="mindset" aria-labelledby="mindset-t">
+  <span class="kicker">Before you start</span>
+  <h2 class="h1" id="mindset-t">The Green Facilitator mindset</h2>
+  <p class="lede">The workshops in this book grew out of a few simple ideas the group practised all week. Keep them in mind and any activity will land better.</p>
+  <div class="principles">
+    <div class="principle"><i class="bi bi-tree" aria-hidden="true"></i><h3>Experience first, theory second</h3><p>Let people feel nature before you talk about it. A blind walk or an hour of colour-hunting builds a stronger connection than any presentation.</p></div>
+    <div class="principle"><i class="bi bi-sun" aria-hidden="true"></i><h3>Hope over fear</h3><p>Many young people feel eco-anxiety or simply switch off. Don't lecture about catastrophes; meet the feeling and turn it into something people can actually do.</p></div>
+    <div class="principle"><i class="bi bi-people" aria-hidden="true"></i><h3>Every voice counts</h3><p>Use formats where quiet people get time to think and the loudest don't decide everything, like 1-2-4-All and 25/10 Crowd Sourcing (see the bonus methods).</p></div>
+    <div class="principle"><i class="bi bi-recycle" aria-hidden="true"></i><h3>Creativity makes it stick</h3><p>Turning collected waste into junk art, or photos into a story, makes environmental topics personal, fun and memorable.</p></div>
+    <div class="principle"><i class="bi bi-arrow-repeat" aria-hidden="true"></i><h3>Test, listen, improve</h3><p>Every workshop here was run once, then changed after honest feedback. Plan your first run as a test, and expect to adjust.</p></div>
+    <div class="principle"><i class="bi bi-shield-check" aria-hidden="true"></i><h3>Safe and inclusive outdoors</h3><p>Check the weather and the ground, agree clear boundaries, give everyone a way to opt out, and ask before taking or sharing photos.</p></div>
+  </div>
+  <figure class="photo"><img src="../assets/img/projects/greenfacilitator/photo-9.jpg" alt="Participants in the courtyard during an outdoor workshop, with the hills behind"><figcaption>Testing a workshop in the courtyard at Youtopia Centre, Sarnena Gora.</figcaption></figure>
+  <div class="folio"><span><b>Green Facilitator</b> Toolbox</span><span>3</span></div>
+</section>
+
+<!-- ============ WORKSHOP 1 ============ -->
+<section class="page" id="ws1" aria-labelledby="ws1-t">
+  <header class="ws-head">
+    <span class="ws-num" aria-hidden="true">1</span>
+    <div>
+      <span class="kicker">Nature · Storytelling</span>
+      <h2 class="h1" id="ws1-t">Color-hunting Photoshoot in Nature</h2>
+      <p class="authors">Developed by <b>Dila Yıldırım</b> (Turkey), <b>İsmail Emre Şendur</b> (Turkey) and <b>Mateusz Kurzyk</b> (Poland)</p>
+    </div>
+  </header>
+  <dl class="glance">
+    <div><dt><i class="bi bi-clock"></i> Time</dt><dd>1 hour</dd></div>
+    <div><dt><i class="bi bi-people"></i> Group</dt><dd>16 people, in groups of 4</dd></div>
+    <div><dt><i class="bi bi-geo-alt"></i> Space</dt><dd>Outdoors in nature, plus a screen</dd></div>
+    <div><dt><i class="bi bi-person-check"></i> For</dt><dd>Anyone who enjoys being in nature</dd></div>
+  </dl>
+  <div class="cols">
+    <div>
+      <h3 class="h3">What it is</h3>
+      <p>Small groups each get a colour and an emotion. They go out into nature, photograph everything they find in their colour, and connect the photos into a story about their emotion. Then each group tells its story to everyone.</p>
+      <h3 class="h3">Aims</h3>
+      <p>To bring the group together around a common purpose and a shared emotion, raising awareness of nature and helping people get to know each other better.</p>
+      <h3 class="h3">Participants take away</h3>
+      <ul class="dots"><li>A sharper eye for the details and beauty of nature</li><li>Storytelling skills</li><li>Closer bonds within their small group</li></ul>
+      <h3 class="h3">Materials</h3>
+      <p>Phones or cameras (at least one per group) and a projector or screen to show the photos.</p>
+    </div>
+    <div>
+      <h3 class="h3">Step by step</h3>
+      <ol class="steps">
+        <li><b>Form groups <span class="t">5 min</span></b>Split everyone into groups of four. Give each group one colour and one emotion.</li>
+        <li><b>Hunt and shoot <span class="t">30 min</span></b>Groups head into nature and photograph things in their colour. Within the same time, they choose their best photos and link them into a story that expresses their emotion.</li>
+        <li><b>Tell the story <span class="t">25 min</span></b>Back together, each group shows its photos on the screen and tells its story to the whole group.</li>
+      </ol>
+      <div class="note"><p class="h3"><i class="bi bi-lightbulb"></i> Tips from the authors</p>
+        <ul><li>Pick colours that are easy to find in nature, like green, brown, yellow or blue.</li><li>Choose emotions that suit your target group, and change them freely.</li><li>Give very clear instructions for the storytelling part, for example how many photos and how many minutes each group gets.</li></ul></div>
+    </div>
+  </div>
+  <h3 class="h3">Debrief questions</h3>
+  <ul class="qs"><li>What did you notice in nature that you would normally walk past?</li><li>How did your colour change the way you looked around?</li><li>Which story moved you most, and why?</li></ul>
+  <div class="folio"><span><b>Workshop 1</b> · Color-hunting Photoshoot in Nature</span><span>4</span></div>
+</section>
+
+<!-- ============ WORKSHOP 2 ============ -->
+<section class="page" id="ws2" aria-labelledby="ws2-t">
+  <header class="ws-head">
+    <span class="ws-num" aria-hidden="true">2</span>
+    <div>
+      <span class="kicker">Senses · Improvisation · Misinformation</span>
+      <h2 class="h1" id="ws2-t">Blind Tourist Guide</h2>
+      <p class="authors">Developed by <b>Yasmina Simofi</b> (Romania), <b>Nedko Zhelev</b> (Bulgaria) and <b>Bartłomiej Bzowski</b> (Poland)</p>
+    </div>
+  </header>
+  <dl class="glance">
+    <div><dt><i class="bi bi-clock"></i> Time</dt><dd>30–40 minutes</dd></div>
+    <div><dt><i class="bi bi-people"></i> Group</dt><dd>Small groups of 3–4</dd></div>
+    <div><dt><i class="bi bi-geo-alt"></i> Space</dt><dd>Outdoors, near objects or buildings</dd></div>
+    <div><dt><i class="bi bi-person-check"></i> For</dt><dd>People ready to step out of their comfort zone</dd></div>
+  </dl>
+  <div class="cols">
+    <div>
+      <h3 class="h3">What it is</h3>
+      <p>One person is blindfolded and becomes a "tour guide". An assistant walks them to an object or building, and the "tourists" ask questions about it. The guide has to improvise a convincing tourist explanation without seeing anything.</p>
+      <h3 class="h3">Themes</h3>
+      <p>How easily tour guides, and anyone who sounds confident, can spread misinformation. Also observation, trust and improvisation.</p>
+      <h3 class="h3">Aims</h3>
+      <p>To bring awareness to the surroundings and to how we sense the place we are in.</p>
+      <h3 class="h3">Participants take away</h3>
+      <ul class="dots"><li>Confidence in improvising</li><li>A new awareness of their surroundings</li></ul>
+      <h3 class="h3">Materials</h3>
+      <p>A blindfold for each group.</p>
+      <h3 class="h3">Debrief questions</h3>
+      <ul class="qs"><li>How did it feel to explain something you couldn't see?</li><li>Did the tourists believe the guide? Why does confident-sounding information feel true?</li><li>Where else do we meet information that sounds right but isn't?</li></ul>
+    </div>
+    <div>
+      <h3 class="h3">Step by step</h3>
+      <ol class="steps">
+        <li><b>Set the roles</b>In each small group, choose a tour guide, an assistant and one or two tourists.</li>
+        <li><b>Blindfold and walk</b>The assistant blindfolds the tour guide and carefully leads them to an object or building.</li>
+        <li><b>Tourists ask</b>The tourists ask questions about it, such as "What is this used for?" or "What is the history behind it?"</li>
+        <li><b>Guide improvises</b>The tour guide makes up a touristic explanation. They win if they manage to work out which object or building it really is.</li>
+        <li><b>Swap roles</b>Rotate so that everyone gets a turn as the guide.</li>
+      </ol>
+      <div class="note tested"><p class="h3"><i class="bi bi-clipboard-check"></i> Lesson from the test run</p>
+        <p>We played in one big group and too many people were passive. Keep the groups small, three or four people, so everyone is involved all the time.</p></div>
+      <div class="note"><p class="h3"><i class="bi bi-lightbulb"></i> Safety tip</p><p>Assistants are responsible for their guide: walk slowly, warn about steps and obstacles, and never let go.</p></div>
+    </div>
+  </div>
+  <div class="folio"><span><b>Workshop 2</b> · Blind Tourist Guide</span><span>5</span></div>
+</section>
+
+<!-- ============ WORKSHOP 3 ============ -->
+<section class="page" id="ws3" aria-labelledby="ws3-t">
+  <header class="ws-head">
+    <span class="ws-num" aria-hidden="true">3</span>
+    <div>
+      <span class="kicker">Teamwork · Physical activity · Nature</span>
+      <h2 class="h1" id="ws3-t">Dodgeball in Nature</h2>
+      <p class="authors">Developed by <b>Ege Muslu</b> (Turkey), <b>Çağrı Çiçek</b> (Turkey), <b>Elmira Ketenci</b> (Turkey) and <b>Réka Szalay</b> (Hungary)</p>
+    </div>
+  </header>
+  <dl class="glance">
+    <div><dt><i class="bi bi-clock"></i> Time</dt><dd>45–60 minutes</dd></div>
+    <div><dt><i class="bi bi-people"></i> Group</dt><dd>16–20 people, two teams</dd></div>
+    <div><dt><i class="bi bi-geo-alt"></i> Space</dt><dd>Flat area, at least 20 × 10 m</dd></div>
+    <div><dt><i class="bi bi-person-check"></i> For</dt><dd>Young people getting to know each other</dd></div>
+  </dl>
+  <div class="cols">
+    <div>
+      <h3 class="h3">What it is</h3>
+      <p>A classic team game moved outdoors. Two teams play dodgeball in nature, with a few extra rules that reward catching the ball and give eliminated players a way back in.</p>
+      <h3 class="h3">Aims</h3>
+      <p>To promote team building and cooperation while being in contact with nature, through a fun physical activity that gets everyone moving.</p>
+      <h3 class="h3">Participants take away</h3>
+      <ul class="dots"><li>Bonding through team sport</li><li>A conversation about cultural differences: every country plays dodgeball a little differently</li></ul>
+      <h3 class="h3">Materials</h3>
+      <p>A soft ball, comfortable sports clothes and, ideally, sunny warm weather.</p>
+      <div class="note tested"><p class="h3"><i class="bi bi-clipboard-check"></i> Lessons from the test run</p>
+        <ul><li>Choosing the teams took so long that people lost their motivation. Pick teams fast and make them equal, for example by counting off.</li><li>The rules weren't clear before the game started, so it became controversial. Explain every rule, and check everyone understood, before the first throw.</li></ul></div>
+    </div>
+    <div>
+      <h3 class="h3">How to play</h3>
+      <ol class="steps">
+        <li><b>Set up</b>Split into two equal teams. The shooting team stands at both ends of the field; the evading team stands in the middle.</li>
+        <li><b>Shoot and dodge</b>Shooters throw the ball to hit the players in the middle. Middle players dodge, or try to catch the ball before it touches the ground.</li>
+        <li><b>Extra lives</b>A player who catches the ball earns an extra life. They can keep it for themselves or use it to bring an eliminated teammate back into the game.</li>
+        <li><b>Win the round</b>The evading team wins the round if they catch the ball in the air three times, or if their last remaining player survives 10 throws without being hit.</li>
+        <li><b>Best of five</b>Switch roles between rounds. The first team to win three rounds wins the game.</li>
+      </ol>
+      <h3 class="h3">Debrief questions</h3>
+      <ul class="qs"><li>How did your team decide what to do? Who took the lead?</li><li>How is dodgeball played where you come from? What surprised you?</li><li>How did it feel to bring a teammate back into the game?</li></ul>
+    </div>
+  </div>
+  <div class="folio"><span><b>Workshop 3</b> · Dodgeball in Nature</span><span>6</span></div>
+</section>
+
+<!-- ============ WORKSHOP 4 ============ -->
+<section class="page" id="ws4" aria-labelledby="ws4-t">
+  <header class="ws-head">
+    <span class="ws-num" aria-hidden="true">4</span>
+    <div>
+      <span class="kicker">Human rights · Inclusion · Empathy</span>
+      <h2 class="h1" id="ws4-t">Walk of Shame</h2>
+      <p class="authors">Developed by <b>Sude Sertdurak</b> (Türkiye), <b>Iman Bihich</b> (Spain) and <b>Octavian Osvar</b> (Romania)</p>
+    </div>
+  </header>
+  <dl class="glance">
+    <div><dt><i class="bi bi-clock"></i> Time</dt><dd>30 minutes</dd></div>
+    <div><dt><i class="bi bi-people"></i> Group</dt><dd>10–30, including facilitators</dd></div>
+    <div><dt><i class="bi bi-geo-alt"></i> Space</dt><dd>A large room or open outdoor area</dd></div>
+    <div><dt><i class="bi bi-person-check"></i> For</dt><dd>Youth, young adults and youth workers</dd></div>
+  </dl>
+  <div class="cols">
+    <div>
+      <h3 class="h3">What it is</h3>
+      <p>A two-part non-formal education session. First, a "Step Forward" (privilege walk): everyone takes on a character and steps forward each time a statement is true for that character. Then a "Walk and Talk": small groups stroll together, discussing reflective topics to build real connections.</p>
+      <h3 class="h3">Themes</h3>
+      <p>Human rights, socio-economic inequality, social inclusion, empathy and interpersonal communication.</p>
+      <h3 class="h3">Aims</h3>
+      <ul class="dots"><li>Raise awareness of systemic inequalities and the unequal distribution of privilege.</li><li>Foster empathy by stepping into the shoes of people from very different backgrounds.</li><li>Encourage active listening, self-reflection and bonding through guided conversations.</li></ul>
+      <h3 class="h3">Participants take away</h3>
+      <ul class="dots"><li><b>Knowledge:</b> social stratification, human rights and systemic barriers.</li><li><b>Skills:</b> active listening and empathetic communication.</li><li><b>Attitudes:</b> tolerance, openness and stronger group cohesion.</li></ul>
+      <h3 class="h3">Materials</h3>
+      <p>Printed character cards (one per participant), the list of statements for the facilitator, and a timer. All are on the next two pages.</p>
+    </div>
+    <div>
+      <h3 class="h3">Step by step</h3>
+      <ol class="steps">
+        <li><b>Hand out roles</b>Give out the character cards at random. Participants read them silently, get into character and imagine their daily life.</li>
+        <li><b>Step forward</b>Line everyone up side by side. Read the statements one by one; participants take one step forward whenever a statement is true for their character.</li>
+        <li><b>Debrief in a circle</b>Ask people at the front and at the back how they felt. Talk about the realities of human rights and inequality.</li>
+        <li><b>Walk and talk</b>Form groups of 3–4 and give each a topic. Groups walk around the venue or outdoors while they talk. Every 10 minutes, rotate the groups and give a new topic.</li>
+        <li><b>Final reflection</b>Bring everyone back together to share key takeaways from their conversations.</li>
+      </ol>
+      <div class="note"><p class="h3"><i class="bi bi-lightbulb"></i> Tips from the authors</p>
+        <ul><li>Keep strict silence during the Step Forward exercise; it builds focus and impact.</li><li>The debrief can trigger strong emotions. Create a safe, non-judgmental space.</li><li>During Walk and Talk, encourage people to team up with someone they haven't spoken to yet.</li><li>Thirty minutes is tight for both parts. Allow extra time for a deeper debrief with larger groups.</li></ul></div>
+    </div>
+  </div>
+  <div class="folio"><span><b>Workshop 4</b> · Walk of Shame</span><span>7</span></div>
+</section>
+
+<section class="page" aria-label="Walk of Shame: character cards">
+  <span class="kicker">Workshop 4 · Handout 1</span>
+  <h2 class="h1">Character cards</h2>
+  <p class="muted">Print and cut out. Hand one card to each participant at random.</p>
+  <div class="cards">
+    <p class="card"><span>1</span>An undocumented immigrant from Mali living in southern Europe, working illegal manual labour jobs to send money back home.</p>
+    <p class="card"><span>2</span>A white-collar IT project manager living in Frankfurt, earning a high, stable income with full legal and social security benefits.</p>
+    <p class="card"><span>3</span>An heir to an old aristocratic family in London, living off inherited wealth and attending an elite private university.</p>
+    <p class="card"><span>4</span>A registered Syrian refugee living in a border camp, relying on humanitarian aid and seasonal agricultural labour.</p>
+    <p class="card"><span>5</span>A middle-class high school teacher in Bogotá struggling with rising inflation and a static salary.</p>
+    <p class="card"><span>6</span>An engineer from a lower-caste background in India who secured a scholarship to study at a public university in New Delhi.</p>
+    <p class="card"><span>7</span>A displaced mother from Ukraine working as a hotel housekeeper in Warsaw while raising her child alone.</p>
+    <p class="card"><span>8</span>A middle-class accountant living in the suburbs of Chicago, paying off a large mortgage and student loans.</p>
+    <p class="card"><span>9</span>A small-scale female farmer in a rural village in Zambia, hit by severe drought and a lack of local healthcare.</p>
+    <p class="card"><span>10</span>A retired public sector employee in Sweden receiving a generous state pension and full universal healthcare.</p>
+    <p class="card"><span>11</span>An ambitious young entrepreneur running a tech startup in Lagos with moderate financial stability.</p>
+    <p class="card"><span>12</span>An unemployed university graduate in Greece working part-time as a waitress under an informal contract in Athens.</p>
+    <p class="card"><span>13</span>A Nepalese construction worker in the Gulf region working under a strict sponsorship system with limited mobility and rights.</p>
+    <p class="card"><span>14</span>A senior executive at a multinational cosmetics brand in Paris, with extensive private insurance and a luxury lifestyle.</p>
+    <p class="card"><span>15</span>A teenager growing up in a favela in Rio de Janeiro, attending an underfunded public school and working part-time at a local shop.</p>
+    <p class="card"><span>16</span>A middle-class corporate lawyer in Tokyo working long hours, with strong economic stability but very little free time.</p>
+  </div>
+  <div class="folio"><span><b>Workshop 4</b> · Walk of Shame · Handout 1</span><span>8</span></div>
+</section>
+
+<section class="page" aria-label="Walk of Shame: statements and topics">
+  <span class="kicker">Workshop 4 · Handouts 2 and 3</span>
+  <h2 class="h1">Statements for the facilitator</h2>
+  <p class="muted">Read slowly, one at a time. Participants step forward if the statement is true for their character.</p>
+  <ol class="statements">
+    <li>I have continuous access to clean, safe drinking water inside my home.</li>
+    <li>I can walk alone at night in my neighbourhood without fear for my physical safety or of harassment.</li>
+    <li>If I get sick or injured today, I can access quality medical care without falling into severe debt.</li>
+    <li>I live in a home with secure heating, electricity and protection from extreme weather.</li>
+    <li>I do not have to worry about where my next meal will come from.</li>
+    <li>I have legal identification documents that let me freely access basic public services where I live.</li>
+    <li>I have never felt threatened or discriminated against by police or security forces because of my background or status.</li>
+    <li>I hold a passport or document that lets me cross international borders easily, without severe visa restrictions.</li>
+    <li>I can publicly express my political opinions or identity without fear of persecution, violence or losing my job.</li>
+    <li>I am confident I will not face employment discrimination based on my ethnicity, nationality, gender or social background.</li>
+    <li>I feel fully protected by the legal system in the country where I live.</li>
+    <li>I can access the internet, news and information freely, without state censorship.</li>
+    <li>I could cover an unexpected emergency expense, such as a major repair or a hospital bill, without borrowing money.</li>
+    <li>Most of my daily food comes from eating out at restaurants or ordering delivery.</li>
+    <li>I own property or will inherit valuable assets from my family.</li>
+    <li>I can afford higher education without long-term debt or working several full-time jobs.</li>
+    <li>I can afford to travel abroad for holidays at least three times a year.</li>
+    <li>I can see private healthcare specialists whenever I want to skip public waiting lists.</li>
+    <li>If I make a mistake or break a minor law, my family's resources or status can protect me from serious consequences.</li>
+    <li>I have never been forced to work in unsafe, illegal or abusive conditions to survive.</li>
+    <li>I am confident my children or the next generation will enjoy a higher standard of living than I do.</li>
+    <li>I can take long unpaid breaks or a career sabbatical whenever I feel overworked.</li>
+  </ol>
+  <h2 class="h2">Topic ideas for Walk and Talk</h2>
+  <ul class="chips"><li>Favourite season</li><li>What you value in a friend</li><li>The kind of travel you like: hiking, cities, food…</li><li>Your love language, and how you show appreciation</li><li>Something you'd like to improve about yourself: self-esteem, communication, discipline, confidence or emotional regulation</li></ul>
+  <div class="folio"><span><b>Workshop 4</b> · Walk of Shame · Handouts 2 and 3</span><span>9</span></div>
+</section>
+
+<!-- ============ BONUS METHODS ============ -->
+<section class="page page--cream" id="methods" aria-labelledby="methods-t">
+  <span class="kicker">Bonus</span>
+  <h2 class="h1" id="methods-t">Methods from the course</h2>
+  <p class="lede">The trainers used these activities with the group during the week. They work with almost any topic, and especially well with ecology and climate action.</p>
+  <div class="methods">
+    <div class="method"><h3>Blind walk</h3><p class="meta">Pairs · outdoors · 30–45 min</p><p>In pairs, one person is blindfolded and the other guides. Explore nature through sound, touch and smell, everything except sight, then swap. It shows how much we miss when we only look, and builds a direct connection to nature.</p></div>
+    <div class="method"><h3>Clean-up and junk art</h3><p class="meta">Whole group · outdoors · half a day</p><p>Clean up a forest, a park or a street, then turn what you collected into art and sculptures. At Green Facilitator, old tyres, plastic bottles, a broken lamp and a lot of duct tape became "Contemporary art be like: sometimes junk is just junk". Every piece of waste ends up somewhere.</p></div>
+    <div class="method"><h3>1-2-4-All</h3><p class="meta">Liberating Structure · 12–15 min</p><ol><li>1 min: think alone, in silence.</li><li>2 min: share in pairs.</li><li>4 min: in fours, look for similarities and differences.</li><li>5 min: each four shares its key idea with everyone.</li></ol><p>Try: "If you were 10 times bolder, what environmental action would you do with young people this year? What's the first step?" Starting in silence gives introverts and less confident English speakers time to prepare.</p></div>
+    <div class="method"><h3>25/10 Crowd Sourcing</h3><p class="meta">Liberating Structure · 30 min</p><p>Everyone writes one bold idea and a first step on a card, for example: "What would make our next Erasmus+ project almost zero-waste?" People walk around swapping cards until "stop", then pairs rate the cards they hold from 1 to 5. After five rounds, count down from 25 and read out the top 10. Ratings are anonymous, so there is no pressure or competition.</p></div>
+    <div class="method"><h3>TRIZ: how do we destroy the planet?</h3><p class="meta">Liberating Structure · 35–40 min</p><p>In groups of 4–5, list how to organise "the worst and least sustainable youth exchange about ecology ever": only talk about catastrophes, shame people, lecture instead of act, use difficult words, never ask young people's opinion. Then ask honestly: "What on this list do we already do, even a little?" Decide what to stop and the first step. Fun, unblocking, and never preachy.</p></div>
+    <div class="method"><h3>Quiz games with Blooket</h3><p class="meta">Teams · indoors · 20–30 min per quiz</p><p>Teams build an interactive quiz on blooket.com, for example "What is fast fashion?", and run it live for the rest of the group. A free, ready-to-use digital tool that turns any topic into a game.</p></div>
+  </div>
+  <div class="folio"><span><b>Bonus</b> · Methods from the course</span><span>10</span></div>
+</section>
+
+<!-- ============ TEMPLATE ============ -->
+<section class="page" id="template" aria-labelledby="template-t">
+  <span class="kicker">Your turn</span>
+  <h2 class="h1" id="template-t">Design your own workshop</h2>
+  <p class="muted">The same template the participants used at Green Facilitator. Print it, fill it in, run your workshop, then come back and add what you learned.</p>
+  <div class="form">
+    <div><b>Name of activity</b></div>
+    <div class="row"><div><b>Time</b></div><div><b>Group size</b></div><div><b>Target group</b><small>Who is it for?</small></div></div>
+    <div class="mid"><b>Summary</b><small>A short overview: what is it about?</small></div>
+    <div class="mid"><b>Themes and aims</b><small>What does it tackle, and what do you want to achieve?</small></div>
+    <div class="mid"><b>Learning outcomes</b><small>What will participants take away: knowledge, skills, attitudes?</small></div>
+    <div class="tall"><b>Instructions</b><small>Step by step, with timings. Be as specific as you can.</small></div>
+    <div class="mid"><b>Materials and space</b></div>
+    <div class="mid"><b>Tips for facilitators</b><small>Including what you'd change after your first run.</small></div>
+  </div>
+  <div class="folio"><span><b>Green Facilitator</b> Toolbox</span><span>11</span></div>
+</section>
+
+<!-- ============ BACK ============ -->
+<section class="page back" aria-label="Credits">
+  <span class="kicker">Thank you</span>
+  <h2 class="h1">The people behind this toolbox</h2>
+  <p>These workshops were designed, tested and written by participants of the Erasmus+ training course "Green Facilitator", organised by IYAC Bulgaria at Youtopia Centre, Sarnena Gora, Stara Zagora, from 25 October to 2 November 2026.</p>
+  <div class="credits">
+    <div><h3>Color-hunting Photoshoot in Nature</h3><p>Dila Yıldırım, İsmail Emre Şendur, Mateusz Kurzyk</p></div>
+    <div><h3>Blind Tourist Guide</h3><p>Yasmina Simofi, Nedko Zhelev, Bartłomiej Bzowski</p></div>
+    <div><h3>Dodgeball in Nature</h3><p>Ege Muslu, Çağrı Çiçek, Elmira Ketenci, Réka Szalay</p></div>
+    <div><h3>Walk of Shame</h3><p>Sude Sertdurak, Iman Bihich, Octavian Osvar</p></div>
+  </div>
+  <p style="margin-top:6mm">Edited and designed by IYAC Bulgaria. Photos from the training course. Feel free to use, share and adapt these activities in your own non-formal education work.</p>
+  <p><b style="color:var(--sun)">www.iyacbulgaria.com</b> · iyac.bulgaria@gmail.com</p>
+  <div class="funding">
+    <img src="../assets/img/cofounded.png" alt="Co-funded by the European Union">
+    <p>Funded by the European Union. Views and opinions expressed are however those of the author(s) only and do not necessarily reflect those of the European Union or the European Education and Culture Executive Agency (EACEA). Neither the European Union nor EACEA can be held responsible for them.</p>
+  </div>
+</section>
+
+</main>
+</body>
+</html>

@@ -39,6 +39,8 @@ KEEP = {'IYAC', 'EN', 'BG', 'IYAC Bulgaria', '+359 88 792 8282', 'iyac.bulgaria@
 PATTERNS = [
     (re.compile(r'^Open photo (\d+) of (\d+)$'), r'Отвори снимка \1 от \2'),
     (re.compile(r'^(\d+) projects$'), r'\1 проекта'),
+    (re.compile(r'^PDF · (\d+)\.(\d) MB · English$'), r'PDF · \1,\2 MB · на английски'),
+    (re.compile(r'^PDF · (\d+)\.(\d) MB$'), r'PDF · \1,\2 MB'),
 ]
 
 
@@ -109,7 +111,7 @@ def translate(page_html, bg, missing):
 def localise_paths(page_html, slug):
     """/bg pages live one folder down: point assets up a level and swap the language switch."""
     s = page_html.replace('<html lang="en">', '<html lang="bg">')
-    s = re.sub(r'(\b(?:src|href)=")(assets/)', r'\1../\2', s)
+    s = re.sub(r'(\b(?:src|href)=")(assets/|guides/)', r'\1../\2', s)
     # Language switch: EN goes up to the English page, BG is this page
     s = re.sub(r'<div class="lang" role="group" aria-label="[^"]*">.*?</div>',
                f'<div class="lang" role="group" aria-label="Език">\n'

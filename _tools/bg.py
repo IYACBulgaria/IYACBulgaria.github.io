@@ -1101,8 +1101,8 @@ BG = {
         "Курсът започна на 26 октомври с изграждане на екип, игри за разчупване на леда и разговори по двойки и в малки групи. В голям кръг всеки сподели какво го е довело тук, както и своите очаквания, страхове и мотивация, преди екипът да представи целта на седмицата: да даде на младежките работници инструменти за провеждане на екологични уъркшопи, които вдъхновяват младите хора и превръщат еко тревожността и апатията в действие.",
     "Day two began with a blind walk. In pairs, one blindfolded and one guiding, participants explored the nature around the venue through sound, touch and smell, discovering how much we miss when we only look. The group then cleaned up the forest and the nearby village and turned what they collected, from old tyres and plastic bottles to a broken lamp and a lot of duct tape, into junk art and sculptures. One piece carried the message \"Contemporary art be like: sometimes junk is just junk\", a reminder that every piece of waste ends up somewhere.":
         "Вторият ден започна с разходка със затворени очи. По двойки – единият със завързани очи, а другият водач – участниците опознаха природата около мястото чрез звуци, допир и мирис и откриха колко много пропускаме, когато само гледаме. След това групата почисти гората и близкото село и превърна събраното – от стари гуми и пластмасови бутилки до счупена лампа и много тиксо – в junk art и скулптури. Една от творбите носеше посланието „Contemporary art be like: sometimes junk is just junk“ – напомняне, че всеки отпадък стига някъде.",
-    "On day three, participants stepped into the facilitator role and designed their own environmental workshops: setting goals, choosing methods and planning how to reach young people in a fun, active and meaningful way. They then ran their first tests with the group, many of them outdoors in the courtyard, the village streets and on nature trails, followed by honest peer feedback and improvements. These workshops will be collected into a guidebook for youth workers.":
-        "През третия ден участниците влязоха в ролята на фасилитатори и проектираха свои собствени екологични уъркшопи: поставиха цели, избраха методи и планираха как да достигнат до младите хора по забавен, активен и смислен начин. След това проведоха първите тестове с групата – много от тях навън, в двора, по улиците на селото и по горските пътеки, – последвани от честна обратна връзка и подобрения. Тези уъркшопи ще бъдат събрани в наръчник за младежки работници.",
+    "On day three, participants stepped into the facilitator role and designed their own environmental workshops: setting goals, choosing methods and planning how to reach young people in a fun, active and meaningful way. They then ran their first tests with the group, many of them outdoors in the courtyard, the village streets and on nature trails, followed by honest peer feedback and improvements. These workshops are now collected in the Green Facilitator Toolbox, a free book for youth workers.":
+        "През третия ден участниците влязоха в ролята на фасилитатори и проектираха свои собствени екологични уъркшопи: поставиха цели, избраха методи и планираха как да достигнат до младите хора по забавен, активен и смислен начин. След това проведоха първите тестове с групата – много от тях навън, в двора, по улиците на селото и по горските пътеки, – последвани от честна обратна връзка и подобрения. Тези уъркшопи вече са събрани в Green Facilitator Toolbox – безплатна книга за младежки работници.",
     "Day four was a cultural day to rest and recharge, with visits to Stara Zagora and Plovdiv, two of Bulgaria's oldest cities.":
         "Четвъртият ден беше културен ден за почивка и презареждане, с посещения в Стара Загора и Пловдив – два от най-старите градове в България.",
     "Day five, \"Every Voice Counts\", was dedicated to Liberating Structures: simple group formats that make sure everyone is heard, not just the loudest. In 1-2-4-All, participants moved from silent thinking to pairs, fours and the whole group to answer: \"If you were 10 times bolder, what environmental action would you do with young people this year?\" In 25/10 Crowd Sourcing, they wrote, swapped and anonymously rated ideas for a nearly zero-waste Erasmus+ project. In TRIZ, they planned \"the worst and least sustainable youth exchange about ecology ever\", then asked honestly which of those habits they already have, and committed to stopping them.":
@@ -1123,9 +1123,7 @@ BG = {
         "Участниците направиха рефлексия върху собствените си навици и поеха лични ангажименти да живеят по-устойчиво.",
     "Every participant designed, tested and improved their own environmental workshop for young people.":
         "Всеки участник проектира, тества и подобри свой собствен екологичен уъркшоп за млади хора.",
-    "A guidebook of the participants' workshops for youth workers, to be published on the IYAC website.":
-        "Наръчник с уъркшопите на участниците за младежки работници, който ще бъде публикуван на уебсайта на IYAC.",
-    "Ideas for future Erasmus+ youth exchanges on ecology and climate action, plus a top-10 list of ideas for nearly zero-waste Erasmus+ projects.":
+        "Ideas for future Erasmus+ youth exchanges on ecology and climate action, plus a top-10 list of ideas for nearly zero-waste Erasmus+ projects.":
         "Идеи за бъдещи младежки обмени по Еразъм+ на тема екология и климатични действия, както и списък с 10-те най-добри идеи за почти безотпадъчни проекти по Еразъм+.",
     "A toolbox of ready-to-use methods: the blind walk, clean-up and junk art, 1-2-4-All, 25/10 Crowd Sourcing, TRIZ, design thinking, World Café, Open Space and Blooket quizzes.":
         "Набор от готови за използване методи: разходка със затворени очи, почистване и junk art, 1-2-4-All, 25/10 Crowd Sourcing, TRIZ, дизайн мислене, World Café, Open Space и викторини в Blooket.",
@@ -1185,4 +1183,37 @@ BG = {
         "Превъртете надолу, за да видите някои от най-запомнящите се моменти от „Green Facilitator“.",
     "Poland, Bulgaria, Romania, Turkey, Spain, Hungary":
         "Полша, България, Румъния, Турция, Испания, Унгария",
+    # Green Facilitator Toolbox
+    "Resources":
+        "Ресурси",
+    "Photos on Google Drive":
+        "Снимки в Google Drive",
+    "Download the Toolbox":
+        "Изтеглете наръчника",
+    "Read online":
+        "Прочетете онлайн",
+    "The workshop book":
+        "Книгата с уъркшопи",
+    "Green Facilitator Toolbox":
+        "Green Facilitator Toolbox",
+    "Green Facilitator Toolbox cover":
+        "Корица на Green Facilitator Toolbox",
+    "Outdoor and participatory workshops designed, tested and improved by the participants, ready to use with young people: step-by-step instructions, tips, lessons from the test runs, printable handouts and a template to design your own.":
+        "Уъркшопи сред природата и с активно участие, създадени, тествани и подобрени от участниците и готови за работа с млади хора: инструкции стъпка по стъпка, съвети, поуки от пробните провеждания, материали за печат и шаблон за създаване на собствен уъркшоп.",
+    "The Green Facilitator mindset":
+        "Нагласата на Green Facilitator",
+    "Color-hunting Photoshoot in Nature":
+        "Color-hunting Photoshoot in Nature",
+    "Blind Tourist Guide":
+        "Blind Tourist Guide",
+    "Dodgeball in Nature":
+        "Dodgeball in Nature",
+    "Walk of Shame":
+        "Walk of Shame",
+    "Bonus: methods from the course":
+        "Бонус: методи от курса",
+    "Design your own workshop":
+        "Създайте свой уъркшоп",
+    "The Green Facilitator Toolbox: a book of the participants' workshops for youth workers, free to download and read online.":
+        "Green Facilitator Toolbox: книга с уъркшопите на участниците за младежки работници, която може да бъде изтеглена и прочетена онлайн безплатно.",
 }
