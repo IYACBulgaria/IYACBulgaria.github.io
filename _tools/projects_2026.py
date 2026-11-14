@@ -85,7 +85,7 @@ PROJECTS_2026 = {
             'A toolbox of ready-to-use methods: the blind walk, clean-up and junk art, 1-2-4-All, 25/10 Crowd Sourcing, TRIZ, design thinking, World Café, Open Space and Blooket quizzes.',
             'Youthpass certificates for participants.',
         ],
-        'after': {2: ('photo', 'photo-4'), 3: ('duo', 'photo-3', 'photo-7')},
+        'after': {2: ('photo', 'photo-5'), 3: ('duo', 'photo-3', 'photo-7')},
     },
     'smartyouthworker': {
         # photo-17 (a pitch) leads the story, and sits with the other pitches in the gallery
